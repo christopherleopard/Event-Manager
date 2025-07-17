@@ -1,0 +1,8 @@
+<h1 class="text-3xl font-bold"><%= @staff.name %></h1>
+<p class="mt-2 text-lg"><%= @staff.role %></p>
+
+<% if @staff.resume.attached? %>
+  <div class="mt-4">
+    <%= link_to "Download Resume", rails_blob_path(@staff.resume, disposition: "attachment"), class: "text-green-600 underline" %>
+  </div>
+<% end %>

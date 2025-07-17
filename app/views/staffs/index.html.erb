@@ -1,0 +1,9 @@
+<h1 class="text-3xl font-bold my-4">Staff Members</h1>
+<ul class="space-y-4">
+  <% @staffs.each do |staff| %>
+    <li class="border p-4 rounded">
+      <h2 class="text-xl font-semibold"><%= link_to staff.name, staff_path(staff), class: "text-blue-600 underline" %></h2>
+      <p><%= staff.role %></p>
+    </li>
+  <% end %>
+</ul>
