@@ -1,0 +1,15 @@
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+
+.active_admin .header {
+    display: flex;
+    justify-content: space-between;
+}
+.active_admin .header-item {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
