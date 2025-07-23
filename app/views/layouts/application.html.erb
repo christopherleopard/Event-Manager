@@ -18,12 +18,37 @@
     <link rel="apple-touch-icon" href="/icon.png">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5">
+    <main class="page">
+      <header>
+        <div class="top-bar bg-gray-800 text-white p-4">
+          <div class="container flex">
+            <%= image_tag("fb.png", alt: "Facebook", class: "h-6") %>
+            <%= image_tag("x.png", alt: "X", class: "h-6") %>
+          </div>
+        </div>
+        <div class="main_menu text-center">
+          <div class="logo">
+            <%= link_to root_path do %>
+              <%= image_tag("logo.png", alt: "Admin Logo", class: "h-12 mx-auto") %>
+            <% end %>
+          </div>
+          <nav class="flex justify-center space-x-4 mb-6">
+            <%= link_to "Home", root_path, class: "text-blue-600 hover:underline" %>
+            <%= link_to "Login", root_path, class: "text-blue-600 hover:underline" %>
+          </nav>
+        </div>
+      </header>
+
       <%= yield %>
+
+      <footer class="mt-10 text-center text-gray-600">
+        <p>&copy; <%= Time.current.year %> Event Manager Admin</p>
+      </footer>
     </main>
   </body>
 </html>

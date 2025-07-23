@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Login</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body class="min-h-screen flex font-sans">
+    <!-- Left Image Column -->
+    <div class="w-2/5 bg-cover bg-center" style="background-image: url('<%= asset_path("login_side.png") %>');"></div>
+
+    <!-- Right Form Column -->
+    <div class="w-3/5 p-10 flex flex-col">
+      <!-- Logo at top -->
+      <div class="mb-10">
+        <%= image_tag("logo.png", alt: "Admin Logo", class: "h-12") %>
+      </div>
+
+      <!-- Centered form -->
+      <div class="flex-grow flex items-center justify-center">
+        <div class="w-full max-w-md">
+          <h1 class="text-3xl font-bold mb-6">Hello! Please sign in below.</h1>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
