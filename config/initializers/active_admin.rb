@@ -3,9 +3,9 @@ ActiveAdmin.setup do |config|
 
   config.use_webpacker = false
 
-  config.register_stylesheet "active_admin.scss"
   config.clear_stylesheets!
   config.register_stylesheet "active_admin.css"
+  config.register_stylesheet "global.css"
 
   config.authentication_method = :authenticate_admin_user!
 

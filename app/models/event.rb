@@ -1,13 +1,11 @@
 class Event < ApplicationRecord
-  validates :name, :starts_at, :ends_at, presence: true
-  validate :ends_after_start
-  
+  validates :name, :starts_at_date, presence: true
+
   def self.ransackable_attributes(auth_object = nil)
-    %w[id name description starts_at ends_at created_at updated_at]
+    %w[id name description starts_at_date created_at updated_at]
   end
 
   def ends_after_start
-    return unless ends_at && starts_at
-    errors.add(:ends_at, "must be after start time") if ends_at < starts_at
+    nil unless starts_at_date
   end
 end

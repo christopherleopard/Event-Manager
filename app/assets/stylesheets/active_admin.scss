@@ -2,6 +2,9 @@
 @import "active_admin/mixins";
 @import "active_admin/base";
 
+#index_footer  {
+    display: none;
+}
 .active_admin .header {
     display: flex;
     justify-content: space-between;
@@ -12,4 +15,18 @@
     display: flex;
     gap: 15px;
     align-items: center;
+}
+#active_admin_content {
+    padding: 30px 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+#active_admin_content #main_content_wrapper {
+    float: initial;
+}
+#active_admin_content thead th {
+    background: #D32128;
+}
+#active_admin_content table {
+    font-size: 14px;
 }

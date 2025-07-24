@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_23_195540) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_24_151833) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -71,10 +71,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_23_195540) do
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.datetime "starts_at"
-    t.datetime "ends_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "starts_at_date"
+    t.time "starts_at_time"
   end
 
   create_table "staffs", force: :cascade do |t|

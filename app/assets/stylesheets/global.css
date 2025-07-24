@@ -1,0 +1,26 @@
+body {
+    font-size: 16px;
+    color: #3e3e3e;
+    background: #E5E5E5;
+}
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #D32128;
+    margin-bottom: 1rem;
+}
+p {
+    margin-bottom: 1rem;
+}
+.primary-btn {
+    background: #D32128;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+    padding: 1em 5em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+a {
+    text-decoration: none;
+}
