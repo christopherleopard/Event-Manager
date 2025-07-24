@@ -1,11 +1,13 @@
 source "https://rubygems.org"
 
-gem 'devise'
-gem 'activeadmin'
-gem 'active_storage_validations'
-gem 'tailwindcss-rails'
-gem 'sprockets-rails'
-gem 'sassc-rails'
+ruby "3.4.4"
+
+gem "devise"
+gem "activeadmin"
+gem "active_storage_validations"
+gem "sprockets-rails"
+gem "sassc-rails"
+gem "bootstrap", "~> 5.3.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"

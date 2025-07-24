@@ -1,6 +1,6 @@
-/* @import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities"; */
+@import "bootstrap";
+@import "active_admin/mixins";
+@import "active_admin/base";
 
 .active_admin .header {
     display: flex;

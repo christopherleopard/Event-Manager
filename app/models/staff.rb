@@ -1,14 +1,12 @@
 class Staff < ApplicationRecord
-  has_one_attached :resume
-
-  validates :name, :role, :resume, presence: true
-  validates :resume, content_type: ['application/pdf']
+  validates :name, :title, :department, :phone, :email, presence: true
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 
   def self.ransackable_attributes(auth_object = nil)
-    %w[id name role created_at updated_at]
+    %w[id name title department phone email]
   end
 
   def self.ransackable_associations(auth_object = nil)
-    ["resume_attachment", "resume_blob"]
+    []
   end
 end
