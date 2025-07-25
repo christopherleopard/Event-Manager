@@ -9,9 +9,9 @@ ActiveAdmin.register BoardBook do
   index title: false, download_links: false do
     div class: "custom-message" do
       h2 "WLPS Board Books Management", class: "staff-management-heading"
-      para "You can view board minutes by school year below. The order of board minutes can be changed using the provided drag-and-drop sort function. You can edit and delete board minutes from this page, and you can create new board minutes by clicking the 'Create Board Minute' button below.", class: "staff-management-description"
+      para 'To add a new Board Book, click the "Add Board Book" button below. TO update an existing Board Book, locate the Board Book below and click the Edit icon to update the Board Book.', class: "staff-management-description"
       button class: "primary-btn" do
-        link_to "Create Board Minute", new_admin_board_minute_path, class: "text-white"
+        link_to "Add Board Book", new_admin_board_book_path, class: "text-white"
       end
     end
 

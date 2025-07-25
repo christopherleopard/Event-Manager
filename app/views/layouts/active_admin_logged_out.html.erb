@@ -6,25 +6,28 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "global", "data-turbo-track": "reload" %>
   </head>
 
   <body>
-    <div class="d-flex">
+    <div class="d-flex min-vh-100">
       <!-- Left Image Column -->
-      <div class="col-lg-4" style="background-image: url('<%= asset_path("login_side.png") %>');"></div>
+      <div class="login-left" style="background-image: url('<%= asset_path("login_side.png") %>');"></div>
 
       <!-- Right Form Column -->
-      <div class="col-lg-8">
+      <div class="login-right d-flex justify-content-center" style="background-image: url('<%= asset_path("login_bg.png") %>');">
         <!-- Logo at top -->
-        <div class="mb-10">
-          <%= image_tag("logo.png", alt: "Admin Logo", class: "h-12") %>
-        </div>
+        <div>
+          <div class="admin-login-logo">
+            <%= image_tag("logo.png", alt: "Admin Logo", class: "h-12") %>
+          </div>
 
-        <!-- Centered form -->
-        <div class="flex-grow flex items-center justify-center">
-          <div class="w-full max-w-md">
-            <h1 class="text-3xl font-bold mb-6">Hello! Please sign in below.</h1>
-            <%= yield %>
+          <!-- Centered form -->
+          <div class="admin-login-form">
+            <div class="w-full max-w-md">
+              <h2>Hello! Please sign in below.</h2>
+              <%= yield %>
+            </div>
           </div>
         </div>
       </div>

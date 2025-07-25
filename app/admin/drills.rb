@@ -8,8 +8,8 @@ ActiveAdmin.register Drill do
 
   index title: "Drills Management" do
     div class: "custom-message" do
-      h2 "WLPS Board Books Management", class: "staff-management-heading"
-      para "You can view board minutes by school year below. The order of board minutes can be changed using the provided drag-and-drop sort function. You can edit and delete board minutes from this page, and you can create new board minutes by clicking the 'Create Board Minute' button below.", class: "staff-management-description"
+      h2 "WLPS Safety Drills Management", class: "staff-management-heading"
+      para "You can use the button below to create a new safety drill. The tables for each school allow you to edit and delete your drills, as needed.", class: "staff-management-description"
       button class: "primary-btn" do
         link_to "Create New Drill", new_admin_drill_path, class: "text-white"
       end
