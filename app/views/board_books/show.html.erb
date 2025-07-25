@@ -1,0 +1,8 @@
+<h2><%= @board_book.school_year %></h2>
+<p>Date: <%= @board_book.date.strftime("%B %d, %Y") %></p>
+
+<% if @board_book.pdf.attached? %>
+  <%= link_to "Download PDF", rails_blob_path(@board_book.pdf, disposition: "attachment") %>
+<% else %>
+  <p>No file</p>
+<% end %>

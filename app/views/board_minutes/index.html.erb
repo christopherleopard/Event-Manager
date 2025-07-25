@@ -1,0 +1,12 @@
+<h1>Board Meeting Minutes</h1>
+
+<ul>
+  <% @board_minutes.each do |minute| %>
+    <li>
+      <strong><%= minute.school_year %></strong> - <%= minute.date.strftime("%m/%d/%Y") %>
+      <% if minute.pdf.attached? %>
+        <%= link_to "Download PDF", rails_blob_path(minute.pdf, disposition: "attachment") %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

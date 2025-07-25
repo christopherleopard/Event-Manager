@@ -1,0 +1,16 @@
+<h1>Board Books</h1>
+
+<% @grouped_books.each do |school_year, books| %>
+  <h3><%= school_year %></h3>
+
+  <% books.each do |book| %>
+    <div class="mb-2">
+      <p><%= book.date.strftime("%B %d, %Y") %></p>
+      <% if book.pdf.attached? %>
+        <%= link_to "Download PDF", rails_blob_path(book.pdf, disposition: "attachment") %>
+      <% else %>
+        <p>No file</p>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>

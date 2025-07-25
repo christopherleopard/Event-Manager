@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_24_151833) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_25_062003) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -68,6 +68,20 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_24_151833) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "board_books", force: :cascade do |t|
+    t.string "school_year"
+    t.date "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "board_minutes", force: :cascade do |t|
+    t.string "school_year"
+    t.date "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -75,6 +89,16 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_24_151833) do
     t.datetime "updated_at", null: false
     t.date "starts_at_date"
     t.time "starts_at_time"
+  end
+
+  create_table "newsletter_settings", force: :cascade do |t|
+    t.string "ecc_url"
+    t.string "gltw_url"
+    t.string "wles_url"
+    t.string "wlms_hs_url"
+    t.string "district_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "staffs", force: :cascade do |t|
