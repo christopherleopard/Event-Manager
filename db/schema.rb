@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_25_062003) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_25_093149) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -82,6 +82,23 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_25_062003) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "drills", force: :cascade do |t|
+    t.string "school"
+    t.string "drill_type"
+    t.date "date"
+    t.time "time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "emergency_alerts", force: :cascade do |t|
+    t.string "name"
+    t.text "message"
+    t.boolean "enabled"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -89,6 +106,12 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_25_062003) do
     t.datetime "updated_at", null: false
     t.date "starts_at_date"
     t.time "starts_at_time"
+  end
+
+  create_table "food_services", force: :cascade do |t|
+    t.string "school"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "newsletter_settings", force: :cascade do |t|

@@ -1,0 +1,15 @@
+<h2>Emergency Alerts</h2>
+
+<%= link_to "New Emergency Alert", new_emergency_alert_path, class: "btn btn-primary mb-3" %>
+
+<% @emergency_alerts.each do |alert| %>
+  <div class="p-3 border mb-3 <%= alert.enabled ? 'bg-danger text-white' : 'bg-light' %>">
+    <h4><%= alert.name %></h4>
+    <p><%= alert.message %></p>
+    <p><strong>Status:</strong> <%= alert.enabled ? "Active" : "Inactive" %></p>
+    <div>
+      <%= link_to "Edit", edit_emergency_alert_path(alert), class: "btn btn-sm btn-warning" %>
+      <%= link_to "Delete", emergency_alert_path(alert), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-danger" %>
+    </div>
+  </div>
+<% end %>

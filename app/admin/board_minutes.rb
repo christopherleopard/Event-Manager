@@ -6,7 +6,7 @@ ActiveAdmin.register BoardMinute do
 
   permit_params :school_year, :date, :pdf
 
-  index title: "Board Minutes", download_links: false do
+  index title: false, download_links: false do
     div class: "custom-message" do
       h2 "WLPS Board Minutes Management", class: "staff-management-heading"
       para "You can view board minutes by school year below. The order of board minutes can be changed using the provided drag-and-drop sort function. You can edit and delete board minutes from this page, and you can create new board minutes by clicking the 'Create Board Minute' button below.", class: "staff-management-description"

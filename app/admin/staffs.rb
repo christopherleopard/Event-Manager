@@ -47,7 +47,7 @@ ActiveAdmin.register Staff do
 
         tbody class: "divide-y divide-gray-200" do
           staffs.each do |s|
-            tr class: "hover:bg-gray-50" do
+            tr do
               td class: "p-3 text-primary" do link_to s.name, admin_staff_path(s) end
               td class: "p-3" do s.title end
               td class: "p-3" do s.department end
