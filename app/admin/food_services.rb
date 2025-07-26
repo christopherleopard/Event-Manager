@@ -2,12 +2,17 @@ ActiveAdmin.register_page "Food Services" do
   menu label: "Food Services", priority: 3
 
   content title: false do
+    div class: "custom-message" do
+      h2 "WLPS School Lunch Menus", class: "staff-management-heading"
+      para "Use the Upload PDF buttons below to replace the current menu with a new menu. Menus will be displayed on the Food Service Menus webpage.", class: "staff-management-description"
+    end
+
     div class: "lunch_manage d-flex justify-content-center gap-4 align-items-end" do
       FoodService::SCHOOLS.each do |school|
         record = FoodService.find_or_create_by!(school: school)
 
         div class: "school_lunch w-100" do
-          para "#{record.school}", class: "text-center font-weight-bold mb-2"
+          para "#{record.school}", class: "text-center fw-bold mb-2"
           div class: "mb-4" do
             div style: "width: 100%; height: 260px; border: 2px solid #ccc; display: flex; align-items: center; justify-content: center; overflow: hidden;" do
               if record.pdf.attached?

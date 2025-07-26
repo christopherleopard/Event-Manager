@@ -11,6 +11,7 @@ h2 {
 }
 p {
     margin-bottom: 1rem;
+    color: #3e3e3e;
 }
 .primary-btn {
     background: #D32128;
@@ -23,4 +24,14 @@ p {
 }
 a {
     text-decoration: none;
+}
+.card-header {
+    background: #3e3e3e;
+}
+.text-white a, .primary-btn a {
+    color: #fff;
+    text-decoration: none;
+}
+.collapse div:nth-child(even) {
+    background: #f3f3f3;
 }

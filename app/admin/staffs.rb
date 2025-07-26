@@ -33,9 +33,10 @@ ActiveAdmin.register Staff do
     end
 
     div do
-      table class: "min-w-full border-collapse bg-white shadow rounded-lg" do
-        thead class: "bg-gray-100 text-left" do
+      table do
+        thead do
           tr do
+            th do "" end
             th class: "p-3 text-white" do "Name" end
             th class: "p-3 text-white" do "Title" end
             th class: "p-3 text-white" do "Department" end
@@ -45,17 +46,22 @@ ActiveAdmin.register Staff do
           end
         end
 
-        tbody class: "divide-y divide-gray-200" do
+        tbody do
           staffs.each do |s|
             tr do
-              td class: "p-3 text-primary" do link_to s.name, admin_staff_path(s) end
+              td class: "p-3" do
+                span do
+                  image_tag("move.png", alt: "Move")
+                end
+              end
+              td class: "p-3" do s.name end
               td class: "p-3" do s.title end
               td class: "p-3" do s.department end
               td class: "p-3" do s.phone end
-              td class: "p-3" do mail_to s.email end
-              td class: "p-3 space-x-2" do
-                span { link_to "Edit", edit_admin_staff_path(s), class: "text-blue-600" }
-                span { link_to "Delete", admin_staff_path(s), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-600" }
+              td class: "p-3" do s.email end
+              td class: "p-3 d-flex gap-2" do
+                span { link_to image_tag("edit.png", alt: "Edit"), edit_admin_staff_path(s) }
+                span { link_to image_tag("delete.png", alt: "Delete"), admin_staff_path(s), method: :delete, data: { confirm: "Are you sure?" } }
               end
             end
           end

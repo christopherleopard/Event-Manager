@@ -21,25 +21,17 @@ ActiveAdmin.register BoardBook do
       grouped_minutes.each_with_index do |(school_year, minutes), index|
         collapse_id = "collapse#{index}"
 
-        div class: "card" do
-          div class: "card-header" do
+        div class: "card bg-transparent border-0 mb-2" do
+          div class: "card-header text-white rounded-0" do
             link_to("#{school_year}", "##{collapse_id}", class: "card-link", data: { toggle: "collapse" })
           end
           div class: [ "collapse", ("show" if index == 0) ].compact.join(" "), id: collapse_id, data: { parent: "#accordion" } do
             minutes.each do |bm|
-              div class: "p-2" do
-                para bm.date.strftime("%B %d, %Y"), class: "mb-1 font-semibold"
-
-                if bm.pdf.attached?
-                  para link_to("Download PDF", rails_blob_path(bm.pdf, disposition: "attachment", only_path: true), class: "text-blue-600")
-                else
-                  para status_tag("No file", :warning)
+              div class: "p-3 d-flex align-items-center gap-2 px-4" do
+                span do
+                  image_tag("pdf.png", alt: "PDF", class: "h-12")
                 end
-
-                div class: "space-x-2 mt-1" do
-                  span { link_to "Edit", edit_admin_board_minute_path(bm), class: "text-sm text-blue-500" }
-                  span { link_to "Delete", admin_board_minute_path(bm), method: :delete, data: { confirm: "Are you sure?" }, class: "text-sm text-red-500" }
-                end
+                para bm.date.strftime("%B %d, %Y"), class: "mb-0 fw-semibold"
               end
             end
           end
