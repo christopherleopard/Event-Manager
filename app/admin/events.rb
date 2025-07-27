@@ -20,7 +20,7 @@ ActiveAdmin.register Event do
         thead class: "bg-gray-100 text-left" do
           tr do
             th class: "p-3 text-white" do "Event Date" end
-            th class: "p-3 text-white" do "Name" end
+            th class: "p-3 text-white" do "Event Name" end
             th class: "p-3 text-white" do "" end
           end
         end
@@ -29,10 +29,10 @@ ActiveAdmin.register Event do
           Event.all.each do |event|
             tr class: "hover:bg-gray-50" do
               td class: "p-3" do event.starts_at_date.strftime("%m/%d/%Y") if event.starts_at_date.present? end
-              td class: "p-3 text-primary" do link_to event.name, admin_event_path(event) end
-              td class: "p-3 space-x-2" do
-                span { link_to "Edit", edit_admin_event_path(event), class: "text-blue-600" }
-                span { link_to "Delete", admin_event_path(event), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-600" }
+              td class: "p-3" do event.name end
+              td class: "p-3 d-flex gap-3 justify-content-end" do
+                span { link_to image_tag("edit.png", alt: "Edit"), edit_admin_event_path(event), class: "text-blue-600" }
+                span { link_to image_tag("delete.png", alt: "Delete"), admin_event_path(event), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-600" }
               end
             end
           end

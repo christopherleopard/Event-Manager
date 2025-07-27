@@ -32,6 +32,6 @@ a {
     color: #fff;
     text-decoration: none;
 }
-.collapse div:nth-child(even) {
+.collapse div:nth-child(even), tbody tr:nth-child(even) {
     background: #f3f3f3;
 }

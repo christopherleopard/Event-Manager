@@ -59,7 +59,7 @@ ActiveAdmin.register Staff do
               td class: "p-3" do s.department end
               td class: "p-3" do s.phone end
               td class: "p-3" do s.email end
-              td class: "p-3 d-flex gap-2" do
+              td class: "p-3 d-flex gap-3 justify-content-end" do
                 span { link_to image_tag("edit.png", alt: "Edit"), edit_admin_staff_path(s) }
                 span { link_to image_tag("delete.png", alt: "Delete"), admin_staff_path(s), method: :delete, data: { confirm: "Are you sure?" } }
               end

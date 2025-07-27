@@ -9,7 +9,7 @@ ActiveAdmin.register EmergencyAlert do
   index title: false do
     div class: "custom-message" do
       h2 "WLPS Emergency Alert Management", class: "staff-management-heading"
-      para 'Click the "Create New Aler" button to create a new emergency alert message. Once saved, you can activate and deactivate the message using the toggle in the "Active" column to enable/disable the emergency alert pop-up from the website.'
+      para 'Click the "Create New Alert" button to create a new emergency alert message. Once saved, you can activate and deactivate the message using the toggle in the "Active" column to enable/disable the emergency alert pop-up from the website.'
       button class: "primary-btn" do
         link_to "Create a New Alert", new_admin_emergency_alert_path, class: "text-white"
       end
@@ -31,10 +31,15 @@ ActiveAdmin.register EmergencyAlert do
             tr class: "hover:bg-gray-50" do
               td class: "p-3" do emergency_alert.name end
               td class: "p-3 text-primary" do emergency_alert.message end
-              td class: "p-3 text-primary" do emergency_alert.enabled end
-              td class: "p-3 space-x-2" do
-                span { link_to "Edit", edit_admin_emergency_alert_path(emergency_alert), class: "text-blue-600" }
-                span { link_to "Delete", admin_emergency_alert_path(emergency_alert), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-600" }
+              td class: "p-3" do 
+                emergency_alert.enabled
+                div class: "form-check form-switch" do
+                  input type: "checkbox", class: "form-check-input", id: "flexSwitchCheckDefault", checked: emergency_alert.enabled
+                end
+              end
+              td class: "p-3 d-flex gap-3 justify-content-end" do
+                span { link_to image_tag("edit.png", alt: "Edit"), edit_admin_emergency_alert_path(emergency_alert), class: "text-blue-600" }
+                span { link_to image_tag("delete.png", alt: "Delete"), admin_emergency_alert_path(emergency_alert), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-600" }
               end
             end
           end

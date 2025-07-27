@@ -19,9 +19,9 @@ ActiveAdmin.register Drill do
       [ "ECC", "WLES", "GLTW", "WLMS/HS" ].each_with_index do |(school_name), index|
         collapse_id = "collapse#{index}"
 
-        div class: "card" do
-          div class: "card-header" do
-            link_to("#{school_name} Drills", "##{collapse_id}", class: "card-link text-white", data: { toggle: "collapse" })
+        div class: "card bg-transparent border-0 mb-2" do
+          div class: "card-header text-white rounded-0" do
+            link_to("#{school_name} Drills", "##{collapse_id}", class: "card-link", data: { toggle: "collapse" })
           end
 
           div class: [ "collapse", ("show" if index == 0) ].compact.join(" "), id: collapse_id, data: { parent: "#accordion" } do
@@ -29,23 +29,23 @@ ActiveAdmin.register Drill do
 
               if drills.any?
                 div do
-                  div class: "d-flex" do
-                    div class: "p-3 text-white" do "Drill Type" end
-                    div class: "p-3 text-white" do "Date" end
-                    div class: "p-3 text-white" do "Time" end
-                    div class: "p-3 text-white" do "" end
+                  div class: "d-flex", style: "background: #D32128;" do
+                    para class: "p-3 text-white mb-0 w-4p" do "Drill Type" end
+                    para class: "p-3 text-white mb-0 w-2p" do "Date" end
+                    para class: "p-3 text-white mb-0 w-3p" do "Time" end
+                    para class: "p-3 text-white mb-0 w-1p" do "" end
                   end
 
                   div do
                     drills.each do |drill|
                       div class: "d-flex" do
-                        div class: "p-3" do drill.drill_type end
-                        div class: "p-3" do drill.date end
-                        div class: "p-3" do drill.time end
+                        div class: "p-3 w-4p" do drill.drill_type end
+                        div class: "p-3 w-2p" do drill.date end
+                        div class: "p-3 w-3p" do drill.time.strftime("%-I:%M %p") end
 
-                        div class: "p-3" do
-                          span link_to("Edit", edit_admin_drill_path(drill))
-                          span link_to("Delete", admin_drill_path(drill), method: :delete, data: { confirm: "Are you sure?" })
+                        div class: "p-3 w-1p d-flex gap-3 justify-content-end" do
+                          span link_to(image_tag("edit.png", alt: "Edit"), edit_admin_drill_path(drill))
+                          span link_to(image_tag("delete.png", alt: "Delete"), admin_drill_path(drill), method: :delete, data: { confirm: "Are you sure?" })
                         end
                       end
                     end
