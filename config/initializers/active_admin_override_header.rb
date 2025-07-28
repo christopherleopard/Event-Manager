@@ -1,5 +1,7 @@
 if Rails.env.production?
-  require Rails.root.join("lib/active_admin/header_override.rb").to_s
+  Rails.application.config.after_initialize do
+    require Rails.root.join("lib/active_admin/views/header.rb").to_s
+  end
 else
   Rails.application.config.to_prepare do
     load Rails.root.join("app/overrides/active_admin/custom_header.rb")

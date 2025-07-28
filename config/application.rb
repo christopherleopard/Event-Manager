@@ -36,5 +36,6 @@ module EventManagerAdmin
     config.paths.add 'app/overrides', eager_load: true
     config.autoload_paths << Rails.root.join('app/overrides')
     config.eager_load_paths << Rails.root.join('app/overrides')
+    config.eager_load_paths << Rails.root.join("lib")
   end
 end
