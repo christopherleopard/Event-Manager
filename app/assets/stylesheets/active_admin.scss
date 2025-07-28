@@ -5,17 +5,6 @@
 #index_footer  {
     display: none;
 }
-.active_admin .header {
-    display: flex;
-    justify-content: space-between;
-}
-.active_admin .header-item {
-    list-style: none;
-    padding-left: 0;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
 #active_admin_content {
     padding: 30px 0;
     max-width: 900px;
@@ -38,4 +27,18 @@
 }
 .w-2p {
     width: 20%;
+}
+.admin_tools_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+.tool-btn {
+    background: #D32128;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+    padding: 1em;
+    font-weight: bold;
+    margin-bottom: 0;
 }

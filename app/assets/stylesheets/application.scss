@@ -14,3 +14,20 @@
 .admin-login-form {
     margin-top: 150px;
 }
+
+.hero-section .slide {
+    width: 60%;
+}
+//Events
+.events {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+}
+.event_title {
+    font-size: 18px;
+}
+.event_item {
+    background: #f3f3f3;
+}

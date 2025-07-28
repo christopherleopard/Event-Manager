@@ -1,5 +1,5 @@
 ActiveAdmin.setup do |config|
-  config.site_title = "Event Manager Admin"
+  config.site_title = "Admin Dashboard"
 
   config.use_webpacker = false
 
@@ -11,6 +11,7 @@ ActiveAdmin.setup do |config|
   config.register_javascript "https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
 
   config.authentication_method = :authenticate_admin_user!
+  config.comments = false
 
   config.current_user_method = :current_admin_user
 

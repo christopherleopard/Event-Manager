@@ -1,7 +1,16 @@
-<div class="text-center mt-10">
-  <h1 class="text-4xl font-bold mb-4">Welcome to Event Manager</h1>
-  <div class="space-x-4">
-    <%= link_to "Events", events_path, class: "text-blue-500 underline" %>
-    <%= link_to "Staffs", staffs_path, class: "text-blue-500 underline" %>
+<div id="slider" class="carousel slide" data-ride="carousel" data-interval="false">
+
+  <ul class="carousel-indicators">
+    <li data-target="#slider" data-slide-to="0" class="active"></li>
+    <li data-target="#slider" data-slide-to="1"></li>
+  </ul>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag("slider_1.png", alt: "Slider 1", class: "w-100") %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag("slider_1.png", alt: "Slider 2", class: "w-100") %>
+    </div>
   </div>
 </div>

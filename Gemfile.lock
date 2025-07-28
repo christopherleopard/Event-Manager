@@ -416,6 +416,7 @@ DEPENDENCIES
   devise
   image_processing (~> 1.12)
   importmap-rails
+  inherited_resources
   jbuilder
   kamal
   pg (~> 1.1)

@@ -8,6 +8,7 @@ gem "active_storage_validations"
 gem "sprockets-rails"
 gem "sassc-rails"
 gem "bootstrap", "~> 5.3.0"
+gem 'inherited_resources'
 
 gem "image_processing", "~> 1.12"
 

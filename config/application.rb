@@ -33,5 +33,8 @@ module EventManagerAdmin
     config.assets.configure do |env|
       env.cache = ActiveSupport::Cache::MemoryStore.new
     end
+    config.paths.add 'app/overrides', eager_load: true
+    config.autoload_paths << Rails.root.join('app/overrides')
+    config.eager_load_paths << Rails.root.join('app/overrides')
   end
 end
