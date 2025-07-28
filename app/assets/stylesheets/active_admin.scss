@@ -2,7 +2,7 @@
 @import "active_admin/mixins";
 @import "active_admin/base";
 
-.active_admin #header, .active_admin #title_bar {
+.active_admin #header, .active_admin #title_bar, .active_admin #footer {
     display: none;
 }
 #index_footer  {
