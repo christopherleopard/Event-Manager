@@ -41,7 +41,9 @@ ActiveAdmin.register Event do
       end
     end
   end
+
   form do |f|
+    render "admin/dropdown"
     div class: "mb-3" do
       h2 "Create a New Event", class: "mb-1"
       para "Fill out the fields below to create your new event. Once created, the event will appear in the Events section at the top of the homepage. Once the event date has passed, the event will automatically be deleted", class: "mb-30"
