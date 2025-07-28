@@ -1,7 +1,6 @@
-# app/overrides/active_admin/custom_header.rb
 module ActiveAdmin
   module Views
-    class Header < Component
+    class CustomHeader < ActiveAdmin::Views::Header
       def build(namespace, menu)
         super(id: "main-header", class: "main-header py-4")
 
