@@ -1,6 +1,6 @@
 module ActiveAdmin
   module Views
-    class CustomHeader < ActiveAdmin::Views::Header
+    class Header < Component
       def build(namespace, menu)
         super(id: "main-header", class: "main-header py-4")
 
