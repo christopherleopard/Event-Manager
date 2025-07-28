@@ -7,7 +7,8 @@ ActiveAdmin.register Event do
   permit_params :name, :description, :starts_at_date, :starts_at_time
 
   index title: false, class: "events_manager" do
-    div class: "custom-message" do
+    render "admin/dropdown"
+    div class: "custom-message container" do
       h2 "WLPS Events Management", class: "staff-management-heading"
       para "Click the button below to create a new event. Use the table below to view, edit, and delete current events. All events will automatically be removed after their event date has passed", class: "staff-management-description"
       button class: "primary-btn" do
@@ -15,8 +16,8 @@ ActiveAdmin.register Event do
       end
     end
 
-    div do
-      table class: "min-w-full border-collapse bg-white shadow rounded-lg" do
+    div class: "container" do
+      table class: "min-w-full border-collapse bg-white shadow rounded-lg container" do
         thead class: "bg-gray-100 text-left" do
           tr do
             th class: "p-3 text-white" do "Event Date" end

@@ -2,13 +2,14 @@
 @import "active_admin/mixins";
 @import "active_admin/base";
 
+.active_admin #header, .active_admin #title_bar {
+    display: none;
+}
 #index_footer  {
     display: none;
 }
 #active_admin_content {
-    padding: 30px 0;
-    max-width: 900px;
-    margin: 0 auto;
+    padding: 0;
 }
 #active_admin_content #main_content_wrapper {
     float: initial;

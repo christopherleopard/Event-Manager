@@ -2,6 +2,7 @@ ActiveAdmin.register_page "Newsletters" do
   menu priority: 2, label: "Newsletters"
 
   content title: false do
+    render "admin/dropdown"
     setting = NewsletterSetting.first_or_create
 
     div do

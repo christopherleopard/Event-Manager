@@ -7,7 +7,8 @@ ActiveAdmin.register EmergencyAlert do
   permit_params :name, :message, :enabled
 
   index title: false do
-    div class: "custom-message" do
+    render "admin/dropdown"
+    div class: "custom-message container" do
       h2 "WLPS Emergency Alert Management", class: "staff-management-heading"
       para 'Click the "Create New Alert" button to create a new emergency alert message. Once saved, you can activate and deactivate the message using the toggle in the "Active" column to enable/disable the emergency alert pop-up from the website.'
       button class: "primary-btn" do
@@ -16,7 +17,7 @@ ActiveAdmin.register EmergencyAlert do
     end
 
     div do
-      table class: "min-w-full border-collapse bg-white shadow rounded-lg" do
+      table class: "min-w-full border-collapse bg-white shadow rounded-lg container" do
         thead class: "bg-gray-100 text-left" do
           tr do
             th class: "p-3 text-white" do "Alert Name" end
