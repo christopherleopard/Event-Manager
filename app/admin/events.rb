@@ -6,7 +6,7 @@ ActiveAdmin.register Event do
 
   permit_params :name, :description, :starts_at_date, :starts_at_time
 
-  index title: false do
+  index title: false, class: "events_manager" do
     div class: "custom-message" do
       h2 "WLPS Events Management", class: "staff-management-heading"
       para "Click the button below to create a new event. Use the table below to view, edit, and delete current events. All events will automatically be removed after their event date has passed", class: "staff-management-description"
