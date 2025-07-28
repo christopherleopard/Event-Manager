@@ -2,13 +2,12 @@ ActiveAdmin.register_page "Food Services" do
   menu label: "Food Services", priority: 3
 
   content title: false do
-    render "admin/dropdown"
-    div class: "custom-message container" do
+    div class: "custom-message" do
       h2 "WLPS School Lunch Menus", class: "staff-management-heading"
       para "Use the Upload PDF buttons below to replace the current menu with a new menu. Menus will be displayed on the Food Service Menus webpage.", class: "staff-management-description"
     end
 
-    div class: "lunch_manage d-flex justify-content-center gap-4 align-items-end container" do
+    div class: "lunch_manage d-flex justify-content-center gap-4 align-items-end" do
       FoodService::SCHOOLS.each do |school|
         record = FoodService.find_or_create_by!(school: school)
 

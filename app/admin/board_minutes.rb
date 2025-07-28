@@ -7,8 +7,7 @@ ActiveAdmin.register BoardMinute do
   permit_params :school_year, :date, :pdf
 
   index title: false, download_links: false do
-    render "admin/dropdown"
-    div class: "custom-message container" do
+    div class: "custom-message" do
       h2 "WLPS Board Minutes Management", class: "staff-management-heading"
       para "You can view board minutes by school year below. The order of board minutes can be changed using the provided drag-and-drop sort function. You can edit and delete board minutes from this page, and you can create new board minutes by clicking the 'Create Board Minute' button below.", class: "staff-management-description"
       button class: "primary-btn" do
@@ -22,7 +21,7 @@ ActiveAdmin.register BoardMinute do
       grouped_minutes.each_with_index do |(school_year, minutes), index|
         collapse_id = "collapse#{index}"
 
-        div class: "card bg-transparent border-0 mb-2 container" do
+        div class: "card bg-transparent border-0 mb-2" do
           div class: "card-header text-white rounded-0" do
             link_to("#{school_year}", "##{collapse_id}", class: "card-link", data: { toggle: "collapse" })
           end

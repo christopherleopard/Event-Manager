@@ -7,8 +7,7 @@ ActiveAdmin.register Drill do
   permit_params :school, :drill_type, :date, :time, :pdf
 
   index title: "Drills Management" do
-    render "admin/dropdown"
-    div class: "custom-message container" do
+    div class: "custom-message" do
       h2 "WLPS Safety Drills Management", class: "staff-management-heading"
       para "You can use the button below to create a new safety drill. The tables for each school allow you to edit and delete your drills, as needed.", class: "staff-management-description"
       button class: "primary-btn" do
@@ -20,7 +19,7 @@ ActiveAdmin.register Drill do
       [ "ECC", "WLES", "GLTW", "WLMS/HS" ].each_with_index do |(school_name), index|
         collapse_id = "collapse#{index}"
 
-        div class: "card bg-transparent border-0 mb-2 container" do
+        div class: "card bg-transparent border-0 mb-2" do
           div class: "card-header text-white rounded-0" do
             link_to("#{school_name} Drills", "##{collapse_id}", class: "card-link", data: { toggle: "collapse" })
           end

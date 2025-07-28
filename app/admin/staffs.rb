@@ -7,11 +7,10 @@ ActiveAdmin.register Staff do
   permit_params :name, :title, :department, :phone, :email
 
   index title: false do
-    render "admin/dropdown"
     selected = params[:department]
     departments = Staff::DEPARTMENTS
 
-    div class: "custom-message container" do
+    div class: "custom-message" do
       h2 "WPLS Staff Management", class: "staff-management-heading"
       para 'You can view staff by department below by selecting a department from the dropdown menu. The order of staff members can be changed using the provided drag-and-drop sort function. You can edit and delete staff members from this page, and you can create new staff members by clicking the "Create Staff" button below.', class: "staff-management-description"
       button class: "primary-btn" do
@@ -33,8 +32,8 @@ ActiveAdmin.register Staff do
       end
     end
 
-    div class:"container" do
-      table class:"container" do
+    div do
+      table do
         thead do
           tr do
             th do "" end

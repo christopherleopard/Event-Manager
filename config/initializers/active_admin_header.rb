@@ -2,10 +2,10 @@ module ActiveAdmin
   module Views
     class Header < Component
       def build(namespace, menu)
-        super(id: "main-header", class: "main-header py-4")
+        super(id: "main-header", class: "main-header")
 
         div class: "top_header py-2" do
-          div class: "container d-flex justify-content-between" do
+          div class: "container d-flex justify-content-between py-2" do
             div class: "d-flex" do
               span { link_to image_tag("fb.png", alt: "Facebook"), "#", class: "text-blue-600" }
               span { link_to image_tag("x.png", alt: "X"), "#", class: "text-blue-600" }
@@ -14,7 +14,7 @@ module ActiveAdmin
               span { link_to "(739) 449-4464", "tel:7394494464", class: "text-red"}
             end
           end
-          div class: "custom-select-wrapper text-center" do
+          div class: "custom-select-wrapper text-center py-2" do
             current_path = request.fullpath
             select_tag "page_redirect",
               options_for_select([

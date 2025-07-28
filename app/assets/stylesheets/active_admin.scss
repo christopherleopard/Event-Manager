@@ -8,8 +8,10 @@
 #index_footer  {
     display: none;
 }
-#active_admin_content {
+#active_admin_content #main_content_wrapper {
     padding: 0;
+    max-width: 900px;
+    margin: 0 auto;
 }
 #active_admin_content #main_content_wrapper {
     float: initial;
