@@ -84,6 +84,12 @@ p {
 a {
     text-decoration: none;
 }
+.logo img {
+    width: 100px;
+}
+.top_header img {
+    width: 24px;
+}
 img {
     width: 100%;
 }
