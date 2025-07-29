@@ -1,29 +1,63 @@
-<div class="container">
-  <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#kindergarten">Kindergarten at WLPS</a>
+<div class="container py-5">
+  <ul class="nav nav-tabs gap-4 border-0" role="tablist">
+    <li class="nav-item ff-bb">
+      <a class="nav-link text-black active" data-toggle="tab" href="#kindergarten">Kindergarten at WLPS</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#school_of_choice">School of Choice</a>
+    <li class="nav-item ff-bb">
+      <a class="nav-link text-black" data-toggle="tab" href="#school_of_choice">School of Choice</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#enrollment">Enrollment</a>
+    <li class="nav-item ff-bb">
+      <a class="nav-link text-black" data-toggle="tab" href="#enrollment">Enrollment</a>
     </li>
   </ul>
 
-  <!-- Tab panes -->
   <div class="tab-content">
-    <div id="kindergarten" class="container tab-pane active">
-      <h3>HOME</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div id="kindergarten" class="tab-pane mt-5 active">
+      <div class="tab_container">
+        <div class="left_img">
+          <%= image_tag("Kindergarten_at_WLPS.png", alt: "Kindergarten at Whitmore Lake") %>
+        </div>
+        <div class="right_para p-5">
+          <h2 class="text-white">Kindergarten at Whitmore Lake</h2>
+          <p class="text-white mb-2"><i>Experience the Difference</i></p>
+          <p class="text-white mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas iaculis arcu, a sagittis turpis.</p>
+          <button class="btn btn-white mt-4">
+            <%= link_to "Register Now", "/kindergarten", class:"text-white" %>
+          </button>
+        </div>
+      </div>
     </div>
-    <div id="school_of_choice" class="container tab-pane fade">
-      <h3>Menu 1</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    <div id="school_of_choice" class="tab-pane mt-5 fade">
+      <div class="tab_container">
+        <div class="left_img">
+          <%= image_tag("Kindergarten_at_WLPS.png", alt: "Kindergarten at Whitmore Lake") %>
+        </div>
+        <div class="right_para p-5">
+          <h2 class="text-white">Kindergarten at Whitmore Lake</h2>
+          <p class="text-white mb-2"><i>Experience the Difference</i></p>
+          <p class="text-white mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas iaculis arcu, a sagittis turpis.</p>
+          <button class="btn btn-white mt-4">
+            <%= link_to "Register Now", "/kindergarten", class:"text-white" %>
+          </button>
+        </div>
+      </div>
     </div>
-    <div id="enrollment" class="container tab-pane fade">
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+
+    <div id="enrollment" class="tab-pane mt-5 fade">
+      <div class="tab_container">
+        <div class="left_img">
+          <%= image_tag("Kindergarten_at_WLPS.png", alt: "Kindergarten at Whitmore Lake") %>
+        </div>
+        <div class="right_para p-5">
+          <h2 class="text-white">Kindergarten at Whitmore Lake</h2>
+          <p class="text-white mb-2"><i>Experience the Difference</i></p>
+          <p class="text-white mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas iaculis arcu, a sagittis turpis.</p>
+          <button class="btn btn-white mt-4">
+            <%= link_to "Register Now", "/kindergarten", class:"text-white" %>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

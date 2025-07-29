@@ -1,14 +1,49 @@
+@font-face {
+  font-family: 'Bitter';
+  src: url('/assets/Bitter-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BitterBold';
+  src: url('/assets/Bitter-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/assets/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
     font-size: 16px;
     color: #3e3e3e;
     background: #E5E5E5;
+    font-family: "OpenSans";
 }
 h2 {
     font-size: 24px;
-    font-weight: bold;
     margin-bottom: 1rem;
+    font-family: "BitterBold";
+    color: #D32128;
+}
+.ff-bb {
+    font-family: "BitterBold";
+}
+.ff-b {
     font-family: "Bitter";
-    color: #D32128
+}
+.pb-lg {
+    padding-bottom: 128px;;
+}
+.mt-lg-m {
+    margin-top: -80px;
 }
 p {
     margin-bottom: 1rem;
@@ -17,14 +52,23 @@ p {
 .primary-bg {
     background: #D32128;
 }
+.white-bg {
+    background: #ffffff;
+}
 .primary-btn {
     background: #D32128;
     color: #fff;
     border-radius: 0;
     border: none;
     padding: 1em 5em;
-    font-weight: bold;
     margin-bottom: 1rem;
+}
+.btn-white {
+    background: transparent;
+    color: #fff;
+    border-radius: 0;
+    border: 1px solid #fff;
+    padding: 1em 5em;
 }
 .top_header {
     background: #e9e9e9;
@@ -39,6 +83,9 @@ p {
 }
 a {
     text-decoration: none;
+}
+img {
+    width: 100%;
 }
 .card-header {
     background: #3e3e3e;

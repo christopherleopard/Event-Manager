@@ -1,4 +1,4 @@
-<div class="container">
+<div>
   <h2>WLPS Newsletter Management</h2>
   <p>Use the sections below to update the newsletter URL for each school as needed. Once saved, the button on the corresponding webpage will update with the new URL.</p>
 </div>
@@ -13,7 +13,7 @@
 %>
 
 <% custom_labels.each do |field, label| %>
-  <%= form_with model: setting, url: admin_newsletter_urls_update_path(field: field), method: :post, local: true, class: "container" do |f| %>
+  <%= form_with model: setting, url: admin_newsletter_urls_update_path(field: field), method: :post, local: true do |f| %>
     <div class="mb-3">
       <%= f.label field, label, class: "me-2 fw-bold" %>
       <%= f.text_field field, class: "form-control", value: setting.send(field), placeholder: "Newsletter URL", style: "width: 100%;" %>

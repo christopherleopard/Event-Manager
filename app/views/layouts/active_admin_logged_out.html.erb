@@ -7,10 +7,11 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "global", "data-turbo-track": "reload" %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-    <div class="d-flex min-vh-100">
+    <div class="d-flex min-vh-100 admin_login">
       <!-- Left Image Column -->
       <div class="login-left" style="background-image: url('<%= asset_path("login_side.png") %>');"></div>
 
@@ -25,7 +26,7 @@
           <!-- Centered form -->
           <div class="admin-login-form">
             <div class="w-full max-w-md">
-              <h2>Hello! Please sign in below.</h2>
+              <h2 class="text-center">Hello! Please sign in below.</h2>
               <%= yield %>
             </div>
           </div>

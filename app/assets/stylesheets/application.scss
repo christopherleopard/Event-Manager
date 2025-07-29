@@ -18,6 +18,11 @@
 .hero-section .slide {
     width: 60%;
 }
+//Icons
+.icons_wrapper .icon img {
+    width: 50px;
+}
+
 //Events
 .events {
     display: flex;
@@ -30,4 +35,73 @@
 }
 .event_item {
     background: #f3f3f3;
+}
+
+//Tabs
+.tab_container {
+    display: flex;
+    align-items: center;
+}
+.tab_container .left_img {
+    width: 65%;
+}
+.tab_container .right_para {
+    width: 40%;
+    margin-left: -5%;
+    background: #3e3e3e;
+}
+.three-tabs .nav-tabs .nav-link.active {
+    background: transparent;
+    border: none;
+    border-bottom: solid 3px #D32128;
+}
+.three-tabs .nav-tabs .nav-link, .three-tabs .nav-tabs .nav-link:hover {
+    background: transparent;
+    border: none;
+    border-bottom: solid 3px #c4c4c4;
+}
+.three-tabs .nav-tabs .nav-item {
+    flex: 1;
+}
+
+//Boxes
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+}
+.box img {
+    width: 50%;
+}
+
+//Videos
+.video-container {
+    flex: 1;
+}
+
+//Responsive styles
+@media screen and (max-width: 768px) {
+    .admin_login {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .login-left {
+        order: 2;
+        height: 300px;
+    }
+    .login-right {
+        order: 1;
+        padding-bottom: 30px;
+    }
+    #new_admin_user, .login-left, .login-right {
+        width: 100%;
+    }
+    .admin-login-form {
+        margin-top: 30px;
+    }
+    .admin-login-logo {
+        text-align: center;
+    }
 }
