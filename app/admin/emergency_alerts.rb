@@ -34,7 +34,7 @@ ActiveAdmin.register EmergencyAlert do
               td class: "p-3" do 
                 emergency_alert.enabled
                 div class: "form-check form-switch" do
-                  input type: "checkbox", class: "form-check-input", id: "flexSwitchCheckDefault", checked: emergency_alert.enabled
+                  input type: "checkbox", class: "form-check-input alert-toggle", id: "alert_toggle_#{emergency_alert.id}", data: { id: emergency_alert.id }, checked: emergency_alert.enabled
                 end
               end
               td class: "p-3 d-flex gap-3 justify-content-end" do

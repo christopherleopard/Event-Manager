@@ -18,7 +18,9 @@ Rails.application.routes.draw do
   resources :staffs, only: [ :index, :show ]
   resources :board_minutes, only: [ :index, :show ]
   resources :board_books, only: [ :index, :show ]
-  resources :emergency_alerts, only: [ :index, :show ]
+  resources :emergency_alerts, only: [:index, :show, :create, :update, :destroy] do
+    patch :activate, on: :member
+  end
 
   namespace :admin do
     post "newsletter_urls/update", to: "newsletters#update", as: :newsletter_urls_update

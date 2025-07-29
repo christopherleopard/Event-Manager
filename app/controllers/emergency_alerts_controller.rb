@@ -33,6 +33,17 @@ class EmergencyAlertsController < ApplicationController
     end
   end
 
+  def activate
+    @emergency_alert = EmergencyAlert.find(params[:id])
+
+    if @emergency_alert.update(enabled: true)
+      EmergencyAlert.where.not(id: @emergency_alert.id).update_all(enabled: false)
+      render json: { success: true }
+    else
+      render json: { success: false, errors: @emergency_alert.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
+
   def destroy
     @emergency_alert.destroy
     redirect_to emergency_alerts_path, notice: "Emergency alert was successfully deleted."
