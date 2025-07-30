@@ -6,6 +6,14 @@ ActiveAdmin.register Event do
 
   permit_params :name, :description, :starts_at_date, :starts_at_time
 
+  controller do
+    before_action :remove_past_events, only: :index
+
+    def remove_past_events
+      Event.where("starts_at_date < ?", Date.today).destroy_all
+    end
+  end
+
   index title: false, class: "events_manager" do
     div class: "custom-message" do
       h2 "WLPS Events Management", class: "staff-management-heading"
