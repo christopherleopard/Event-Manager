@@ -25,7 +25,7 @@ ActiveAdmin.register BoardMinute do
           div class: "card-header text-white rounded-0" do
             link_to("#{school_year}", "##{collapse_id}", class: "card-link", data: { toggle: "collapse" })
           end
-          div class: [ "collapse", ("show" if index == 0) ].compact.join(" "), id: collapse_id, data: { parent: "#accordion" } do
+          div class: [ "mt-3 mb-2 collapse", ("show" if index == 0) ].compact.join(" "), id: collapse_id, data: { parent: "#accordion" } do
             minutes.each do |bm|
               div class: "p-3 d-flex align-items-center gap-2 px-4" do
                 span do
@@ -41,12 +41,27 @@ ActiveAdmin.register BoardMinute do
   end
 
   form do |f|
-    f.inputs do
-      f.input :school_year, as: :select, collection: BoardMinute::SCHOOL_YEARS, include_blank: false
-      f.input :date, as: :datepicker
-      f.input :pdf, as: :file
+    div class: "mb-3" do
+      h2 "Create Board Minutes", class: "mb-1"
+      para 'Enter in the date for the Board Minutes below and upload your PDF. Click "Save" to save your update and add it to the Board Minutes webpage.', class: "mb-30"
     end
-    f.actions
+
+    f.inputs do
+      div class: "d-flex gap-3" do
+        div class: "flex-1" do
+          f.input :school_year, as: :select, collection: BoardMinute::SCHOOL_YEARS, include_blank: false, label: "School Year", prompt: "Select School Year", input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
+        end
+        div class: "flex-1" do
+          f.input :date, as: :datepicker, input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
+        end
+      end
+      div class: "mt-3" do
+        f.input :pdf, label: "Upload PDF", as: :file, input_html: { class: "mt-2" }
+      end
+    end
+    f.actions do
+      f.action :submit, label: "Save", button_html: { class: "primary-btn" }
+    end
   end
 
   show do

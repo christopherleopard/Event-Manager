@@ -4,7 +4,12 @@ ActiveAdmin.register Staff do
 
   config.filters = false
 
-  permit_params :name, :title, :department, :phone, :email
+  permit_params :name, :title, :department, :phone, :email, :profile_image
+
+  member_action :remove_profile_image, method: :delete do
+    resource.profile_image.purge_later if resource.profile_image.attached?
+    redirect_back fallback_location: edit_admin_staff_path(resource), notice: "Profile image removed"
+  end
 
   index title: false do
     selected = params[:department]
@@ -77,12 +82,48 @@ ActiveAdmin.register Staff do
     end
 
     f.inputs do
-      f.input :name
-      f.input :title
-      f.input :department, as: :select, collection: Staff::DEPARTMENTS, include_blank: false
-      f.input :phone
-      f.input :email
+      div class: "d-flex gap-3" do
+        div class: "flex-1" do
+          f.input :name, input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
+        end
+        div class: "flex-1" do
+          f.input :title, input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
+        end
+      end
+
+      div class: "d-flex mt-2" do
+        div class: "flex-1" do
+          f.input :department, as: :select, collection: Staff::DEPARTMENTS, prompt: "Select Department", include_blank: false, input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
+        end
+      end
+
+      div class: "d-flex gap-3 mt-2" do
+        div class: "flex-1" do
+          f.input :phone, input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
+        end
+        div class: "flex-1" do
+          f.input :email, input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
+        end
+      end
+      div class: "mt-3" do
+        f.input :profile_image, as: :file, input_html: { class: 'hidden-file-input' }, label: false, hint: begin
+          div id: "custom-upload-button", class: "grey-button mt-3 w-200 text-center", style: "cursor: pointer;" do
+            "Image Upload"
+          end
+          if f.object.profile_image.attached?
+            image_tag(url_for(f.object.profile_image), class:"origin") +
+            tag.br +
+            link_to("Remove Image",
+                    remove_profile_image_admin_staff_path(f.object),
+                    method: :delete,
+                    data: { confirm: "Are you sure you want to remove this image?" },
+                    class: "button mt-2")
+          end
+        end
+      end
     end
-    f.actions
+    f.actions do
+      f.action :submit, label: "Save", button_html: { class: "primary-btn" }
+    end
   end
 end

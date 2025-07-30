@@ -48,11 +48,27 @@ ActiveAdmin.register Event do
     end
 
     f.inputs do
-      f.input :starts_at_date, as: :datepicker, label: "Event Date", input_html: { class: "form-control custom-date" }
-      f.input :name, label: "Event Name"
-      f.input :starts_at_time, as: :time_picker, label: "Event Time"
-      f.input :description, label: "Event Details"
+      div class: "d-flex gap-3" do
+        div class: "flex-1" do
+          f.input :starts_at_date, as: :datepicker, label: "Event Date", input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
+        end
+        div class: "flex-1" do
+          f.input :name, label: "Event Name", input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
+        end
+      end
+      div class: "d-flex mt-2" do
+        div class: "flex-1" do
+          f.input :starts_at_time, as: :time_picker, label: "Event Time", input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
+        end
+      end
+      div class: "d-flex mt-2" do
+        div class: "flex-1" do
+          f.input :description, label: "Event Details", input_html: { rows: 5, class: "p-2 mt-2 w-100 border border-1 border-black" }
+        end
+      end
     end
-    f.actions
+    f.actions do
+      f.action :submit, label: "Save", button_html: { class: "primary-btn" }
+    end
   end
 end

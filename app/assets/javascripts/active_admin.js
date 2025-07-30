@@ -38,4 +38,27 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+
+  var customBtn = document.getElementById("custom-upload-button");
+  var realInput = document.querySelector(".hidden-file-input");
+
+  if (customBtn && realInput) {
+    customBtn.addEventListener("click", function() {
+      console.log("Click");
+      realInput.click();
+    });
+
+    // Optional: remove filename display
+    realInput.addEventListener("change", function() {
+      customBtn.innerText = "File selected";
+    });
+  }
+
+  document.querySelectorAll('.pdf_uploader').forEach(function(uploader) {
+    uploader.addEventListener('click', function() {
+      var pdfControl = uploader.closest('.lunch_menu').querySelector('.pdf_selector .pdf_control');
+      if (pdfControl) pdfControl.click();
+    });
+  });
 });

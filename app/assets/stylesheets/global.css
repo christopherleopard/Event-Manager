@@ -56,12 +56,28 @@ p {
     background: #ffffff;
 }
 .primary-btn {
-    background: #D32128;
+    background: #D32128 !important;
+    color: #fff !important;
+    border-radius: 0 !important;
+    border: none !important;
+    padding: 1em 5em !important;
+    margin-bottom: 1rem;
+}
+.grey-button {
+    background: #979797;
     color: #fff;
     border-radius: 0;
     border: none;
-    padding: 1em 5em;
-    margin-bottom: 1rem;
+    padding: 1em;
+}
+.w-200 {
+    width: 200px;
+}
+.min-5 {
+    min-width: 5rem;
+}
+.min-8 {
+    min-width: 8rem;
 }
 .btn-white {
     background: transparent;
@@ -93,6 +109,10 @@ a {
 img {
     width: 100%;
 }
+img.origin {
+    width: initial;
+    height: initial;
+}
 .card-header {
     background: #3e3e3e;
 }
@@ -119,4 +139,7 @@ img {
     height: 12px;
     margin: 0;
     background-color: #fff;
+}
+.flex-1 {
+    flex: 1;
 }

@@ -45,3 +45,22 @@
     font-weight: bold;
     margin-bottom: 0;
 }
+.custom-select-wrapper {
+    background-image: url('/assets/bg_2.png');
+}
+.active_admin form fieldset.inputs {
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+}
+.active_admin form fieldset.inputs label {
+    display: block;
+    font-family: "BitterBold";
+}
+.active_admin form fieldset.inputs input {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.hidden-file-input {
+    display: none;
+}

@@ -24,7 +24,7 @@ ActiveAdmin.register Drill do
             link_to("#{school_name} Drills", "##{collapse_id}", class: "card-link", data: { toggle: "collapse" })
           end
 
-          div class: [ "collapse", ("show" if index == 0) ].compact.join(" "), id: collapse_id, data: { parent: "#accordion" } do
+          div class: [ "collapse mt-3 mb-2", ("show" if index == 0) ].compact.join(" "), id: collapse_id, data: { parent: "#accordion" } do
             drills = Drill.where(school: school_name).order(date: :desc, time: :desc)
 
               if drills.any?
@@ -61,14 +61,35 @@ ActiveAdmin.register Drill do
   end
 
   form do |f|
-    f.inputs "Drill Details" do
-      f.input :school, as: :select, collection: [ "ECC", "WLES", "GLTW", "WLMS/HS" ], prompt: "Select School"
-      f.input :drill_type, as: :select, collection: [ "Fire", "Storm", "Lockdown" ], prompt: "Select Drill Type"
-      f.input :date, as: :datepicker
-      f.input :time, as: :time_picker
-      f.input :pdf, as: :file
+    div class: "mb-3" do
+      h2 "Create New Drill", class: "mb-1"
+      end
+    f.inputs do
+      div class: "d-flex gap-3" do
+        div class: "flex-1" do
+          f.input :school, as: :select, collection: [ "ECC", "WLES", "GLTW", "WLMS/HS" ], prompt: "Select School", input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
+        end
+        div class: "flex-1" do
+          f.input :drill_type, as: :select, collection: [ "Fire", "Storm", "Lockdown" ], prompt: "Select Drill Type", input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
+        end
+      end
+      div class: "d-flex gap-3 mt-2" do
+        div class: "flex-1" do
+          f.input :date, as: :datepicker, input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
+        end
+        div class: "flex-1" do
+          f.input :time, as: :time_picker, input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
+        end
+      end
+      div class: "d-flex gap-3 mt-2" do
+        div class: "flex-1" do
+          f.input :pdf, as: :file, label: "Upload PDF"
+        end
+      end
     end
-    f.actions
+    f.actions do
+      f.action :submit, label: "Save", button_html: { class: "primary-btn" }
+    end
   end
 
   show do

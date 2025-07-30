@@ -1,4 +1,6 @@
 class Staff < ApplicationRecord
+  has_one_attached :profile_image
+  
   DEPARTMENTS = [ "Administration", "Early Childhood Center", "Go Like the Wind Montessori", "Elementary School", "Middle & High School", "Counseling", "Transportation" ]
 
   validates :name, :title, :department, :phone, :email, presence: true
