@@ -21,6 +21,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/assets/HelveticaNeueLight.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
     font-size: 16px;
     color: #3e3e3e;
@@ -122,6 +130,8 @@ img.origin {
 .text-white a, .primary-btn a, .tool-btn a {
     color: #fff;
     text-decoration: none;
+    text-shadow: none;
+    letter-spacing: 1px;
 }
 .collapse div:nth-child(even), tbody tr:nth-child(even) {
     background: #f3f3f3;

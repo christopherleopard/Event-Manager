@@ -10,7 +10,7 @@
 }
 #active_admin_content #main_content_wrapper {
     padding: 0;
-    max-width: 900px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 #active_admin_content #main_content_wrapper {
@@ -34,7 +34,8 @@
 .admin_tools_wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
+    row-gap: 12px;
+    column-gap: 30px;
 }
 .tool-btn {
     background: #D32128;
@@ -42,8 +43,10 @@
     border-radius: 0;
     border: none;
     padding: 1em;
-    font-weight: bold;
     margin-bottom: 0;
+    font-weight: normal;
+    line-height: 1.25;
+    margin-right: 0;
 }
 .custom-select-wrapper {
     background-image: url('/assets/bg_2.png');
@@ -63,4 +66,7 @@
 }
 .hidden-file-input {
     display: none;
+}
+input#event_starts_at_time {
+    width: calc(50% - 0.5rem);
 }
