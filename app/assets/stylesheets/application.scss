@@ -81,6 +81,24 @@
     flex: 1;
 }
 
+//Images
+.shadow_img {
+    box-shadow: 0px 32px 44px rgba(0,0,0,0.5);
+}
+
+// Download
+.border-b-2 {
+    border-bottom: 2px solid #3E3E3E;
+}
+
+//Facilities
+.link_btn {
+    width: 170px;
+    background: #b31c23;
+    border-radius: 8px;
+    border: none;
+}
+
 //Responsive styles
 @media screen and (max-width: 768px) {
     .admin_login {

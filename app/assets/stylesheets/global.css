@@ -70,6 +70,9 @@ p {
     border: none;
     padding: 1em;
 }
+.tool-btn:hover {
+    background: #3e3e3e !important;
+}
 .w-200 {
     width: 200px;
 }

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/facilities', to: 'pages#facilities'
   get "staffs/index"
   get "staffs/show"
   get "events/index"

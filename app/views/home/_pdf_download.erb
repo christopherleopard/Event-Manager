@@ -1,0 +1,13 @@
+<% if @home_pdfs.any? %>
+  <div class="container text-center">
+    <% @home_pdfs.each do |pdf_doc| %>
+      <% if pdf_doc.pdf.attached? %>
+        <div class="pdf-entry">
+          <p>
+            <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "attachment", only_path: true), class:"text-red text-decoration-underline", target: "_blank", rel: "noopener" %>
+          </p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

@@ -12,7 +12,19 @@
   <div class="four-tared-boxes white-bg pb-lg">
     <%= render "boxes" %>
   </div>
-  <div class="videos">
+  <div class="videos pb-5" style="background-image: url('<%= asset_path("login_bg.png") %>');">
     <%= render "videos" %>
+  </div>
+  <div class="image_first_text white-bg py-5">
+    <%= render "image_text" %>
+  </div>
+  <div class="static_images py-5 white-bg" style="background-image: url('<%= asset_path("pattern.png") %>'); background-size: 100% auto; background-repeat: no-repeat;">
+    <%= render "static_images" %>
+  </div>
+  <div class="video_text white-bg">
+    <%= render "video_text" %>
+  </div>
+  <div class="pdf_download white-bg py-5">
+    <%= render "pdf_download" %>
   </div>
 </div>
