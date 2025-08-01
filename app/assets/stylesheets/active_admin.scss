@@ -38,15 +38,15 @@
     column-gap: 30px;
 }
 .tool-btn {
-    background: #D32128;
-    color: #fff;
-    border-radius: 0;
+    background: #D32128 !important;
+    color: #fff !important;
+    border-radius: 0 !important;
     border: none;
-    padding: 1em;
-    margin-bottom: 0;
-    font-weight: normal;
-    line-height: 1.25;
-    margin-right: 0;
+    padding: 1em !important;
+    margin-bottom: 0 !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    margin-right: 0 !important;
 }
 .custom-select-wrapper {
     background-image: url('/assets/bg_2.png');

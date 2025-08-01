@@ -6,6 +6,27 @@ ActiveAdmin.register BoardBook do
 
   permit_params :school_year, :date, :pdf
 
+    controller do
+
+    def create
+      super do |success, failure|
+        success.html do
+          redirect_to collection_path, notice: "Board Book created" and return
+        end
+        failure.html { render :new, status: :unprocessable_entity and return }
+      end
+    end
+    
+    def update
+      super do |success, failure|
+        success.html do
+          redirect_to collection_path, notice: "Board Book updated" and return
+        end
+        failure.html { render :edit, status: :unprocessable_entity and return }
+      end
+    end
+  end
+
   index title: false, download_links: false do
     div class: "custom-message" do
       h2 "WLPS Board Books Management", class: "staff-management-heading"
@@ -22,8 +43,14 @@ ActiveAdmin.register BoardBook do
         collapse_id = "collapse#{index}"
 
         div class: "card bg-transparent border-0 mb-2" do
-          div class: "card-header text-white rounded-0" do
-            link_to("#{school_year}", "##{collapse_id}", class: "card-link", data: { toggle: "collapse" })
+          div class: "card-header text-white rounded-0 ff-b fw-semibold d-flex justify-content-between" do
+            div do
+              link_to("#{school_year}", "##{collapse_id}", class: "card-link", data: { toggle: "collapse" })
+            end
+            div class: "status_icons" do
+              span class: ["status_icon", (index == 0 ? "hide" : "show")].compact.join(" ") do "+" end
+              span class: ["status_icon", (index == 0 ? "show" : "hide")].compact.join(" ") do "-" end
+            end
           end
           div class: [ "mt-3 mb-2 collapse", ("show" if index == 0) ].compact.join(" "), id: collapse_id, data: { parent: "#accordion" } do
             minutes.each do |bm|
@@ -31,7 +58,7 @@ ActiveAdmin.register BoardBook do
                 span do
                   image_tag("pdf.png", alt: "PDF", class: "h-12")
                 end
-                para bm.date.strftime("%B %d, %Y"), class: "mb-0 fw-semibold"
+                para bm.date.strftime("%B %d, %Y"), class: "mb-0 fw-semibold fs-20"
               end
             end
           end

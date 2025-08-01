@@ -22,8 +22,14 @@ ActiveAdmin.register BoardMinute do
         collapse_id = "collapse#{index}"
 
         div class: "card bg-transparent border-0 mb-2" do
-          div class: "card-header text-white rounded-0" do
-            link_to("#{school_year}", "##{collapse_id}", class: "card-link", data: { toggle: "collapse" })
+          div class: "card-header text-white rounded-0 ff-b fw-semibold d-flex justify-content-between" do
+            div do
+              link_to("#{school_year}", "##{collapse_id}", class: "card-link", data: { toggle: "collapse" })
+            end
+            div class: "status_icons" do
+              span class: ["status_icon", (index == 0 ? "hide" : "show")].compact.join(" ") do "+" end
+              span class: ["status_icon", (index == 0 ? "show" : "hide")].compact.join(" ") do "-" end
+            end
           end
           div class: [ "mt-3 mb-2 collapse", ("show" if index == 0) ].compact.join(" "), id: collapse_id, data: { parent: "#accordion" } do
             minutes.each do |bm|

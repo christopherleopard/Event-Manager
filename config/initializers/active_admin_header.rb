@@ -4,7 +4,7 @@ module ActiveAdmin
       def build(namespace, menu)
         super(id: "main-header", class: "main-header")
 
-        div class: "top_header py-2" do
+        div class: "top_header py-0" do
           div class: "container d-flex justify-content-between py-2" do
             div class: "d-flex" do
               span { link_to image_tag("fb.png", alt: "Facebook"), "#", class: "text-blue-600" }

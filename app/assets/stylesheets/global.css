@@ -57,11 +57,16 @@ p {
     margin-bottom: 1rem;
     color: #3e3e3e;
 }
+.fs-20 {
+    font-size: 20px;
+}
 .primary-bg {
     background: #D32128;
+    text-shadow: none;
 }
 .white-bg {
     background: #ffffff;
+    text-shadow: none;
 }
 .primary-btn {
     background: #D32128 !important;
@@ -70,6 +75,8 @@ p {
     border: none !important;
     padding: 1em 5em !important;
     margin-bottom: 1rem;
+    text-shadow: none !important;
+    letter-spacing: 1px;
 }
 .grey-button {
     background: #979797;
