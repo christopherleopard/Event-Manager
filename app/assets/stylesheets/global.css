@@ -28,6 +28,20 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'AcuminProBold';
+  src: url('/assets/Acumin-BdItPro.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AcuminPro';
+  src: url('/assets/Acumin-RPro.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
     font-size: 16px;
@@ -35,11 +49,22 @@ body {
     background: #fff;
     font-family: "OpenSans";
 }
-h2 {
-    font-size: 24px;
+h2, h1 {
     margin-bottom: 1rem;
     font-family: "BitterBold";
     color: #D32128;
+}
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 24px;
+}
+.ff-ap {
+    font-family: "AcuminPro";
+}
+.ff-apb {
+    font-family: "AcuminProBold";
 }
 .ff-bb {
     font-family: "BitterBold";
@@ -109,6 +134,9 @@ p {
 .top_header {
     background: #e9e9e9;
 }
+.logo_wrapper {
+    padding-left: 120px;
+}
 .container-navbar {
     max-width: 900px;
     margin-left: auto;
@@ -120,11 +148,11 @@ p {
 a {
     text-decoration: none;
 }
-.logo img {
-    width: 100px;
-}
 .top_header img {
     width: 24px;
+}
+.top_header .logo img {
+    width: 100px;
 }
 img {
     width: 100%;

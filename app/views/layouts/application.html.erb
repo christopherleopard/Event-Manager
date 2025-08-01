@@ -29,14 +29,14 @@
   <body>
     <main class="page">
       <header>
-        <div class="logo">
-          <%= link_to root_path do %>
-            <%= image_tag("logo.png", alt: "Admin Logo", class: "h-12 mx-auto") %>
-          <% end %>
-        </div>
-        <div class="top_header py-2">
-          <div class="container d-flex justify-content-between">
-            <%= image_tag("fb.png", alt: "Facebook", class: "h-6") %>
+        <div class="top_header">
+          <div class="container d-flex justify-content-between py-2 position-relative logo_wrapper">
+            <div class="logo position-absolute top-0 start-0 z-3">
+              <%= link_to root_path do %>
+                <%= image_tag("logo.png", alt: "Admin Logo", class: "top_logo") %>
+              <% end %>
+            </div>
+            <%= image_tag("fb.png", alt: "Facebook", class: "fb_icon") %>
             <%= link_to "(739) 449-4464", "tel:7394494464", class: "text-red" %>
           </div>
         </div>
@@ -62,7 +62,7 @@
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white px-4 fw-semibold" href="#" role="button" data-toggle="dropdown">Departments</a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Facilities</a></li>
+                          <li><a class="dropdown-item" href="/facilities">Facilities</a></li>
                           <li><a class="dropdown-item" href="#">Food Service</a></li>
                           <li><a class="dropdown-item" href="#">Kids Club</a></li>
                         </ul>
@@ -87,7 +87,7 @@
 
           <div class="primary_menu">
             <div class="container-navbar">
-              <nav class="navbar navbar-expand-sm p-0">
+              <nav class="navbar navbar-expand-sm py-1">
                 <div class="container-fluid">
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
