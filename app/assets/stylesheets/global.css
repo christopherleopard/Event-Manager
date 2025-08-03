@@ -49,6 +49,11 @@ body {
     background: #fff;
     font-family: "OpenSans";
 }
+.container-sm {
+    max-width: 975px;
+    margin-left: auto;
+    margin-right: auto;
+}
 h2, h1 {
     margin-bottom: 1rem;
     font-family: "BitterBold";
@@ -87,6 +92,9 @@ p {
 }
 .fs-20 {
     font-size: 20px;
+}
+.lh-1_8 {
+    line-height: 1.8;
 }
 .p-20 {
     padding: 20px;

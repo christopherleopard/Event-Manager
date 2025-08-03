@@ -33,7 +33,7 @@
             <div class="flex-1">
                 <h1><span>Special Education Services & Support</span><span class="text-black"> - Whitmore Lake Public Schools</span></h1>
                 <p>The Department of Special Education at Whitmore Lake Public Schools strives to educate students in the most inclusive environment possible for each child, with ages ranging from birth to 26 years old. We pride ourselves in strong connections with families and carry our small community's values into the classroom where every child's unique strengths are honored. In addition to teaching the state curriculum, we help each child develop important life skills and encourage academic growth at their own rate. The Department of Special Education at WLPS also participates in mandated Child Find programs and provides services to non-public schools within our district. Overall, we're a family who respects differences, encourages growth, and celebrates one another.</p>
-                <div class="mb-1">
+                <div class="mb-2">
                     <button class="rule_btn py-3 w-370">
                         <%= link_to "Special Education Programs & Services", "#special_education_programs", class:"text-white" %>
                     </button>
@@ -101,12 +101,108 @@
                     </p>
                 </div>
             </div>
-            <div class="text-center">
-                <p>To learn more about the Department of Special Education at WLPS, please contact Melissa Heuker, Director of Student Services, at Melissa.Heuker@wlps.net, or call 734-449-4464 ext. 5009.</p>
+            <div class="text-center special_education_learn_more">
+                <p class="mb-0">To learn more about the Department of Special Education at WLPS, please contact Melissa Heuker, Director of Student Services,</p>
+                <p>at Melissa.Heuker@wlps.net, or call 734-449-4464 ext. 5009.</p>
             </div>
         </div>
     </div>
-    <div id="special_education_programs"></div>
+    <div id="special_education_programs">
+        <div class="container">
+            <h2 class="text-black">Special Education Programs & Services at Whitmore Lake</h2>
+            <p>
+                Whitmore Lake Public Schools believes in balancing inclusion with the general population, and
+                pull out support services to meet every student’s individual needs. The Individual with
+                Disabilities Education Act (IDEA) is a federal law that guarantees children and youth with
+                disabilities a Free, Appropriate Public Education (FAPE) in the Least Restrictive Environment
+                (LRE). Not all programs and services will be provided for each student. An Individualized
+                Education Planning Committee (IEPC) determines which programs and/or services are
+                appropriate for each student
+            </p>
+        </div>
+    </div>
+    <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
+        <h2 class="text-center text-black">Programs and/or services are provided to students who meet the following eligibility criteria:</h2>
+        <div class="container-sm d-flex py-3">
+            <ul class="text-red fw-semibold flex-1 fs-20 lh-1_8">
+                <li>Autistic Impaired</li>
+                <li>Emotionally Impaired</li>
+                <li>Hearing Impaired</li>
+                <li>Learning Disabled</li>
+                <li>Physically Impaired</li>
+                <li>Otherwise Health Impaired</li>
+                <li>Early Childhood Developmentally Delayed</li>
+            </ul>
+            <ul class="text-red fw-semibold flex-1 fs-20 lh-1_8">
+                <li>Speech and Language Impaired</li>
+                <li>Visually Impaired</li>
+                <li>Traumatic Brain Injury</li>
+                <li>Mildly Cognitive Impaired</li>
+                <li>Moderately Cognitive Impaired</li>
+                <li>Severely Cognitive Impaired</li>
+                <li>Severely Multiply Impaired</li>
+            </ul>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <h2 class="text-center text-black">Whitmore Lake provides the following programs and services in-district:</h2>
+        <div class="container-sm d-flex py-3">
+            <ul class="text-red fw-semibold flex-1 fs-20 lh-1_8">
+                <li>School-based Speech and Language Therapy</li>
+                <li>School-based Occupational Therapy</li>
+                <li>School-based Physical Therapy</li>
+                <li>School-based Social Work</li>
+            </ul>
+            <ul class="text-red fw-semibold flex-1 fs-20 lh-1_8">
+                <li>Teacher Consultation</li>
+                <li>Early Childhood Special Education</li>
+                <li>Resource Room</li>
+                <li>Program for the Mildly Cognitively Impaired</li>
+            </ul>
+        </div>
+    </div>
+    <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
+        <h2 class="text-center text-black">WLPS and Washtenaw Intermediate School District partner to<br>
+        provide the following services to students in-district:</h2>
+        <div class="container d-flex justify-content-between py-3 text-center">
+            <div class="flex-1">
+                <div>
+                    <%= image_tag("grade_level.png", alt: "Grade Level", class: "origin") %>
+                </div>
+                <p class="text-red fs-20 mt-3 mb-0">Hearing impairment consultation</p>
+            </div>
+            <div class="flex-1">
+                <div>
+                    <%= image_tag("grade_level.png", alt: "Grade Level", class: "origin") %>
+                </div>
+                <p class="text-red fs-20 mt-3 mb-0">Visual impairment consultation</p>
+            </div>
+            <div class="flex-1">
+                <div>
+                    <%= image_tag("grade_level.png", alt: "Grade Level", class: "origin") %>
+                </div>
+                <p class="text-red fs-20 mt-3 mb-0">Behavior consultation</p>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <h2 class="text-center text-black">WLPS and Washtenaw Intermediate School District partner to provide the<br>
+        following services to students out-of-district:</h2>
+        <div class="container-sm d-flex py-3">
+            <ul class="text-red fw-semibold flex-1 fs-20 lh-1_8">
+                <li>Moderately/severely cognitive impairment</li>
+                <li>Severely multiply impaired</li>
+            </ul>
+            <ul class="text-red fw-semibold flex-1 fs-20 lh-1_8">
+                <li>Severely emotional impaired</li>
+                <li>Young adult</li>
+            </ul>
+        </div>
+        <div class="text-center">
+            <p class="mb-0">To learn more about the Department of Special Education at WLPS, please contact Melissa Heuker, Director of Student Services,</p>
+            <p>at Melissa.Heuker@wlps.net, or call 734-449-4464 ext. 5009.</p>
+        </div>
+    </div>
     <div id="special_education_resources"></div>
 </div>
 
