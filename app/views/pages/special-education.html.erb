@@ -1,0 +1,112 @@
+<% content_for :title, "Special Education Services - Whitmore Lake Public Schools | Support & Resources" %>
+<% content_for :description, "Explore Whitmore Lake Public Schools' Special Education programs and services. Learn about eligibility, individualized support, and Washtenaw ISD resources." %>
+
+<div class="departments special-education">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">Departments</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <button class="link_btn py-3">
+                <%= link_to "Facilities", "/facilities", class:"text-white ff-b" %>
+            </button>
+            <button class="link_btn py-3">
+                <%= link_to "Food Service", "/food-service", class:"text-white ff-b" %>
+            </button>
+            <button class="link_btn py-3">
+                <%= link_to "Kids Club", "/kids-club", class:"text-white ff-b" %>
+            </button>
+            <button class="link_btn py-3">
+                <%= link_to "Special Education", "/special-education", class:"text-white ff-b" %>
+            </button>
+            <button class="link_btn py-3">
+                <%= link_to "Technology", "http://wlpstech.weebly.com/", class:"text-white ff-b", target: "_blank" %>
+            </button>
+            <button class="link_btn py-3">
+                <%= link_to "Transportation", "/transportation", class:"text-white ff-b" %>
+            </button>
+        </div>
+    </div>
+
+    <div class="facility_rentals py-4">
+        <div class="container d-flex align-items-center">
+            <div class="flex-1">
+                <h1><span>Special Education Services & Support</span><span class="text-black"> - Whitmore Lake Public Schools</span></h1>
+                <p>The Department of Special Education at Whitmore Lake Public Schools strives to educate students in the most inclusive environment possible for each child, with ages ranging from birth to 26 years old. We pride ourselves in strong connections with families and carry our small community's values into the classroom where every child's unique strengths are honored. In addition to teaching the state curriculum, we help each child develop important life skills and encourage academic growth at their own rate. The Department of Special Education at WLPS also participates in mandated Child Find programs and provides services to non-public schools within our district. Overall, we're a family who respects differences, encourages growth, and celebrates one another.</p>
+                <div class="mb-1">
+                    <button class="rule_btn py-3 w-370">
+                        <%= link_to "Special Education Programs & Services", "#special_education_programs", class:"text-white" %>
+                    </button>
+                </div>
+                <div>
+                    <button class="rule_btn py-3 w-370">
+                        <%= link_to "Special Education Resources", "#special_education_resources", class:"text-white" %>
+                    </button>
+                </div>            
+            </div>
+            <div class="flex-1">
+                <%= image_tag("se-logo.png", alt: "SE", class: "origin") %>
+            </div>
+        </div>
+    </div>
+
+    <div class="rules_regulations py-4_5">
+        <div class="container">
+            <h2 class="text-black">Inclusive Special Education at Whitmore Lake Public Schools</h2>
+            <p class="mb-3">With consideration of federal guidelines and state requirements, specific learning disability 
+            eligibility is evaluated using a pattern of strengths and weaknesses. This method is based on the
+            assessment and review of achievement scores as well as performance in a variety of academic
+            areas, with documentation of a pattern of strengths in one or more areas as compared to other
+            areas where the student demonstrates a pattern of significant academic weaknesses. Criteria
+            for determining a Specific Learning Disability (SLD) for students in all buildings and all grades in
+            the district and include the following:
+            </p>
+            <div class="d-flex gap-4_5 py-3">
+                <div class="education">
+                    <%= image_tag("grade_level.png", alt: "Grade Level", class: "origin") %>
+                </div>
+                <div>
+                    <p class="text-red fw-bold">Grade Level Standards</p>
+                    <p class="mb-0">
+                        The student does not achieve adequately for the student's age or meet State-approved grade-level 
+                        standards in one or more of the areas identified at 34CFR 300.309(a) (1) (i) when provided
+                        with learning experiences and instruction appropriate for the student's age or State-approved
+                        grade-level standards.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex gap-4_5 py-3">
+                <div class="education">
+                    <%= image_tag("grade_level.png", alt: "Grade Level", class: "origin") %>
+                </div>
+                <div>
+                    <p class="text-red fw-bold">Evaluations and Reevaluations</p>
+                    <p class="mb-0">
+                        The student exhibits a pattern of strengths and weaknesses in performance, achievement, or
+                        both relative to age, State approved grade-level standards or intellectual development, which is
+                        determined by the Multidisciplinary Evaluation Team to be relevant to the identification of SLD,
+                        using appropriate assessments, consistent with the IDEA (Identification of Specific Learning
+                        Disabilities) Evaluation Procedures and Additional Requirements for Evaluations and Reevaluations.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex gap-4_5 py-3">
+                <div class="education">
+                    <%= image_tag("grade_level.png", alt: "Grade Level", class: "origin") %>
+                </div>
+                <div>
+                    <p class="text-red fw-bold">Attendance</p>
+                    <p class="mb-0">
+                        Attendance and exposure to appropriate educational opportunities will continue to be a factor of relevance.
+                    </p>
+                </div>
+            </div>
+            <div class="text-center">
+                <p>To learn more about the Department of Special Education at WLPS, please contact Melissa Heuker, Director of Student Services, at Melissa.Heuker@wlps.net, or call 734-449-4464 ext. 5009.</p>
+            </div>
+        </div>
+    </div>
+    <div id="special_education_programs"></div>
+    <div id="special_education_resources"></div>
+</div>
+

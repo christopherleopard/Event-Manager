@@ -14,7 +14,7 @@ module ActiveAdmin
               span { link_to "(739) 449-4464", "tel:7394494464", class: "text-red"}
             end
           end
-          div class: "custom-select-wrapper text-center py-2" do
+          div class: "custom-select-wrapper text-center p-20" do
             current_path = request.fullpath
             select_tag "page_redirect",
               options_for_select([

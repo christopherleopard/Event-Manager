@@ -72,6 +72,9 @@ h2 {
 .ff-b {
     font-family: "Bitter";
 }
+.ff-h {
+    font-family: 'Helvetica Neue';
+}
 .pb-lg {
     padding-bottom: 128px;;
 }
@@ -84,6 +87,16 @@ p {
 }
 .fs-20 {
     font-size: 20px;
+}
+.p-20 {
+    padding: 20px;
+}
+.py-4_5 {
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+.gap-4_5 {
+    gap: 32px;
 }
 .primary-bg {
     background: #D32128;
@@ -151,7 +164,7 @@ a {
 .top_header img {
     width: 24px;
 }
-.top_header .logo img {
+.top_header .logo img, .logo img {
     width: 100px;
 }
 img {
