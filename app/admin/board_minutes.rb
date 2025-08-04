@@ -57,7 +57,7 @@ ActiveAdmin.register BoardMinute do
                 span do
                   image_tag("pdf.png", alt: "PDF", class: "h-12")
                 end
-                para bm.date.strftime("%B %d, %Y"), class: "mb-0 fw-semibold"
+                para bm.date.strftime("%B %d, %Y"), class: "mb-0 fw-semibold fs-20"
               end
             end
           end
