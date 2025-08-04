@@ -19,7 +19,7 @@ ActiveAdmin.register_page "Dashboard" do
         end
 
         button class: "tool-btn" do
-          link_to "Staff Management", admin_staffs_path, class: "text-white"
+          link_to "Staff Management", "/admin/staff", class: "text-white"
         end
 
         button class: "tool-btn" do
@@ -27,11 +27,11 @@ ActiveAdmin.register_page "Dashboard" do
         end
 
         button class: "tool-btn" do
-          link_to "Board Book Management", admin_board_books_path, class: "text-white"
+          link_to "Board Book Management", "/admin/board-books", class: "text-white"
         end
 
         button class: "tool-btn" do
-          link_to "Board Minutes Management", admin_board_minutes_path, class: "text-white"
+          link_to "Board Minutes Management", "/admin/board-minutes", class: "text-white"
         end
 
         button class: "tool-btn" do

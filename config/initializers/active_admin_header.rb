@@ -22,8 +22,8 @@ module ActiveAdmin
                 ['Events Management', '/admin/events'],
                 ['Staff Management', '/admin/staff'],
                 ['Food Service Management', '/admin/food_services'],
-                ['Board Books Management', '/admin/board_books'],
-                ['Board Minutes Management', '/admin/board_minutes'],
+                ['Board Books Management', '/admin/board-books'],
+                ['Board Minutes Management', '/admin/board-minutes'],
                 ['Newsletters Management', '/admin/newsletters'],
                 ['Drills Management', '/admin/drills']
               ], current_path),
