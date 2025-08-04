@@ -1,4 +1,4 @@
-ActiveAdmin.register BoardMinute do
+ActiveAdmin.register BoardMinute, path: "board-minutes" do
   config.clear_action_items!
   sidebar :filters, only: []
 
@@ -10,7 +10,7 @@ ActiveAdmin.register BoardMinute do
     def create
       super do |success, failure|
         success.html do
-          redirect_to collection_path, notice: "Staff created" and return
+          redirect_to "/admin/board-minutes", notice: "Staff created" and return
         end
         failure.html { render :new, status: :unprocessable_entity and return }
       end
@@ -31,7 +31,7 @@ ActiveAdmin.register BoardMinute do
       h2 "WLPS Board Minutes Management", class: "staff-management-heading"
       para "You can view board minutes by school year below. The order of board minutes can be changed using the provided drag-and-drop sort function. You can edit and delete board minutes from this page, and you can create new board minutes by clicking the 'Create Board Minute' button below.", class: "staff-management-description"
       button class: "primary-btn" do
-        link_to "Create Board Minute", new_admin_board_minute_path, class: "text-white"
+        link_to "Create Board Minute", "/admin/board-minutes/new", class: "text-white"
       end
     end
 

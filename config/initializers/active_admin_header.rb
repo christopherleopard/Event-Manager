@@ -20,7 +20,7 @@ module ActiveAdmin
               options_for_select([
                 ['Emergency Alerts Management', '/admin/emergency_alerts'],
                 ['Events Management', '/admin/events'],
-                ['Staff Management', '/admin/staffs'],
+                ['Staff Management', '/admin/staff'],
                 ['Food Service Management', '/admin/food_services'],
                 ['Board Books Management', '/admin/board_books'],
                 ['Board Minutes Management', '/admin/board_minutes'],

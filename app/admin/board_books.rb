@@ -1,4 +1,4 @@
-ActiveAdmin.register BoardBook do
+ActiveAdmin.register BoardBook, path: "board-books" do
   config.clear_action_items!
   sidebar :filters, only: []
 
@@ -11,7 +11,7 @@ ActiveAdmin.register BoardBook do
     def create
       super do |success, failure|
         success.html do
-          redirect_to collection_path, notice: "Board Book created" and return
+          redirect_to "/admin/board-books", notice: "Board Book created" and return
         end
         failure.html { render :new, status: :unprocessable_entity and return }
       end
@@ -30,9 +30,9 @@ ActiveAdmin.register BoardBook do
   index title: false, download_links: false do
     div class: "custom-message" do
       h2 "WLPS Board Books Management", class: "staff-management-heading"
-      para 'To add a new Board Book, click the "Add Board Book" button below. TO update an existing Board Book, locate the Board Book below and click the Edit icon to update the Board Book.', class: "staff-management-description"
+      para 'To add a new Board Book, click the "Add Board Book" button below. To update an existing Board Book, locate the Board Book below and click the Edit icon to update the Board Book.', class: "staff-management-description"
       button class: "primary-btn" do
-        link_to "Add Board Book", new_admin_board_book_path, class: "text-white"
+        link_to "Add Board Book", "/admin/board-books/new", class: "text-white"
       end
     end
 

@@ -1,5 +1,6 @@
-ActiveAdmin.register Staff, path: 'staff', as: 'Staff' do
+ActiveAdmin.register Staff, as: 'Staff', path: "staff" do
   config.clear_action_items!
+
   sidebar :filters, only: []
 
   config.filters = false
@@ -39,11 +40,11 @@ ActiveAdmin.register Staff, path: 'staff', as: 'Staff' do
       h2 "WPLS Staff Management", class: "staff-management-heading"
       para 'You can view staff by department below by selecting a department from the dropdown menu. The order of staff members can be changed using the provided drag-and-drop sort function. You can edit and delete staff members from this page, and you can create new staff members by clicking the "Create Staff" button below.', class: "staff-management-description"
       button class: "primary-btn" do
-        link_to "Create Staff", new_admin_staff_path, class: "text-white"
+        link_to "Create Staff", "/admin/staff/new", class: "text-white"
       end
 
       div class: "mb-3" do
-        form method: :get, action: admin_staffs_path do
+        form method: :get, action: admin_staff_index_path do
           select_tag :department, options_for_select([ [ "Select a Department", "" ] ] + departments.map { |d| [ d, d ] }, selected), class: "form-select d-inline-block w-auto me-2", onchange: "this.form.submit();"
         end
       end
