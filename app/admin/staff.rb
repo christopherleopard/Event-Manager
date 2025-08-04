@@ -1,10 +1,30 @@
-ActiveAdmin.register Staff do
+ActiveAdmin.register Staff, path: 'staff', as: 'Staff' do
   config.clear_action_items!
   sidebar :filters, only: []
 
   config.filters = false
 
   permit_params :name, :title, :department, :phone, :email, :profile_image
+
+  controller do
+    def create
+      super do |success, failure|
+        success.html do
+          redirect_to collection_path, notice: "Staff created" and return
+        end
+        failure.html { render :new, status: :unprocessable_entity and return }
+      end
+    end
+    
+    def update
+      super do |success, failure|
+        success.html do
+          redirect_to collection_path, notice: "Staff updated" and return
+        end
+        failure.html { render :edit, status: :unprocessable_entity and return }
+      end
+    end
+  end
 
   member_action :remove_profile_image, method: :delete do
     resource.profile_image.purge_later if resource.profile_image.attached?
@@ -29,7 +49,7 @@ ActiveAdmin.register Staff do
       end
     end
 
-    staffs = selected.present? ? Staff.where(department: selected) : []
+    staffs = selected.present? ? Staff.where(department: selected) : Staff.all
 
     if selected.present?
       h2 class: "text-center" do

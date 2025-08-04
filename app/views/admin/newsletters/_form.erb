@@ -15,8 +15,8 @@
 <% custom_labels.each do |field, label| %>
   <%= form_with model: setting, url: admin_newsletter_urls_update_path(field: field), method: :post, local: true do |f| %>
     <div class="mb-3">
-      <%= f.label field, label, class: "me-2 fw-bold" %>
-      <%= f.text_field field, class: "form-control", value: setting.send(field), placeholder: "Newsletter URL", style: "width: 100%;" %>
+      <%= f.label field, label, class: "ff-bb" %>
+      <%= f.text_field field, class: "form-control ff-op", value: setting.send(field), placeholder: "Newsletter URL", style: "width: 100%;" %>
       <%= f.submit "Save", class: "primary-btn mt-3", style: "background-color: #D32128; background-image: none; border-radius: 0; border: none; padding: 1em 5em;" %>
     </div>
   <% end %>

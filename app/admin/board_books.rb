@@ -6,7 +6,7 @@ ActiveAdmin.register BoardBook do
 
   permit_params :school_year, :date, :pdf
 
-    controller do
+  controller do
 
     def create
       super do |success, failure|

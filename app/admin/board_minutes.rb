@@ -6,6 +6,26 @@ ActiveAdmin.register BoardMinute do
 
   permit_params :school_year, :date, :pdf
 
+  controller do
+    def create
+      super do |success, failure|
+        success.html do
+          redirect_to collection_path, notice: "Staff created" and return
+        end
+        failure.html { render :new, status: :unprocessable_entity and return }
+      end
+    end
+    
+    def update
+      super do |success, failure|
+        success.html do
+          redirect_to collection_path, notice: "Staff updated" and return
+        end
+        failure.html { render :edit, status: :unprocessable_entity and return }
+      end
+    end
+  end
+
   index title: false, download_links: false do
     div class: "custom-message" do
       h2 "WLPS Board Minutes Management", class: "staff-management-heading"

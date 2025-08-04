@@ -6,6 +6,26 @@ ActiveAdmin.register Drill do
 
   permit_params :school, :drill_type, :date, :time, :pdf
 
+  controller do
+    def create
+      super do |success, failure|
+        success.html do
+          redirect_to collection_path, notice: "Board Book created" and return
+        end
+        failure.html { render :new, status: :unprocessable_entity and return }
+      end
+    end
+    
+    def update
+      super do |success, failure|
+        success.html do
+          redirect_to collection_path, notice: "Board Book updated" and return
+        end
+        failure.html { render :edit, status: :unprocessable_entity and return }
+      end
+    end
+  end
+
   index title: "Drills Management" do
     div class: "custom-message" do
       h2 "WLPS Safety Drills Management", class: "staff-management-heading"
@@ -20,8 +40,14 @@ ActiveAdmin.register Drill do
         collapse_id = "collapse#{index}"
 
         div class: "card bg-transparent border-0 mb-2" do
-          div class: "card-header text-white rounded-0" do
-            link_to("#{school_name} Drills", "##{collapse_id}", class: "card-link", data: { toggle: "collapse" })
+          div class: "card-header text-white rounded-0 ff-b fw-semibold d-flex justify-content-between" do
+            div do
+              link_to("#{school_name} Drills", "##{collapse_id}", class: "card-link", data: { toggle: "collapse" })
+            end
+            div class: "status_icons" do
+              span class: ["status_icon", (index == 0 ? "hide" : "show")].compact.join(" ") do "+" end
+              span class: ["status_icon", (index == 0 ? "show" : "hide")].compact.join(" ") do "-" end
+            end
           end
 
           div class: [ "collapse mt-3 mb-2", ("show" if index == 0) ].compact.join(" "), id: collapse_id, data: { parent: "#accordion" } do
@@ -37,10 +63,10 @@ ActiveAdmin.register Drill do
                   end
 
                   div do
-                    drills.each do |drill|
-                      div class: "d-flex" do
+                    drills.each_with_index do |(drill), index2|
+                      div class: "d-flex drill_#{index2}" do
                         div class: "p-3 w-4p" do drill.drill_type end
-                        div class: "p-3 w-2p" do drill.date end
+                        div class: "p-3 w-2p" do drill.date.strftime("%m/%d/%Y") end
                         div class: "p-3 w-3p" do drill.time.strftime("%-I:%M %p") end
 
                         div class: "p-3 w-1p d-flex gap-3 justify-content-end" do
@@ -70,7 +96,7 @@ ActiveAdmin.register Drill do
           f.input :school, as: :select, collection: [ "ECC", "WLES", "GLTW", "WLMS/HS" ], prompt: "Select School", input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
         end
         div class: "flex-1" do
-          f.input :drill_type, as: :select, collection: [ "Fire", "Storm", "Lockdown" ], prompt: "Select Drill Type", input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
+          f.input :drill_type, as: :select, label:"Drill Type", collection: [ "Fire", "Storm", "Lockdown" ], prompt: "Select Drill Type", input_html: { class: "p-2 mt-2 w-100 border border-1 border-black" }
         end
       end
       div class: "d-flex gap-3 mt-2" do

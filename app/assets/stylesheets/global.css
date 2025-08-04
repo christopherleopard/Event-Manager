@@ -80,6 +80,9 @@ h2 {
 .ff-h {
     font-family: 'Helvetica Neue', sans-serif;
 }
+.ff-op {
+    font-family: "OpenSans", sans-serif !important;
+}
 .pb-lg {
     padding-bottom: 128px;;
 }
