@@ -3,7 +3,7 @@ class PdfDocument < ApplicationRecord
 
   validates :page_title, :title, :pdf, presence: true
 
-  PAGE_TITLES = ["Home", "Facilities", "Special Education", "FAQ", "Terms & Conditions"]
+  PAGE_TITLES = ["Home", "Facilities", "Special Education", "Food Service", "Menus", "Family Resources", "Kids Club"]
 
   def self.ransackable_attributes(auth_object = nil)
     %w[id page_title title created_at updated_at]

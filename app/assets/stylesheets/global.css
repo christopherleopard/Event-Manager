@@ -47,7 +47,7 @@ body {
     font-size: 16px;
     color: #3e3e3e;
     background: #fff;
-    font-family: "OpenSans";
+    font-family: "OpenSans", sans-serif;
 }
 .container-sm {
     max-width: 975px;
@@ -56,7 +56,7 @@ body {
 }
 h2, h1 {
     margin-bottom: 1rem;
-    font-family: "BitterBold";
+    font-family: "BitterBold", sans-serif;
     color: #D32128;
 }
 h1 {
@@ -66,19 +66,19 @@ h2 {
     font-size: 24px;
 }
 .ff-ap {
-    font-family: "AcuminPro";
+    font-family: "AcuminPro", sans-serif;
 }
 .ff-apb {
-    font-family: "AcuminProBold";
+    font-family: "AcuminProBold", sans-serif;
 }
 .ff-bb {
-    font-family: "BitterBold";
+    font-family: "BitterBold", sans-serif;
 }
 .ff-b {
-    font-family: "Bitter";
+    font-family: "Bitter", sans-serif;
 }
 .ff-h {
-    font-family: 'Helvetica Neue';
+    font-family: 'Helvetica Neue', sans-serif;
 }
 .pb-lg {
     padding-bottom: 128px;;
@@ -213,4 +213,19 @@ img.origin {
 }
 .flex-1 {
     flex: 1;
+}
+.grey_card {
+  height: 167px;
+  border-radius: 10px;
+  background: #d8d8d8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+.grey_card_2 {
+    height: 202px;
+    border-radius: 10px;
+    background: #d8d8d8;
+    padding: 20px;
 }

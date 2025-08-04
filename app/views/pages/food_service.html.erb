@@ -1,0 +1,128 @@
+<% content_for :title, "Whitmore Lake Public Schools Food Service" %>
+
+<div class="departments facilities">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">Departments</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <button class="link_btn py-3">
+                <%= link_to "Facilities", "/facilities", class:"text-white ff-b" %>
+            </button>
+            <button class="link_btn py-3">
+                <%= link_to "Food Service", "/food-service", class:"text-white ff-b" %>
+            </button>
+            <button class="link_btn py-3">
+                <%= link_to "Kids Club", "/kids-club", class:"text-white ff-b" %>
+            </button>
+            <button class="link_btn py-3">
+                <%= link_to "Special Education", "/special-education", class:"text-white ff-b" %>
+            </button>
+            <button class="link_btn py-3">
+                <%= link_to "Technology", "http://wlpstech.weebly.com/", class:"text-white ff-b", target: "_blank" %>
+            </button>
+            <button class="link_btn py-3">
+                <%= link_to "Transportation", "/transportation", class:"text-white ff-b" %>
+            </button>
+        </div>
+    </div>
+    <div class="facility_rentals py-4">
+        <div class="container">
+            <h1><span>School Meals & Nutrition</span><span class="text-black"> at Whitmore Lake Public Schools section</span></h1>
+            <p>We are excited to announce the Healthy School Meals for All program continues for the 24/25 school year! This program provides FREE breakfast and lunches for all public school students ages 4-12th grade!</p>
+            <p>We are asking ALL WLPS families to still complete the FREE & Reduced Meals application as our funding for important programs serving our students are still based on that application. Find the application at: <a class="text-red text-decoration-underline" href="https://whitmore.familyportal.cloud/benefits/onlyapplying">https://whitmore.familyportal.cloud/benefits/onlyapplying</a></p>
+            <p>In addition to the free meals, WLPS Food Service will still have a la carte items available for purchase at the Middle/High School Campus.</p>
+            <p>To view menus for each school, click the button below.</p>
+            <p>Question? Contact us at <a class="text-red text-decoration-underline" href="mailto:info@wlps.net">info@wlps.net</a></p>
+            <button class="rule_btn py-3 ff-ap">
+                <a class="text-white" href="/food-service/menus">WLPS Food Service Menus</a>
+            </button>
+        </div>
+    </div>
+    <div class="py-4" style="background-image: url('/assets/login_bg.png');">
+        <div class="container">
+            <h2 class="text-center text-black mb-0">WLPS School Meal Pricing & Additional Options</h2>
+            <div class="d-flex gap-4_5 py-4">
+                <div class="flex-1 grey_card text-center">
+                    <p class="fs-20 ff-b text-red mb-2">Elementary School</p>
+                    <p class="mb-2">Breakfast = FREE</p>
+                    <p class="mb-2">Lunch = FREE</p>
+                </div>
+                <div class="flex-1 grey_card text-center">
+                    <p class="fs-20 ff-b text-red mb-2">Middle & High School</p>
+                    <p class="mb-2">Breakfast = FREE</p>
+                    <p class="mb-2">Lunch = FREE</p>
+                    <p class="mb-2">Milk = $0.65</p>
+                </div>
+                <div class="flex-1 grey_card text-center">
+                    <p class="fs-20 ff-b text-red mb-2">Adult Meals</p>
+                    <p class="mb-2">Breakfast = $2.90</p>
+                    <p class="mb-2">Lunch = $5.40</p>
+                </div>
+            </div>
+            <p class="text-center mb-0">A la carte items are available for purchase at all buildings.</p>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <div class="container">
+            <div class="d-flex gap-4">
+                <div class="flex-1">
+                    <h2 class="text-black">Lunch Service at Whitmore Lake Public Schools</h2>
+                    <p class="mb-0">Lunch is one of the most important meals during a student's day. Keeping the mind fueled with healthy food is important. If it's not convenient to bring lunch, or if your student just wants a break from homemade meals, we provide a great option.</p>
+                    <div class="add_funds py-4">
+                        <a href="https://whitmore.familyportal.cloud/" target="_blank"><%= image_tag("funds.png", alt: "Add Funds", class:"origin") %></a>
+                    </div>
+                    <h2 class="text-black">Breakfast Service at Whitmore Lake Public Schools</h2>
+                    <p><b>FREE BREAKFAST!</b> We invite our students to join us for breakfast before school starts. Every day we serve a hot entrée. Each meal includes juice or fresh fruit and milk. A healthy breakfast is a great way to start the day. Students can pick up breakfast on their way to class each morning. Breakfast times are:</p>
+                    <ul>
+                        <li>Middle/High School: 7:40 a.m. to 8:00 a.m.</li>
+                        <li>Elementary: 5th-6th grades: 7:40 a.m.-7:50 a.m.</li>
+                        <li>K-4th Grade: 8:40 a.m.-9:00 a.m.</li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <%= image_tag("school_lunch.png", alt: "Lunch") %>
+                </div>
+            </div>
+            <p class="fw-semibold mb-2">Cashless Cafeterias</p>
+            <p class="mb-0">Our cafeterias are now cashless. We offer an easy and convenient way to add funds to your child's account through Meal Magic Family Portal. You may utilize a credit card or your checking/savings account. This is a safe and secure way for you to make sure your child has the funds available to purchase breakfast or lunch. Please do not send cash or checks to the school.</p>
+        </div>
+    </div>
+    <div class="py-4" style="background-image: url('/assets/login_bg.png');">
+        <div class="container">
+            <h2 class="text-black">Education Benefits with Michigan School Meals Program</h2>
+            <p class="mb-4">Families are highly encouraged to complete the Education Benefits with Michigan School Meals Program application. Families that qualify for free and reduced meals are eligible for additional benefits including discounts for pay to participate. You apply online at https://whitmore.familyportal.cloud/ or apply using the document below.</p>
+            <p>Please Note: A new application must be submitted each school year.</p>
+            <div class="d-flex gap-4_5">
+                <% if @food_service_pdfs.any? %>
+                    <% @food_service_pdfs.each do |pdf_doc| %>
+                        <% if pdf_doc.pdf.attached? %>
+                            <button class="rule_btn_2 ff-h">
+                                <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "attachment", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                            </button>
+                        <% end %>
+                    <% end %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <div class="py-4">
+        <div class="container">
+            <h2 class="text-black">USDA Nondiscrimination Statement</h2>
+            <p>In accordance with federal civil rights law and U.S. Department of Agriculture (USDA) civil rights regulations and policies, this institution is prohibited from discriminating on the basis of race, color, national origin, sex (including gender identity and sexual orientation), disability, age, or reprisal or retaliation for prior civil rights activity.</p>
+            <p>Program information may be made available in languages other than English. Persons with disabilities who require alternative means of communication to obtain program information (e.g., Braille, large print, audiotape, American Sign Language), should contact the responsible state or local agency that administers the program or USDA's<br>
+            TARGET Center at (202) 720-2600 (voice and TTY) or contact USDA through the Federal Relay Service at (800) 877-8339.</p>
+            <p>To file a program discrimination complaint, a Complainant should complete a Form AD-3027, USDA Program Discrimination Complaint Form which can be obtained online at: USDA Program Discrimination Complaint Form, from any USDA office, by calling (866) 632-9992, or by writing a letter addressed to USDA. The letter must contain the complainant's name, address, telephone number, and a written description of the alleged discriminatory action in sufficient detail to inform the Assistant Secretary for Civil Rights (ASCR) about the nature and date of an alleged civil rights violation. The completed AD-3027 form or letter must be submitted to USDA by:</p>
+            <p>1. mail:<br>
+            U.S. Department of Agriculture<br>
+            Office of the Assistant Secretary for Civil Rights<br>
+            1400 Independence Avenue, SW<br>
+            Washington, D.C. 20250-9410; or</p>
+            <p>2. fax: (833) 256-1665 or (202) 690-7442; or</p>
+            <p>3. email: <a class="text-red" href="mailto:program.intake@usda.gov">program.intake@usda.gov</a></p>
+            <p>This institution is an equal opportunity provider.<br>
+            USDA Civil Rights Complaint Link:<br>
+            <a class="text-red" href="https://www.usda.gov/sites/default/files/documents/USDA-OASCR%20P-ComplaintForm-0508-0002-508-11-28-17Fax2Mail.pdf">https://www.usda.gov/sites/default/files/documents/USDA-OASCR%20P-ComplaintForm-0508-0002-508-11-28-17Fax2Mail.pdf</a></p>
+        </div>
+    </div>
+</div>

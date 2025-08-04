@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   get '/facilities', to: 'pages#facilities'
-  get '/special-education', to: 'pages#special-education'
+  get '/special-education', to: 'pages#special_education'
+  get '/food-service', to: 'pages#food_service'
+  get '/food-service/menus', to: 'pages#menus'
+  get '/food-service/family-resources', to: 'pages#family_resources'
+  get '/kids-club', to: 'pages#kids_club'
   get "staffs/index"
   get "staffs/show"
   get "events/index"

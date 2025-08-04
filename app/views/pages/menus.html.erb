@@ -1,0 +1,84 @@
+<% content_for :title, "Whitmore Lake Public Schools Menus" %>
+
+<div class="departments facilities">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">Departments</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <button class="link_btn py-3">
+                <%= link_to "Facilities", "/facilities", class:"text-white ff-b" %>
+            </button>
+            <button class="link_btn py-3">
+                <%= link_to "Food Service", "/food-service", class:"text-white ff-b" %>
+            </button>
+            <button class="link_btn py-3">
+                <%= link_to "Kids Club", "/kids-club", class:"text-white ff-b" %>
+            </button>
+            <button class="link_btn py-3">
+                <%= link_to "Special Education", "/special-education", class:"text-white ff-b" %>
+            </button>
+            <button class="link_btn py-3">
+                <%= link_to "Technology", "http://wlpstech.weebly.com/", class:"text-white ff-b", target: "_blank" %>
+            </button>
+            <button class="link_btn py-3">
+                <%= link_to "Transportation", "/transportation", class:"text-white ff-b" %>
+            </button>
+        </div>
+    </div>
+    <div class="py-4">
+        <div class="container">
+            <h1><span>School Breakfast & Lunch Menus</span><span class="text-black"> - Whitmore Lake Public Schools</span></h1>
+            <p>View the latest monthly breakfast and lunch menus for each school below. If you'd like to make a deposit to your student's lunch account, click the "Add Funds to Meal Account" button below.</p>
+        </div>
+    </div>
+    <div class="py-4_5 pt-0" style="background-image: url('/assets/login_bg.png');">
+        <div class="container">
+            <div class="d-flex gap-4_5 py-4_5">
+                <div class="flex-1 grey_card_2 text-center">
+                    <h2 class="text-black">Early Childhood Center Menus</h2>
+                    <% if @menu_pdfs.any? %>
+                        <% @menu_pdfs.each do |pdf_doc| %>
+                            <% if pdf_doc.pdf.attached? %>
+                                <% if pdf_doc.title == "ECC January Menu" %>
+                                    <button class="rule_btn_2 w-100 ff-h">
+                                        <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "attachment", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                    </button>
+                                <% end %>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                </div>
+                <div class="flex-1 grey_card_2 text-center">                
+                    <h2 class="text-black">Elementary Menus</h2>
+                    <% if @menu_pdfs.any? %>
+                        <% @menu_pdfs.each do |pdf_doc| %>
+                            <% if pdf_doc.pdf.attached? %>
+                                <% if pdf_doc.title == "WLES January Menu" or pdf_doc.title == "GLTW January Menu" %>
+                                    <button class="rule_btn_2 w-100 ff-h mb-2">
+                                        <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "attachment", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                    </button>
+                                <% end %>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                </div>
+                <div class="flex-1 grey_card_2 text-center">
+                    <h2 class="text-black">Middle & High School Menus</h2>
+                    <% if @menu_pdfs.any? %>
+                        <% @menu_pdfs.each do |pdf_doc| %>
+                            <% if pdf_doc.pdf.attached? %>
+                                <% if pdf_doc.title == "WLMS/HS January Menu" %>
+                                    <button class="rule_btn_2 w-100 ff-h">
+                                        <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "attachment", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                    </button>
+                                <% end %>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                </div>
+            </div>
+            <p class="text-center mb-0"><a href="https://whitmore.familyportal.cloud/"><%= image_tag("funds.png", alt: "Add Funds", class:"origin") %></a></p>
+        </div>
+    </div>
+</div>
