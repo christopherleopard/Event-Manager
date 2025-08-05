@@ -137,6 +137,7 @@ p {
     text-shadow: none !important;
     letter-spacing: 1px;
     line-height: 1.25 !important;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 .grey-button {
     background: #979797;
@@ -145,6 +146,7 @@ p {
     border: none;
     padding: 1em;
     line-height: 1.25 !important;    
+    font-family: 'Helvetica Neue', sans-serif;
 }
 .tool-btn:hover {
     background: #3e3e3e !important;
@@ -164,6 +166,7 @@ p {
     border-radius: 0;
     border: 1px solid #fff;
     padding: 1em 5em;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 .top_header {
     background: #e9e9e9;

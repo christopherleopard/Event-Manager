@@ -1,0 +1,89 @@
+<% content_for :title, "Personalized Academic Offerings - Whitmore Lake Public Schools" %>
+<% content_for :description, "Discover the personalized academic offerings at Whitmore Lake Public Schools. From elementary to high school, our small class sizes and diverse electives create a unique and inclusive learning environment that fosters success." %>
+
+<div class="departments facilities">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">Academics</h2>
+    </div>
+    
+    <div class="py-4_5">
+        <div class="container d-flex align-items-center gap-5">
+            <div class="text_container flex-1">
+                <h1><span>Academic Offerings</span><span class="text-black"> at Whitmore Lake Public Schools Offer a Unique & Personalized Education</span></h1>
+                <p>
+                    At Whitmore Lake Public Schools, the well being of our students is our #1 priority, and their
+                    success is extremely important to us. We're proud of our small population culture, which allows
+                    us to get to know each student personally. This means that we can offer exactly what that
+                    student needs to succeed. While core classes are important at both the elementary and high
+                    school level, we believe our unique elective classes are just as important in helping to
+                    personalize the education experience. Facilitating student growth while accommodating
+                    personal interests into each individual's education is what we excel in at Whitmore Lake Public
+                    Schools! Our smaller size and inclusive culture fosters a sense of belonging and school pride
+                </p>
+            </div>
+
+            <div class="image_container flex-1">
+                <div class="right_img">
+                    <%= image_tag("offerings.png", alt: "Academic Offerings") %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
+        <div class="container d-flex align-items-center gap-5">
+            <div class="image_container flex-1">
+                <div class="right_img text-center">
+                    <%= image_tag("encouraging.png", alt: "Personalized Learning at Whitmore Lake Elementary School", class:"origin") %>
+                </div>
+            </div>
+            <div class="text_container flex-1">
+                <h2 class="text-black">Personalized Learning at Whitmore Lake Elementary School</h2>
+                <p>
+                    Whitmore Lake Elementary offers our students a unique education experience through
+                    personalized teaching and mentoring. Less than 500 students are enrolled in our Elementary
+                    School, which allows our teachers to understand the unique needs and interests of each student
+                    in order to customize the education experience. Even at the elementary level, we help facilitate
+                    academic success by encouraging engagement in more challenging educational arenas and by
+                    supplementing core class requirements with the flexibility of individual learning plans,
+                    regardless or age or grade.
+                </p>
+                <p class="text-red fw-semibold">Our elementary school curriculum consists of:</p>
+                <ul>
+                    <li>Grades K-3: Self-Contained Basic Core Classes</li>
+                    <li>Grades 4-6: Rotating Math, English/Language Arts, Science, and Social Studies Classes</li>
+                    <li>All Grades: Rotating Art, Music, and PE Classes</li>
+                    <li>Grades 5-6: Optional Band and Guitar Classes</li>
+                </ul>
+                <button class="rule_btn_2 w-370">
+                    <%= link_to "Visit Our Elementary School Page", "/elementary-school/overview", class:"text-white" %>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <div class="container d-flex align-items-center gap-5">
+            <div class="text_container flex-1">
+                <h2 class="text-black">Preparing for Success at Whitmore Lake Middle & High School</h2>
+                <p>
+                    Whitmore Lake Middle & High School offers a personalized secondary education, and an
+                    inclusive environment to ensure students are prepared for both their high school and post-
+                    secondary school journey. We encourage our students to take advantage our unique offerings
+                    and advanced placement opportunities in order to prepare themselves for the next level of
+                    education. It is refreshing to see that Whitmore Lake Middle & High School students are
+                    unengaged in the stereotypical cliques that have become all too common in many schools. We
+                    attribute this positive feature of our school district to the small class sizes that create an
+                    inclusive culture among the students and faculty. It is qualities like these that truly help
+                    Whitmore Lake High School foster a culture of college readiness.
+                </p>
+                <button class="rule_btn_2 w-370">
+                    <%= link_to "Visit Our Middle & High School Page", "/middle-and-high-school/overview", class:"text-white" %>
+                </button>
+            </div>
+            <div class="image_container flex-1">
+                <div class="right_img text-center">
+                    <%= image_tag("preparing.png", alt: "Preparing for Success at Whitmore Lake Middle & High School") %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
