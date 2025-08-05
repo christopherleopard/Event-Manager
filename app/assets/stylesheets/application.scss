@@ -129,6 +129,18 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
+//Athletics
+.fixed_img {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+.atheletics.py-4_5 {
+    padding-bottom: 100px;
+}
+.py-4_5.sports {
+    padding-top: 100px;
+}
 //Responsive styles
 @media screen and (max-width: 768px) {
     .admin_login {

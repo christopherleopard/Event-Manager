@@ -1,0 +1,108 @@
+<% content_for :title, "Whitmore Lake Public Schools Athletics | Sports Programs for All Seasons" %>
+<% content_for :description, "Explore Whitmore Lake Public Schools Athletics! From fall to spring, WLPS offers diverse sports programs for all grades. Join our Trojan community and embrace school spirit." %>
+
+<div class="departments">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">Athletics</h2>
+    </div>
+    
+    <div class="atheletics py-4_5">
+        <div class="container d-flex gap-5">
+            <div class="text_container flex-1">
+                <h1><span>Athletics</span><span class="text-black"> at Whitmore Lake Public Schools</span></h1>
+                <p class="mb-4">
+                    At Whitmore Lake Public Schools, athletics are more than just sports—they’re a way for
+                    students to grow, collaborate, and achieve their best. With a strong emphasis on school spirit
+                    and inclusivity, we’re proud to be Trojans! Our athletic programs foster teamwork, discipline,
+                    and excellence, helping students develop skills that last a lifetime.
+                </p>
+                <p>
+                    From elementary to high school, WLPS offers diverse sports for every season. Whether you're
+                    interested in football, swimming, or track and field, there's a place for everyone to shine. Check
+                    out the full list of our sports programs below and explore the home of WLPS athletics for the
+                    latest news, schedules, and updates.
+                </p>
+                <div class="d-flex gap-4_5">
+                    <% if @athletics_pdfs.any? %>
+                        <% @athletics_pdfs.each do |pdf_doc| %>
+                            <% if pdf_doc.pdf.attached? %>
+                                <button class="rule_btn py-3">
+                                    <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "attachment", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                </button>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                    <button class="rule_btn py-3">
+                        <%= link_to "Visit Athletics Website", "http://www.whitmorelakeathletics.com/", class:"text-white", target: "_blank" %>
+                    </button>
+                </div>
+            </div>
+
+            <div class="image_container flex-1">
+                <div class="right_img mb-5">
+                    <%= image_tag("athletics.png", alt: "Athletics at Whitmore Lake Public Schools") %>
+                </div>
+                <div class="position-relative">
+                    <div class="fixed_img">
+                        <%= image_tag("go_red.png", alt: "Go Red, Pride, Trojan", class:"origin") %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="py-4_5 sports" style="background-image: url('/assets/login_bg.png');">
+        <div class="container">
+            <div class="offer_courses">
+                <div>
+                    <h2>Fall Sports</h2>
+                    <ul>
+                        <li>Boys Cross Country</li>
+                        <li>Girls Cross Country</li>
+                        <li>Football</li>
+                        <li>Sideline Cheer</li>
+                        <li>Volleyball</li>
+                        <li>Boys Soccer</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Winter Sports</h2>
+                    <ul>
+                        <li>Boys Basketball</li>
+                        <li>Girls Basketball</li>
+                        <li>Boys Bowling</li>
+                        <li>Girls Bowling</li>
+                        <li>Competitive Cheer</li>
+                        <li>Ice Hockey</li>
+                        <li>Wrestling</li>
+                        <li>Swimming</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Spring Sports</h2>
+                    <ul>
+                        <li>Baseball</li>
+                        <li>Softball</li>
+                        <li>Coed Golf</li>
+                        <li>Coed Lacrosse</li>
+                        <li>Boys Track & Field</li>
+                        <li>Girls Track & Field</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Middle School Sports</h2>
+                    <ul>
+                        <li>Boys Basketball</li>
+                        <li>Girls Basketball</li>
+                        <li>Football</li>
+                        <li>Sideline Cheer</li>
+                        <li>Volleyball</li>
+                        <li>Boys Cross Country</li>
+                        <li>Girls Cross Country</li>
+                        <li>Track & Field</li>                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -22,4 +22,8 @@ class PagesController < ApplicationController
   def kids_club
     @kids_club_pdfs = PdfDocument.where(page_title: "Kids Club").includes(:pdf_attachment, :pdf_blob)
   end
+
+  def athletics
+    @athletics_pdfs = PdfDocument.where(page_title: "Athletics").includes(:pdf_attachment, :pdf_blob)
+  end
 end
