@@ -29,6 +29,13 @@
   font-display: swap;
 }
 @font-face {
+  font-family: 'HelveticaLight';
+  src: url('/assets/HelveticaNeueLight.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: 'AcuminProBold';
   src: url('/assets/Acumin-BdItPro.otf') format('opentype');
   font-weight: normal;
@@ -79,6 +86,9 @@ h2 {
 }
 .ff-h {
     font-family: 'Helvetica Neue', sans-serif;
+}
+.ff-hl {
+    font-family: 'HelveticaLight', sans-serif;
 }
 .ff-op {
     font-family: "OpenSans", sans-serif !important;
