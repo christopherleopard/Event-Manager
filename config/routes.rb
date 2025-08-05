@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   get '/kids-club', to: 'pages#kids_club'
   get '/academics', to: 'pages#academics'
   get '/athletics', to: 'pages#athletics'
+  get '/district-calendar', to: 'pages#district_calendar'
+  get '/middle-and-high-school-calendar', to: 'pages#middle_and_high_school_calendar'
+  get '/main-street-campus-calendar', to: 'pages#main_street_campus_calendar'
+  get '/elementary-school-calendar', to: 'pages#elementary_school_calendar'
+  get '/community-recreation-calendar', to: 'pages#community_recreation_calendar'
   get "staffs/index"
   get "staffs/show"
   get "events/index"

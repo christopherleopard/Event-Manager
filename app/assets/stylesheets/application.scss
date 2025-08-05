@@ -119,6 +119,16 @@
     align-items: center;
     font-family: 'Helvetica Neue', sans-serif;
 }
+.calendar_btn {
+    width: 170px;
+    height: 66px;
+    display: flex;
+    background: #b31c23;
+    border-radius: 8px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
 //Special Education
 .w-370 {
     width: 370px;

@@ -26,4 +26,16 @@ class PagesController < ApplicationController
   def athletics
     @athletics_pdfs = PdfDocument.where(page_title: "Athletics").includes(:pdf_attachment, :pdf_blob)
   end
+
+  def district_calendar
+    @district_calendar_pdfs = PdfDocument.where(page_title: "District Calendar").includes(:pdf_attachment, :pdf_blob)
+  end
+
+  def middle_and_high_school_calendar
+    @middle_and_high_school_calendar_pdfs = PdfDocument.where(page_title: "Middle & High School Calendar").includes(:pdf_attachment, :pdf_blob)
+  end
+
+  def elementary_school_calendar
+    @elementary_school_calendar_pdfs = PdfDocument.where(page_title: "Elementary School Calendar").includes(:pdf_attachment, :pdf_blob)
+  end
 end
