@@ -123,7 +123,12 @@
 .w-370 {
     width: 370px;
 }
-
+// Academics
+.offer_courses {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
 //Responsive styles
 @media screen and (max-width: 768px) {
     .admin_login {

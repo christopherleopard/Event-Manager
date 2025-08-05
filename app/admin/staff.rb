@@ -32,7 +32,7 @@ ActiveAdmin.register Staff, as: 'Staff', path: "staff" do
     redirect_back fallback_location: edit_admin_staff_path(resource), notice: "Profile image removed"
   end
 
-  index title: false do
+  index title: "Staff" do
     selected = params[:department]
     departments = Staff::DEPARTMENTS
 
@@ -77,7 +77,7 @@ ActiveAdmin.register Staff, as: 'Staff', path: "staff" do
             tr do
               td class: "p-3" do
                 span do
-                  image_tag("move.png", alt: "Move")
+                  image_tag("drag_drop_icon.png", alt: "Drag and drop")
                 end
               end
               td class: "p-3" do s.name end
