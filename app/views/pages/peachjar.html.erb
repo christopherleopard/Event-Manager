@@ -1,0 +1,69 @@
+<% content_for :title, "Whitmore Lake Public Schools PeachJar - Digital Flyer Management System" %>
+<% content_for :description, "Whitmore Lake Public Schools uses PeachJar to manage and distribute eFlyers digitally, reducing paper waste and administrative costs. Stay updated with school and district announcements" %>
+
+<div class="peachjar">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">News & Info</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <%= render "news_info_links_bar" %>
+    </div>
+    <div class="py-4_5">
+        <div class="container d-flex align-items-center gap-4_5 mb-4">
+            <div class="flex-1">
+                <h1><span>Whitmore Lake Public Schools Uses PeachJar</span><span class="text-black"> for Digital Flyer Management</span></h1>
+                <p class="mb-0">
+                    As part of our green initiatives, we use PeachJar eFlyer management system to save paper at
+                    Whitmore Lake Public Schools. Using PeachJar enables us to distribute information via
+                    electronic flyers sent to your inbox as opposed to paper flyers. Already, PeachJar has helped
+                    WLPS save a large amount paper and is reducing copy costs by thousands of dollars.
+                </p>
+            </div>
+            <div class="flex-1">
+                <%= image_tag("peachjar_computer.png", alt: "Peachjar Computer") %>
+            </div>
+        </div>
+        <div class="container d-flex justify-content-between pt-4 text-center">
+            <div class="flex-1">
+                <p class="fw-semibold fs-22 mb-2">ECC</p>
+                <div class="mb-3">
+                    <a href="https://app.peachjar.com/flyers/all/schools/90096" target="_blank"><%= image_tag("peachjar_button_orange.png", alt: "Create Your Account", class: "origin") %></a>
+                </div>
+            </div>
+            <div class="flex-1">
+                <p class="fw-semibold fs-22 mb-2">Elementary</p>
+                <div class="mb-3">
+                    <a href="https://app.peachjar.com/flyers/all/schools/90097" target="_blank"><%= image_tag("peachjar_button_orange.png", alt: "Create Your Account", class: "origin") %></a>
+                </div>
+            </div>
+            <div class="flex-1">
+                <p class="fw-semibold fs-22 mb-2">Middle & High School</p>
+                <div class="mb-3">
+                    <a href="https://app.peachjar.com/flyers/all/schools/147754" target="_blank"><%= image_tag("peachjar_button_orange.png", alt: "Create Your Account", class: "origin") %></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">        
+        <div class="container">
+            <div>
+                <h2 class="text-black">Benefits of Using PeachJar for WLPS Families & Staff</h2>
+                <p class="mb-0">PeachJar also helps teachers, staff, and volunteers at Whitmore Lake Public Schools. This eFlyer management system method removes the significant administrative burden from those at WLPS who rely on flyers to disseminate important information to you. The eFlyers sent through PeachJar include information regarding the entire school or district. Specific information pertaining to students' classrooms will be sent home by individual teachers.</p>
+            </div>
+            <div class="py-4_5">
+                <h2 class="text-black">How to Use PeachJar for Whitmore Lake Public Schools</h2>
+                <p class="mb-0">PeachJar is a simple eFlyer management system that requires no action on your part. You will receive a welcome email from PeachJar that includes your username and password. This is provided to give you the opportunity to manage your account and eFlyer delivery preferences; however, you dont need to login to receive or view eFlyers.</p>
+            </div>
+            <div>
+                <h2 class="text-black">Ensure Smooth Delivery</h2>
+                <p class="mb-0">To ensure smooth delivery of this communication, we suggest you add school@peachjar.com to your email contacts. Note: add school@peachjar.com to your contact list just as written; do not change its name to the name of your school @peachjar.com. When you receive your first eflyer, be sure to click "Always Display Images."</p>
+            </div>
+            <div class="py-4_5">
+                <p class="mb-0">This system is used exclusively for distribution of school-approved flyers. Your email address will not be shared or used for any other purpose.</p>
+            </div>
+            <div class="trees py-4" style="background-image: url('/assets/trees.png'); background-size: 100% 100%;">
+                <p class="fs-34 ff-bb mb-0 text-white">Thank you for helping us<br>save time, money, & lots of trees!</p>
+            </div>
+        </div>
+    </div>
+</div>

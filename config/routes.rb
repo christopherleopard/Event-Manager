@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/community-recreation-calendar', to: 'pages#community_recreation_calendar'
   get '/drills', to: 'pages#drills'
   get '/efunds', to: 'pages#efunds'
+  get '/peachjar', to: 'pages#peachjar'
   get "staffs/index"
   get "staffs/show"
   get "events/index"

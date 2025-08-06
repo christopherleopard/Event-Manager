@@ -161,6 +161,10 @@
 .lockdown {
     background: #f3f3f3;
 }
+//Peachjar
+.trees {
+    padding-left: 70px;
+}
 //Responsive styles
 @media screen and (max-width: 768px) {
     .admin_login {
@@ -183,5 +187,20 @@
     }
     .admin-login-logo {
         text-align: center;
+    }
+    .offer_courses {
+        display: block;
+    }
+    .atheletics.py-4_5 {
+        padding-bottom: 70px;
+    }
+    .right_img.mb-5 {
+        margin-bottom: 1rem !important;
+    }
+    .d-flex {
+        flex-direction: column;
+    }
+    .atheletics .rule_btn {
+        width: 100%;
     }
 }
