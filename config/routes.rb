@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get '/main-street-campus-calendar', to: 'pages#main_street_campus_calendar'
   get '/elementary-school-calendar', to: 'pages#elementary_school_calendar'
   get '/community-recreation-calendar', to: 'pages#community_recreation_calendar'
+  get '/drills', to: 'pages#drills'
+  get '/efunds', to: 'pages#efunds'
   get "staffs/index"
   get "staffs/show"
   get "events/index"

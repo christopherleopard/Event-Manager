@@ -151,6 +151,16 @@
 .py-4_5.sports {
     padding-top: 100px;
 }
+//Drills
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.lockdown {
+    background: #f3f3f3;
+}
 //Responsive styles
 @media screen and (max-width: 768px) {
     .admin_login {

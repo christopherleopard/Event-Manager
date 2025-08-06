@@ -38,4 +38,8 @@ class PagesController < ApplicationController
   def elementary_school_calendar
     @elementary_school_calendar_pdfs = PdfDocument.where(page_title: "Elementary School Calendar").includes(:pdf_attachment, :pdf_blob)
   end
+
+  def drills
+    @drills = Drill.all
+  end
 end

@@ -1,0 +1,77 @@
+<% content_for :title, "Fire, Lockdown, & Severe Weather Drills - Whitmore Lake Public Schools" %>
+<% content_for :description, "Access reports on fire, lockdown, and severe weather drills completed at Whitmore Lake Public Schools. Ensure your child's safety with regular drill updates for all school levels." %>
+
+<div class="drills">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">News & Info</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <%= render "news_info_links_bar" %>
+    </div>
+    <div class="facility_rentals py-4_5">
+        <div class="container">
+            <h1><span>Fire, Lockdown, & Severe Weather Drill Reports</span><span class="text-black"> | <br>Whitmore Lake Public Schools</span></h1>
+            <p>Review fire, lock down, and severe weather drill reports in the documents below to ensure drills have been completed for your student's safety.</p>
+            <div id="accordion">
+                <% ["WLMS/HS", "WLES", "ECC", "GLTW"].each_with_index do |school_name, index| %>
+                    <% label =
+                        case school_name
+                        when 'WLMS/HS' then 'Middle & High School'
+                        when 'WLES' then 'Elementary School'
+                        when 'ECC' then 'Early Childhood Center'
+                        when 'GLTW' then 'Go Like the Wind Montessori School'
+                        else school_name
+                        end
+                    %>
+                    <% collapse_id = "collapse#{index}" %>
+
+                    <div class="card bg-transparent border-0 mb-2">
+                    <div class="card-header text-white rounded-0 ff-b fw-semibold d-flex justify-content-between">
+                        <div>
+                            <%= link_to("#{label}", "##{collapse_id}", class: "card-link", data: { toggle: "collapse" }) %>
+                        </div>
+                        <div class="status_icons">
+                            <span class="status_icon <%= index == 0 ? 'hide' : 'show' %>">+</span>
+                            <span class="status_icon <%= index == 0 ? 'show' : 'hide' %>">-</span>
+                        </div>
+                    </div>
+
+                    <div id="<%= collapse_id %>" class="collapse mt-3 mb-2 <%= 'show' if index == 0 %>" data-parent="#accordion">
+                        <% drill_type_order = ['Fire', 'Lockdown', 'Storm'] %>
+                        <% drills = @drills.where(school: school_name).order(date: :desc, time: :desc) %>
+                        <% sorted_drills = drills.sort_by do |d|
+                            [drill_type_order.index(d.drill_type) || 999, d.date || Date.today, d.time || Time.now]
+                        end %>
+
+                        <% if sorted_drills.any? %>
+                        <div>
+                            <div class="fw-semibold color-normal">
+                            <% sorted_drills.each_with_index do |drill, index2| %>
+                                <div class="d-flex drill_<%= index2 %> <%= drill.drill_type.downcase.parameterize %> px-4">
+                                    <div class="p-3 w-4p d-flex align-items-center gap-2">
+                                        <%= image_tag("#{drill.drill_type.downcase}.png", alt: drill.drill_type, class: "origin") %>
+                                        <%= drill.drill_type %> Drill
+                                    </div>
+                                    <div class="p-3 w-4p"><%= drill.date.strftime("%m/%d/%Y") %></div>
+                                    <div class="p-3 w-2p">
+                                        <% if drill.pdf.attached? %>
+                                            <%= link_to url_for(drill.pdf), target: "_blank", rel: "noopener", class: "d-flex align-items-center gap-2 justify-content-end color-normal" do %>
+                                                <%= image_tag("pdf.png", alt: "View", class: "origin", style: "vertical-align: middle; margin-right: 4px;") %>
+                                                View Report
+                                            <% end %>
+                                        <% end %>
+                                    </div>
+                                </div>
+                            <% end %>
+                            </div>
+                        </div>
+                        <% else %>
+                            <div>No drills available for this school.</div>
+                        <% end %>
+                    </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

@@ -96,11 +96,23 @@ h2 {
 .pb-lg {
     padding-bottom: 128px;;
 }
+.w-4p {
+    width: 40%;
+}
+.w-3p {
+    width: 30%;
+}
+.w-2p {
+    width: 20%;
+}
 .mt-lg-m {
     margin-top: -80px;
 }
 p {
     margin-bottom: 1rem;
+    color: #3e3e3e;
+}
+.color-normal {
     color: #3e3e3e;
 }
 .fs-20 {
@@ -207,9 +219,7 @@ img.origin {
     text-shadow: none;
     letter-spacing: 1px;
 }
-.collapse div:nth-child(even), tbody tr:nth-child(even) {
-    background: #f3f3f3;
-}
+
 .carousel-indicators li {
     display: inline-block;
     width: 10px;
