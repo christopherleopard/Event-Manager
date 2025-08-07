@@ -164,6 +164,8 @@
 //Peachjar
 .trees {
     padding-left: 70px;
+    background-image: url('/assets/trees.png');
+    background-size: 100% 100%;
 }
 //Responsive styles
 @media screen and (max-width: 768px) {
@@ -200,7 +202,32 @@
     .d-flex {
         flex-direction: column;
     }
-    .atheletics .rule_btn {
+    #accordion .d-flex {
+        flex-direction: initial;
+    }
+    .rule_btn, .calendar_btn {
         width: 100%;
+    }
+    .calendar_links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    .calendar_btn {
+        height: 74px;
+    }
+    .calendars iframe {
+        height: 400px;
+    }
+    .mobile_drill_item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .trees {
+        background-image: url('/assets/tree_mobile.png');
+        padding-left: 0;
+        padding-bottom: 160px !important;
+        text-align: center;
     }
 }

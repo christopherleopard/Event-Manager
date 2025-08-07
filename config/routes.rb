@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/drills', to: 'pages#drills'
   get '/efunds', to: 'pages#efunds'
   get '/peachjar', to: 'pages#peachjar'
+  get '/school-policy-notices', to: 'pages#school_policy_notices'
   get "staffs/index"
   get "staffs/show"
   get "events/index"

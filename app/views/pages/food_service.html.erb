@@ -98,7 +98,7 @@
                     <% @food_service_pdfs.each do |pdf_doc| %>
                         <% if pdf_doc.pdf.attached? %>
                             <button class="rule_btn_2 ff-h">
-                                <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "attachment", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
                             </button>
                         <% end %>
                     <% end %>

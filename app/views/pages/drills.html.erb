@@ -47,20 +47,41 @@
                         <div>
                             <div class="fw-semibold color-normal">
                             <% sorted_drills.each_with_index do |drill, index2| %>
-                                <div class="d-flex drill_<%= index2 %> <%= drill.drill_type.downcase.parameterize %> px-4">
-                                    <div class="p-3 w-4p d-flex align-items-center gap-2">
-                                        <%= image_tag("#{drill.drill_type.downcase}.png", alt: drill.drill_type, class: "origin") %>
-                                        <%= drill.drill_type %> Drill
-                                    </div>
-                                    <div class="p-3 w-4p"><%= drill.date.strftime("%m/%d/%Y") %></div>
-                                    <div class="p-3 w-2p">
-                                        <% if drill.pdf.attached? %>
-                                            <%= link_to url_for(drill.pdf), target: "_blank", rel: "noopener", class: "d-flex align-items-center gap-2 justify-content-end color-normal" do %>
-                                                <%= image_tag("pdf.png", alt: "View", class: "origin", style: "vertical-align: middle; margin-right: 4px;") %>
-                                                View Report
+                                <div class="desktop_only">
+                                    <div class="d-flex drill_<%= index2 %> <%= drill.drill_type.downcase.parameterize %> px-4">
+                                        <div class="p-3 w-4p d-flex align-items-center gap-2">
+                                            <%= image_tag("#{drill.drill_type.downcase}.png", alt: drill.drill_type, class: "origin") %>
+                                            <%= drill.drill_type %> Drill
+                                        </div>
+                                        <div class="p-3 w-4p"><%= drill.date.strftime("%m/%d/%Y") %></div>
+                                        <div class="p-3 w-2p">
+                                            <% if drill.pdf.attached? %>
+                                                <%= link_to url_for(drill.pdf), target: "_blank", rel: "noopener", class: "d-flex align-items-center gap-2 justify-content-end color-normal" do %>
+                                                    <%= image_tag("pdf.png", alt: "View", class: "origin", style: "vertical-align: middle; margin-right: 4px;") %>
+                                                    View Report
+                                                <% end %>
                                             <% end %>
-                                        <% end %>
+                                        </div>
                                     </div>
+                                </div>
+                                <div class="drill_<%= index2 %> <%= drill.drill_type.downcase.parameterize %> px-4 mobile_only">
+                                    <div class="mobile_drill_item py-3">
+                                        <div class="p-3">
+                                            <%= image_tag("#{drill.drill_type.downcase}.png", alt: drill.drill_type, class: "origin") %>
+                                        </div>
+                                        <div class="text-center">
+                                            <p><%= drill.drill_type %> Drill</p>
+                                            <p><%= drill.date.strftime("%m/%d/%Y") %></p>
+                                            <div>
+                                                <% if drill.pdf.attached? %>
+                                                    <%= link_to url_for(drill.pdf), target: "_blank", rel: "noopener", class: "view_pdf_mobile color-normal" do %>
+                                                        <%= image_tag("pdf.png", alt: "View", class: "origin", style: "vertical-align: middle; margin-right: 4px;") %>
+                                                        View Report
+                                                    <% end %>
+                                                <% end %>
+                                            </div>
+                                        </div>
+                                    </div>                                  
                                 </div>
                             <% end %>
                             </div>

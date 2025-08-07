@@ -42,7 +42,7 @@
                             <% if pdf_doc.pdf.attached? %>
                                 <% if pdf_doc.title == "ECC January Menu" %>
                                     <button class="rule_btn_2 w-100 ff-h">
-                                        <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "attachment", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                        <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
                                     </button>
                                 <% end %>
                             <% end %>
@@ -56,7 +56,7 @@
                             <% if pdf_doc.pdf.attached? %>
                                 <% if pdf_doc.title == "WLES January Menu" or pdf_doc.title == "GLTW January Menu" %>
                                     <button class="rule_btn_2 w-100 ff-h mb-2">
-                                        <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "attachment", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                        <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
                                     </button>
                                 <% end %>
                             <% end %>
@@ -70,7 +70,7 @@
                             <% if pdf_doc.pdf.attached? %>
                                 <% if pdf_doc.title == "WLMS/HS January Menu" %>
                                     <button class="rule_btn_2 w-100 ff-h">
-                                        <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "attachment", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                        <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
                                     </button>
                                 <% end %>
                             <% end %>

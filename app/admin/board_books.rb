@@ -96,7 +96,7 @@ ActiveAdmin.register BoardBook, path: "board-books" do
       row :date
       row :pdf do |bm|
         if bm.pdf.attached?
-          link_to "View PDF", rails_blob_path(bm.pdf, disposition: "attachment", only_path: true)
+          link_to "View PDF", rails_blob_path(bm.pdf, disposition: "inline", only_path: true)
         else
           status_tag "No File"
         end
