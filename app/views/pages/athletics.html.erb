@@ -27,7 +27,7 @@
                         <% @athletics_pdfs.each do |pdf_doc| %>
                             <% if pdf_doc.pdf.attached? %>
                                 <button class="rule_btn py-3">
-                                    <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                    <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "inline"), class:"text-white", target: "_blank", rel: "noopener" %>
                                 </button>
                             <% end %>
                         <% end %>
