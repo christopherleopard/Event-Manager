@@ -39,6 +39,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   root "home#index"
+  post 'contacts', to: 'contacts#create', as: 'contacts'
   resources :events, only: [ :index, :show ]
   resources :staffs, only: [ :index, :show ]
   resources :board_minutes, only: [ :index, :show ]

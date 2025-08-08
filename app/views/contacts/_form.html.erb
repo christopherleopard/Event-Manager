@@ -1,0 +1,35 @@
+<div class="container-sm">
+<%= form_with model: @contact, url: contacts_path, local: true do |form| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% @contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="d-flex gap-4_5 mb-3">
+  <div class="flex-1">
+    <%= form.label "Name*", class: "ff-bb" %>
+    <%= form.text_field :name, class: "w-100", required: true %>
+  </div>
+
+  <div class="flex-1">
+    <%= form.label "Email*", class: "ff-bb" %>
+    <%= form.email_field :email, class: "w-100", required: true %>
+  </div>
+</div>
+
+
+  <div>
+    <%= form.label "Questions/Comments*", class: "ff-bb" %>
+    <%= form.text_area :message, class: "w-100", rows: 6, required: true %>
+  </div>
+
+  <div class="text-center mt-4">
+    <%= form.submit 'Submit', class: "primary-btn" %>
+  </div>
+<% end %>
+</div>

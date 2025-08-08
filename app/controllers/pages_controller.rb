@@ -42,4 +42,7 @@ class PagesController < ApplicationController
   def drills
     @drills = Drill.all
   end
+  def bond_updates
+    @contact = Contact.new
+  end
 end
