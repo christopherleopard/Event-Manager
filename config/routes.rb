@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get '/efunds', to: 'pages#efunds'
   get '/peachjar', to: 'pages#peachjar'
   get '/school-policy-notices', to: 'pages#school_policy_notices'
+  get '/transparency-reporting', to: 'pages#transparency_reporting'
+  get '/bond-updates', to: 'pages#bond_updates'
   get "staffs/index"
   get "staffs/show"
   get "events/index"

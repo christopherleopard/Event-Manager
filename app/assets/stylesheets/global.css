@@ -61,7 +61,7 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-h2, h1 {
+h1, h2, h3 {
     margin-bottom: 1rem;
     font-family: "BitterBold", sans-serif;
     color: #D32128;
@@ -72,7 +72,9 @@ h1 {
 h2 {
     font-size: 24px;
 }
-
+h3 {
+    font-size: 20px;
+}
 .ff-ap {
     font-family: "AcuminPro", sans-serif;
 }

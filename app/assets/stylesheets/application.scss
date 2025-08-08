@@ -167,6 +167,50 @@
     background-image: url('/assets/trees.png');
     background-size: 100% 100%;
 }
+//Policy
+.alpha-counter {
+    counter-increment: alpha-counter;
+    position: relative;
+    padding-left: 2em;
+}
+.alpha-counter::before {
+    content: "(" counter(alpha-counter, lower-alpha) ") ";
+    position: absolute;
+    left: 0;
+}
+.decimal-counter {
+    counter-increment: decimal-counter;
+    position: relative;
+    padding-left: 2em;
+}
+.decimal-counter::before {
+    content: "(" counter(decimal-counter, decimal) ") ";
+    position: absolute;
+    left: 0;
+}
+//Financial Transparency
+.financial_transparency {
+    position: relative;
+    width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.safety {
+    position: absolute;
+    top: -1%;
+    left: 0;
+}
+.facility {
+    position: absolute;
+    right: -3%;
+    top: 25%;
+}
+.technology {
+    position: absolute;
+    bottom: 0;
+    left: 8%;
+}
 //Responsive styles
 @media screen and (max-width: 768px) {
     .admin_login {
