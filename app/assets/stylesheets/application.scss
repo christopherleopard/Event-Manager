@@ -133,6 +133,24 @@
 .w-370 {
     width: 370px;
 }
+//Kids Club
+.child_care_kids_club {
+    flex-wrap: wrap;
+    gap: 5%;
+    justify-content: center;
+}
+.child_care {
+    width: 30%;
+}
+.child_care.homework {
+    margin-top: 100px;
+}
+.child_care.plan {
+    margin-top: 68px;
+}
+.educare_details {
+    justify-content: space-between;
+}
 // Academics
 .offer_courses {
     display: grid;
@@ -225,7 +243,7 @@
         order: 1;
         padding-bottom: 30px;
     }
-    #new_admin_user, .login-left, .login-right {
+    #new_admin_user, .login-left, .login-right, .child_care {
         width: 100%;
     }
     .admin-login-form {
@@ -249,7 +267,7 @@
     #accordion .d-flex {
         flex-direction: initial;
     }
-    .rule_btn, .calendar_btn {
+    .rule_btn, .calendar_btn, .rule_btn_2 {
         width: 100%;
     }
     .calendar_links {
@@ -273,5 +291,14 @@
         padding-left: 0;
         padding-bottom: 160px !important;
         text-align: center;
+    }
+    .child_care {
+        margin-bottom: 16px;
+    }
+    .child_care.homework, .child_care.plan {
+        margin-top: 0;
+    }
+    .child_care.homework {
+        margin-bottom: 0;
     }
 }

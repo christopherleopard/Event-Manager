@@ -39,6 +39,14 @@ class PagesController < ApplicationController
     @elementary_school_calendar_pdfs = PdfDocument.where(page_title: "Elementary School Calendar").includes(:pdf_attachment, :pdf_blob)
   end
 
+  def transparency_reporting
+    @transparency_reporting_pdfs = PdfDocument.where(page_title: "Transparency Reporting").includes(:pdf_attachment, :pdf_blob)
+  end
+
+  def transportation
+    @transportation_pdfs = PdfDocument.where(page_title: "Transportation").includes(:pdf_attachment, :pdf_blob)
+  end
+
   def drills
     @drills = Drill.all
   end

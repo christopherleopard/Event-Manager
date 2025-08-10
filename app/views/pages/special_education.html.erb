@@ -6,30 +6,11 @@
         <h2 class="text-center text-white mb-0">Departments</h2>
     </div>
     <div class="red_button_bar primary-bg py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <button class="link_btn py-3">
-                <%= link_to "Facilities", "/facilities", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Food Service", "/food-service", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Kids Club", "/kids-club", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Special Education", "/special-education", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Technology", "http://wlpstech.weebly.com/", class:"text-white ff-b", target: "_blank" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Transportation", "/transportation", class:"text-white ff-b" %>
-            </button>
-        </div>
+        <%= render "departments_links_bar" %>
     </div>
 
-    <div class="facility_rentals py-4">
-        <div class="container d-flex align-items-center">
+    <div class="facility_rentals py-4_5">
+        <div class="container d-flex align-items-center gap-4">
             <div class="flex-1">
                 <h1><span>Special Education Services & Support</span><span class="text-black"> - Whitmore Lake Public Schools</span></h1>
                 <p>The Department of Special Education at Whitmore Lake Public Schools strives to educate students in the most inclusive environment possible for each child, with ages ranging from birth to 26 years old. We pride ourselves in strong connections with families and carry our small community's values into the classroom where every child's unique strengths are honored. In addition to teaching the state curriculum, we help each child develop important life skills and encourage academic growth at their own rate. The Department of Special Education at WLPS also participates in mandated Child Find programs and provides services to non-public schools within our district. Overall, we're a family who respects differences, encourages growth, and celebrates one another.</p>

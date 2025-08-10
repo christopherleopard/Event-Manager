@@ -1,0 +1,55 @@
+<% content_for :title, "School Bus Routes & Transportation - Whitmore Lake Public Schools" %>
+<% content_for :description, "Find bus routes, schedules, and transportation guidelines for Whitmore Lake Public Schools. Ensure your student arrives safely and on time." %>
+
+<div class="departments transportation">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">Departments</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <%= render "departments_links_bar" %>
+    </div>
+    <div class="facility_rentals py-4_5">
+        <div class="container">
+            <h1><span>School Bus Transportation</span><span class="text-black"> - Whitmore Lake Public Schools</span></h1>
+            <p>Getting to school is the first step in your student's education success. We provide buses to the Elementary and Middle & High schools, plus transfer buses from the Middle School for walkers for your student's convenience. For any questions, please contact the Transportation Dispatcher, Sheryl Webber at 734-449-4463.</p>
+            <% if @transportation_pdfs.any? %>
+                <% @transportation_pdfs.each do |pdf_doc| %>
+                    <% if pdf_doc.pdf.attached? %>
+                        <button class="rule_btn py-3">
+                            <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                        </button>
+                    <% end %>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+    <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
+        <div class="container d-flex align-items-center gap-5">
+            <div class="image_container flex-1">
+                <div class="right_img">
+                    <%= image_tag("bus.png", alt: "Bus") %>
+                </div>
+            </div>
+            <div class="text_container flex-1">
+                <h2 class="text-black">Bus Routes & School Transportation Details</h2>
+                <ul class="mb-0">
+                    <li>
+                        <span class="text-red">All high school walkers</span> need to go to the old Middle School (bus drop-off area in the
+                        morning for the transfer bus to the high school).
+                    </li>
+                    <li>Transfer buses <span class="text-red">leave at 7:01 a.m.</span></li>
+                    <li>High school students will be <span class="text-red">shuttled back to the Middle School drop-off</span> area at dismissal time.</li>
+                    <li>Your student may ride a <span class="text-red">different bus</span> in the AM for pick up than they do in the PM for drop off.</li>
+                    <li>Please <span class="text-red">look carefully at the routes</span> for the most suitable AM and PM buses for your student.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <h2>WLPS is Looking for Substitute Bus Drivers!</h2>
+            <p>Are you interested in becoming a bus driver for Whitmore Lake Public Schools? Click the button below to view our job openings and apply today!</p>
+            <button class="rule_btn py-3">
+                <%= link_to "View Careers Page", "https://jobs.redroverk12.com/org/wlps", class:"text-white", target: "_blank" %>
+            </button>
+        </div>
+    </div>
+</div>

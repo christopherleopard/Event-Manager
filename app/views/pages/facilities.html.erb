@@ -6,35 +6,16 @@
         <h2 class="text-center text-white mb-0">Departments</h2>
     </div>
     <div class="red_button_bar primary-bg py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <button class="link_btn py-3">
-                <%= link_to "Facilities", "/facilities", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Food Service", "/food-service", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Kids Club", "/kids-club", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Special Education", "/special-education", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Technology", "http://wlpstech.weebly.com/", class:"text-white ff-b", target: "_blank" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Transportation", "/transportation", class:"text-white ff-b" %>
-            </button>
-        </div>
+        <%= render "departments_links_bar" %>
     </div>
-    <div class="facility_rentals py-4">
+    <div class="facility_rentals py-4_5">
         <div class="container">
-            <h1 class="text-center"><span>Facility Rentals & Community Use</span><span class="text-black"> - Whitmore Lake Public Schools</span></h1>
+            <h1><span>Facility Rentals & Community Use</span><span class="text-black"> - Whitmore Lake Public Schools</span></h1>
             <p>The Whitmore Lake Public Schools Board of Education recognizes that Whitmore Lake Public Schools facilities are for the community to use. That's why we encourage the use of our facilities by organizations whose goals are to contribute to the development of the Whitmore Lake school district and community.</p>
         </div>
     </div>
     <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
-        <div class="container d-flex align-items-center gap-5">
+        <div class="container d-flex align-items-center gap-4 mobile-reverse">
             <div class="text_container flex-1">
                 <h2 class="text-black">Facility Rentals at Whitmore Lake Public Schools</h2>
                 <p>Whitmore Lake Public Schools is happy to offer our facilities for rental. Whether your dance company needs the theater for a recital, your association needs the media room for a meeting, your organization needs the gym for an event, or you need the pool for a private party, renting facilities at Whitmore Lake Public Schools is straightforward and easy. The facilities available are:</p>
@@ -63,13 +44,13 @@
                 <% if @facility_pdfs.any? %>
                     <% @facility_pdfs.each do |pdf_doc| %>
                         <% if pdf_doc.pdf.attached? %>
-                            <button class="rule_btn py-3">
+                            <button class="rule_btn py-3 primary-bg">
                                 <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
                             </button>
                         <% end %>
                     <% end %>
                 <% end %>
-                <button class="rule_btn py-3">
+                <button class="rule_btn py-3 primary-bg">
                     <%= link_to "Submit Rental Request", "https://wlps.gofmx.com/login", class:"text-white", target: "_blank" %>
                 </button>
             </div>

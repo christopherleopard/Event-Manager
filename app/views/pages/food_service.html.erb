@@ -1,36 +1,17 @@
 <% content_for :title, "Whitmore Lake Public Schools Food Service" %>
 
-<div class="departments facilities">
+<div class="departments food_service">
     <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
         <h2 class="text-center text-white mb-0">Departments</h2>
     </div>
     <div class="red_button_bar primary-bg py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <button class="link_btn py-3">
-                <%= link_to "Facilities", "/facilities", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Food Service", "/food-service", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Kids Club", "/kids-club", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Special Education", "/special-education", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Technology", "http://wlpstech.weebly.com/", class:"text-white ff-b", target: "_blank" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Transportation", "/transportation", class:"text-white ff-b" %>
-            </button>
-        </div>
+        <%= render "departments_links_bar" %>
     </div>
-    <div class="facility_rentals py-4">
+    <div class="facility_rentals py-4_5">
         <div class="container">
             <h1><span>School Meals & Nutrition</span><span class="text-black"> at Whitmore Lake Public Schools section</span></h1>
             <p>We are excited to announce the Healthy School Meals for All program continues for the 24/25 school year! This program provides FREE breakfast and lunches for all public school students ages 4-12th grade!</p>
-            <p>We are asking ALL WLPS families to still complete the FREE & Reduced Meals application as our funding for important programs serving our students are still based on that application. Find the application at: <a class="text-red text-decoration-underline" href="https://whitmore.familyportal.cloud/benefits/onlyapplying">https://whitmore.familyportal.cloud/benefits/onlyapplying</a></p>
+            <p>We are asking ALL WLPS families to still complete the FREE & Reduced Meals application as our funding for important programs serving our students are still based on that application. Find the application at: <a class="text-red text-decoration-underline text-break" href="https://whitmore.familyportal.cloud/benefits/onlyapplying">https://whitmore.familyportal.cloud/benefits/onlyapplying</a></p>
             <p>In addition to the free meals, WLPS Food Service will still have a la carte items available for purchase at the Middle/High School Campus.</p>
             <p>To view menus for each school, click the button below.</p>
             <p>Question? Contact us at <a class="text-red text-decoration-underline" href="mailto:info@wlps.net">info@wlps.net</a></p>
@@ -66,7 +47,7 @@
     <div class="py-4_5">
         <div class="container">
             <div class="d-flex gap-4">
-                <div class="flex-1">
+                <div class="flex-1 mob-order-2">
                     <h2 class="text-black">Lunch Service at Whitmore Lake Public Schools</h2>
                     <p class="mb-0">Lunch is one of the most important meals during a student's day. Keeping the mind fueled with healthy food is important. If it's not convenient to bring lunch, or if your student just wants a break from homemade meals, we provide a great option.</p>
                     <div class="add_funds py-4">
@@ -80,7 +61,7 @@
                         <li>K-4th Grade: 8:40 a.m.-9:00 a.m.</li>
                     </ul>
                 </div>
-                <div class="flex-1">
+                <div class="flex-1 mob-order-1">
                     <%= image_tag("school_lunch.png", alt: "Lunch") %>
                 </div>
             </div>
@@ -122,7 +103,7 @@
             <p>3. email: <a class="text-red" href="mailto:program.intake@usda.gov">program.intake@usda.gov</a></p>
             <p>This institution is an equal opportunity provider.<br>
             USDA Civil Rights Complaint Link:<br>
-            <a class="text-red" href="https://www.usda.gov/sites/default/files/documents/USDA-OASCR%20P-ComplaintForm-0508-0002-508-11-28-17Fax2Mail.pdf">https://www.usda.gov/sites/default/files/documents/USDA-OASCR%20P-ComplaintForm-0508-0002-508-11-28-17Fax2Mail.pdf</a></p>
+            <a class="text-red text-break" href="https://www.usda.gov/sites/default/files/documents/USDA-OASCR%20P-ComplaintForm-0508-0002-508-11-28-17Fax2Mail.pdf">https://www.usda.gov/sites/default/files/documents/USDA-OASCR%20P-ComplaintForm-0508-0002-508-11-28-17Fax2Mail.pdf</a></p>
         </div>
     </div>
 </div>

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/food-service/menus', to: 'pages#menus'
   get '/food-service/family-resources', to: 'pages#family_resources'
   get '/kids-club', to: 'pages#kids_club'
+  get '/transportation', to: 'pages#transportation'
   get '/academics', to: 'pages#academics'
   get '/athletics', to: 'pages#athletics'
   get '/district-calendar', to: 'pages#district_calendar'

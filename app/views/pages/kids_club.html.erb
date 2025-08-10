@@ -5,26 +5,7 @@
         <h2 class="text-center text-white mb-0">Departments</h2>
     </div>
     <div class="red_button_bar primary-bg py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <button class="link_btn py-3">
-                <%= link_to "Facilities", "/facilities", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Food Service", "/food-service", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Kids Club", "/kids-club", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Special Education", "/special-education", class:"text-white ff-b" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Technology", "http://wlpstech.weebly.com/", class:"text-white ff-b", target: "_blank" %>
-            </button>
-            <button class="link_btn py-3">
-                <%= link_to "Transportation", "/transportation", class:"text-white ff-b" %>
-            </button>
-        </div>
+        <%= render "departments_links_bar" %>
     </div>
     <div class="facility_rentals py-4_5">
         <div class="container d-flex gap-4_5 align-items-center">
@@ -37,7 +18,7 @@
                 <% if @kids_club_pdfs.any? %>
                     <% @kids_club_pdfs.each do |pdf_doc| %>
                         <% if pdf_doc.pdf.attached? %>
-                            <button class="rule_btn py-3">
+                            <button class="rule_btn py-3 primary-bg">
                                 <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
                             </button>
                         <% end %>
@@ -47,36 +28,191 @@
         </div>
     </div>
     <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
-        <div class="container d-flex align-items-center gap-5">
-            <div class="text_container flex-1">
-                <h2 class="text-black">Facility Rentals at Whitmore Lake Public Schools</h2>
-                <p>Whitmore Lake Public Schools is happy to offer our facilities for rental. Whether your dance company needs the theater for a recital, your association needs the media room for a meeting, your organization needs the gym for an event, or you need the pool for a private party, renting facilities at Whitmore Lake Public Schools is straightforward and easy. The facilities available are:</p>
-                <ul class="text-red fw-semibold fs-20 lh-1_8">
-                    <li>Theater</li>
-                    <li>Media Center</li>
-                    <li>Gymnasium</li>
-                    <li>Pool</li>
-                    <li>And More!</li>
-                </ul>
-            </div>
-
-            <div class="image_container flex-1">
-                <div class="right_img">
-                    <%= image_tag("facility_rental.png", alt: "Facility Rentals at Whitmore Lake Public Schools") %>
+        <div class="container">
+            <div class="d-flex align-items-center gap-4_5">
+                <div class="grey_card_row gap-4 w-370">
+                    <div>
+                        <%= image_tag("clock.png", alt: "Kids Club Program Details & Hours", class: "origin") %>
+                    </div>
+                    <div><p class="mb-0 fs-20 text-red ff-bb text-center">Monday - Friday<br>6:00 AM - 6:00 PM</p></div>
+                </div>
+                <div class="">
+                    <h2>Kids Club Program Details & Hours</h2>
+                    <p>Location: Whitmore Lake Elementary School, 1077 Barker Rd. Whitmore Lake, MI 48189</p>
+                    <p>Kids Club is open on most half days and full days. No School Days and Snow Day care is available through Kids Club at a combined location with our EduCare program located at the WLPS Main Street Campus.</p>
+                    <p>Care during school breaks is available through our EduCare program.</p>
+                    <button class="rule_btn py-3 primary-bg">
+                        <%= link_to "EduCare Information", "#edcare", class:"text-white" %>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="rules_regulations py-4_5">
+    <div class="py-4_5">
         <div class="container">
-            <h2 class="text-black">Rules and Regulations for Whitmore Lake Public Schools Facilities</h2>
-            <p class="mb-4">Facilities are available to be used for the entertainment and education of adults and children, as well as for important discussions pertaining to the development of personal character and civil welfare. But while facilities are open to the public under the Board of Education's discretion, it's important to respect the rules and regulations that have been carefully thought out and thoroughly explained in the Facility Use Guidelines document below in order to maintain a safe and enjoyable environment for Whitmore Lake Public Schools facilities.</p>
+            <h2 class="text-center text-black mb-5">Safe, Fun, and Enriching Childcare at Kids Club</h2>
+            <div class="d-flex child_care_kids_club container-sm">
+                <div class="text-center child_care">
+                    <div>
+                        <%= image_tag("fun.png", alt: "Positive and fun educationally enriching environment", class: "origin") %>
+                    </div>
+                    <div class="mt-2">
+                        <p class="mb-0 fw-semibold">Positive and fun educationally enriching environment</p>
+                    </div>
+                </div>
+                <div class="text-center child_care">
+                    <div>
+                        <%= image_tag("mental.png", alt: "Physically and mentally challenging planned activities", class: "origin") %>
+                    </div>
+                    <div class="mt-2">
+                        <p class="mb-0 fw-semibold">Physically and mentally challenging planned activities</p>
+                    </div>
+                </div>
+                <div class="text-center child_care">
+                    <div>
+                        <%= image_tag("outdoor.png", alt: "Indoor/outdoor physical activities", class: "origin") %>
+                    </div>
+                    <div class="mt-2">
+                        <p class="mb-0 fw-semibold">Indoor/outdoor physical activities</p>
+                    </div>
+                </div>
+                <div class="text-center child_care plan">
+                    <div>
+                        <%= image_tag("plan.png", alt: "Special planned activities", class: "origin") %>
+                    </div>
+                    <div class="mt-2">
+                        <p class="mb-0 fw-semibold">Special planned activities</p>
+                    </div>
+                </div>
+                <div class="text-center child_care homework">
+                    <div>
+                        <%= image_tag("homework.png", alt: "Homework assistance", class: "origin") %>
+                    </div>
+                    <div class="mt-2">
+                        <p class="mb-0 fw-semibold">Homework assistance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
+        <div class="container text-center">
+            <h2 class="text-black mb-5">How to Register for Whitmore Lake Kids Club</h2>
             <div class="d-flex gap-4_5">
-                
-                <button class="rule_btn py-3">
-                    <%= link_to "Submit Rental Request", "https://wlps.gofmx.com/login", class:"text-white", target: "_blank" %>
-                </button>
+                <div class="flex-1">
+                    <p class="fs-20 fw-semibold">Kids Club Brochure</p>
+                    <% if @kids_club_pdfs.any? %>
+                        <% @kids_club_pdfs.each do |pdf_doc| %>
+                            <% if pdf_doc.pdf.attached? %>
+                                <button class="rule_btn py-3 primary-bg">
+                                    <%= link_to "Download Kids Club Brochure", rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                </button>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                </div>
+                <div class="flex-1">
+                    <p class="fs-20 fw-semibold">Kids Club Registration</p>
+                    <div>
+                        <button class="rule_btn py-3 primary-bg w-370">
+                            <%= link_to "New Student Kids Club Registration", "https://schools.procareconnect.com/register/b3b590fe-f8ad-40ef-8019-5f27eca6c21b", class:"text-white", target: "_blank", rel: "noopener" %>
+                        </button>
+                    </div>
+                    <div class="mt-2">
+                        <button class="rule_btn py-3 primary-bg w-370">
+                            <%= link_to "Returning Student Kids Club Registration", "https://schools.scriptapp.com/#/workflow-submission/10526438581c649f0ddc7436ba2d40fe8de76863d", class:"text-white", target: "_blank", rel: "noopener" %>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <p class="fs-20 fw-semibold">Kids Club Weekly Schedule Request Form</p>
+                    <div>
+                        <button class="rule_btn py-3 primary-bg w-370">
+                            <%= link_to "Weekly Schedule Request Form", "https://schools.scriptapp.com/#/inbox/to-do?workflowIdForNewSubmission=1395894786032d5fc8f054af1a128ceb495d95df3", class:"text-white", target: "_blank", rel: "noopener" %>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="container-sm mt-4">
+                <p class="text-center mb-0">
+                    For more information, contact Kids Club Supervisor, Melinda King at melinda.king@wlps.net or (734) 839-6311.<br>
+                    For Kids Club billing questions, contact Charlie Basham at charlie.basham@wlps.net or (734) 449-2051 ext. 4001.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <div class="container d-flex gap-4 mobile-reverse">
+            <div class="text_container flex-1">
+                <h2 class="text-black">Year-Round Enrichment with EduCare</h2>
+                <p>Whitmore Lake EduCare is more than just childcare, it's a Montessori-inspired, enrichment-based program designed for Preschool through 6th grade students. Located at our Main Street Campus, EduCare supports families year-round with before and after school care, full-day options on no-school days, and extended care during school breaks.</p>
+                <p>The program blends structured, play based activities with free choice opportunities that align with Montessori philosophy. Children are grouped by mixed ages, encouraging positive peer relationships and self-directed learning. Whether it's morning movement in the gym or hands-on projects inspired by the seasons, EduCare offers a safe, fun, and engaging space where students grow socially, emotionally, and academically.</p>
+                <div>
+                    <button class="rule_btn py-3 primary-bg w-370">
+                        <%= link_to "Apply Today", "https://schools.scriptapp.com/#/workflow-submission/945187085100d8c0d92148669fa6c185dc7142f9", class:"text-white", target: "_blank", rel: "noopener" %>
+                    </button>
+                </div>
+                <div class="mt-2">
+                    <% if @kids_club_pdfs.any? %>
+                        <% @kids_club_pdfs.each do |pdf_doc| %>
+                            <% if pdf_doc.pdf.attached? %>
+                                <button class="rule_btn py-3 primary-bg w-370">
+                                    <%= link_to "Download Educare Brochure", rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                </button>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                </div>
+            </div>
+            <div class="image_container flex-1">
+                <div class="right_img">
+                    <%= image_tag("year_round.png", alt: "Year-Round Enrichment with EduCare") %>
+                </div>
+            </div>
+        </div>
+        <div class="container d-flex gap-4 py-4_5">
+            <div class="image_container flex-1">
+                <div class="right_img">
+                    <%= image_tag("highschool_reading.png", alt: "Facility Rentals at Whitmore Lake Public Schools") %>
+                </div>
+            </div>
+            <div class="text_container flex-1">
+                <h2 class="text-black">Safe, Enriching, Montessori-Inspired Care at EduCare</h2>
+                <ul>
+                    <li>Play based, Montessori aligned activities that promote independence</li>
+                    <li>Mixed-age grouping to foster leadership and positive peer relationships</li>
+                    <li>Indoor gym and outdoor play for daily physical activity</li>
+                    <li>Creative, seasonal projects and enrichment during school breaks</li>
+                    <li>Quiet time and space for snacks and relaxation</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex align-items-center primary-bg p-4 gap-4 educare_details">
+                <div>
+                    <h2 class="text-white">EduCare Details, Hours, and Registration</h2>
+                    <p class="text-white">EduCare is open Monday-Friday and operates on most no-school days, including snow days, unless otherwise noted.</p>
+                    <p class="text-white"><b>Location:</b> WLPS Main Street Campus, 8845 Main Street, Whitmore Lake, MI 48189</p>
+                    <p class="text-white"><b>Contact:</b> Karen Barney, Director of Montessori Education - karen.barney@wlps.net | (734) 449-4715</p>
+                </div>
+                <div>
+                    <div>
+                        <button class="btn-white p-3 primary-bg w-370 .ff-ap">
+                            <%= link_to "Apply Today", "https://schools.scriptapp.com/#/workflow-submission/945187085100d8c0d92148669fa6c185dc7142f9", class:"text-white", target: "_blank", rel: "noopener" %>
+                        </button>
+                    </div>
+                    <div class="mt-2">
+                        <% if @kids_club_pdfs.any? %>
+                            <% @kids_club_pdfs.each do |pdf_doc| %>
+                                <% if pdf_doc.pdf.attached? %>
+                                    <button class="btn-white p-3 primary-bg w-370 .ff-ap">
+                                        <%= link_to "Download Educare Brochure", rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                    </button>
+                                <% end %>
+                            <% end %>
+                        <% end %>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

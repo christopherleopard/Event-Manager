@@ -20,7 +20,7 @@
                 communicate with our community on how we utilize the resources that are provided to us.
             </p>
             <p>The following information is required to be posted on our website:</p>
-            <ul style="list-style-type: decimal;">
+            <ul class="mb-0" style="list-style-type: decimal;">
                 <li>The annual operating budget and subsequent budget revisions.</li>
                 <li>
                     Using data that has already been collected and submitted to the Michigan Department of
@@ -60,10 +60,157 @@
                         <li class="alpha-counter">The audit report of the audit conducted under subsection (4) for the most recent fiscal year for which it is available.</li>
                     </ul>
                 </li>
+                <li>Bids required under section 5 of the public employee health benefits act, 2007 PA 106, MCL 124.75.</li>
+                <li>The district's written policy governing procurement of supplies, materials, and equipment.</li>
+                <li>The district's written policy establishing specific categories of reimbursable expenses, as described in section 1254(2) of the revised school code, MCL 380.1254.</li>
+                <li>
+                    Either the district's accounts payable check register for the most recent school fiscal year or a
+                    statement of the total amount of expenses incurred by board members or employees of the
+                    district that were reimbursed by the district for the most recent school fiscal year.
+                </li>
+                <li>
+                    The total salary and a description and cost of each fringe benefit included in the
+                    compensation package for the superintendent of the district and for each employee of the
+                    district whose salary exceeds $100,000.00.
+                </li>
+                <li>The annual amount spent on dues paid to associations.</li>
+                <li>The annual amount spent on lobbying or lobbying services. As used in this subdivision, “lobbying” means that term as defined in section 5 of 1978 PA 472, MCL 4.415.</li>
+                <li>Any deficit elimination plan or enhanced deficit elimination plan the district was required to submit under this article.</li>
+                <li>
+                    Identification of all credit cards maintained by the district as district credit cards, the
+                    identity of all individuals authorized to use each of those credit cards, the credit limit on each
+                    credit card, and the dollar limit, if any, for each individual's authorized use of the credit card.
+                </li>
+                <li>
+                    Costs incurred for each instance of out-of-state travel by the school administrator of the
+                    district that is fully or partially paid for by the district and the details of each of those instances
+                    of out-of-state travel, including at least identification of each individual on the trip, destination, and purpose.
+                </li>
             </ul>
         </div>
     </div>
     <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
-        
+        <div class="container">
+            <% categories = {
+                "Board Approved Budget" => [
+                    "2023-24 Final Budget and 2024-25 Original Budget"
+                ],
+                "Personnel Expenditures" => [
+                    "Personnel Expenditures 2023-24"
+                ],
+                "Current Operating Expenditures" => [
+                    "Operating Expenditures 2023-24"
+                ],
+                "Current Bargaining Agreements" => [
+                    "WLES Agreement 2022-2025",
+                    "Office Assistants Agreement 2023-26",
+                    "Paraprofessional Agreement 2023-26"
+                ],
+                "Employer-Sponsored Health Care Plans" => [
+                    "MESSA Balance+ Summary of Benefits & Coverage",
+                    "MESSA ABC Summary of Benefits & Coverage",
+                    "MESSA LTD Plan Highlights - All Groups",
+                    "MESSA Group Term Life Plan Highlights - All Groups",
+                    "Dental Highlights Teacher - Administration",
+                    "Vision Highlights Teacher - Administration",
+                    "Dental Highlights Parapro - Office - Personnel - Transportation - Maintenance",
+                    "Vision Highlights Parapro - Office - Personnel - Transportation - Maintenance"
+                ],
+                "Audited Financial Statements" => [
+                    "2023-24 Audited Financial Statements",
+                    "2022-23 Audited Financial Statements",
+                    "2021-22 Audited Financial Statements",
+                    "2020-21 Audited Financial Statements",
+                    "2019-20 Audited Financial Statements",
+                    "2018-19 Audited Financial Statements",
+                    "2017-18 Audited Financial Statements",
+                    "2016-17 Audited Financial Statements",
+                    "2014-16 Audited Financial Statements",
+                    "2014-15 Audited Financial Statements"
+                ],
+                "Medical Benefit Plan Bids" => [
+                    "Health Plan Purchasing Consortium Agreement"
+                ],
+                "Procurement" => [
+                    "Procurement"
+                ],
+                "Expense Reimbursement Policy" => [
+                    "Expense Reimbursement Policy"
+                ],
+                "Accounts Payable Check Register" => [
+                    "2023-24 Accounts Payable Payment Register"
+                ],
+                "Employee Compensation Information" => [
+                    "Employee Compensation 2023"
+                ],
+                "District Paid Association Dues" => [
+                    "District Paid Association Dues 2023-24"
+                ],
+                "District Paid Lobbying Costs" => [],
+                "Approved Deficit Elimination Plan" => [],
+                "District Credit Card Information" => [
+                    "District Credit Card Information 2023-24"
+                ],
+                "District Paid Out-of-State Travel Information" => [],
+                "MI School Data Portal" => [],
+                "Educator Evaluation Postings and Assurances Documents for District-Use as required by Public Act 173 of 2015" => [
+                    "Teacher Evaluation Posting and Assurances Tool",
+                    "Teacher-Admin Evaluation Training Plan",
+                    "Superintendent Evaluation Posting and Assurances Tool"
+                ],
+                "Extended COVID-19 Learning Plan" => [
+                    "Extended COVId-19 Learning Plan",
+                    "End of Year Extended COVID-19 Learning Plan",
+                    "2021-2022 WLPS Extended COVID-19 Learning Goal Reporting 6.15.22",
+                    "2022-2023 WLPS Extended COVID-19 Learning Goal Reporting"
+                ],
+                "Mitigating Learning Loss Prevention" => [
+                    "WLPS 98c Board Presentation",
+                    "98c Learning Loss Plan",
+                    "Strategic 23g Budget",
+                    "Strategic 23g Plan 3",
+                    "Strategic 23g Plan Contact Information"
+                ]
+            } %>
+
+            <% categories.each do |heading, titles| %>
+                <h2 class="text-black mb-2 mt-3"><%= heading %></h2>
+                <% if heading == "Medical Benefit Plan Bids" %>
+                    <p>
+                        Whitmore Lake Public Schools participates in the Washtenaw County Consortium for employee
+                        medical insurance coverage for administrators, qualified non-union personnel, and all
+                        bargaining groups. No bids have been requested.
+                    </p>
+                <% end %>
+                <% if heading == "District Paid Lobbying Costs" %>
+                    <p>Whitmore Lake Public Schools has no expenses related to district paid lobbying costs.</p>
+                <% end %>
+                <% if heading == "Approved Deficit Elimination Plan" %>
+                    <p>Whitmore Lake Public Schools has not incurred a deficit.</p>
+                <% end %>
+                <% if heading == "District Paid Out-of-State Travel Information" %>
+                    <p>Whitmore Lake Public Schools did not have any out-of-state travel.</p>
+                <% end %>
+                <% if heading == "MI School Data Portal" %>
+                    <p>
+                        Pursuant to the Best Practices Incentives Grant, as defined in MCL 388.1622f, the district
+                        provides the following link to the MI School Data Portal which provides a dashboard
+                        demonstrating the district's efforts to manage its finances responsibly.<br>
+                        <a href="MISchoolData.org" class="text-red">www.MISchoolData.org</a>
+                    </p>
+                <% end %>
+                <% @transparency_reporting_pdfs.each do |pdf_doc| %>
+                    <% if pdf_doc.pdf.attached? && titles.include?(pdf_doc.title) %>
+                        <% if pdf_doc.title == "Superintendent Evaluation Posting and Assurances Tool" %>
+                            <p class="mb-0"><b>Administrator Evaluation Posting and Assurances Tool</b></p>
+                        <% end %>
+                        <%= link_to rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), target: "_blank", rel: "noopener", class: "d-flex align-items-center color-normal mb-2 text-decoration-underline" do %>
+                            <%= image_tag("pdf.png", alt: "View", class: "origin", style: "vertical-align: middle; margin-right: 4px;") %>
+                            <%= pdf_doc.title %>
+                        <% end %>
+                    <% end %>
+                <% end %>
+            <% end %>
+        </div>
     </div>
 </div>
