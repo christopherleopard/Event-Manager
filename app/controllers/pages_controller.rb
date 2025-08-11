@@ -47,6 +47,10 @@ class PagesController < ApplicationController
     @transportation_pdfs = PdfDocument.where(page_title: "Transportation").includes(:pdf_attachment, :pdf_blob)
   end
 
+  def school_of_choice
+    @school_of_choice_pdfs = PdfDocument.where(page_title: "School of Choice").includes(:pdf_attachment, :pdf_blob)
+  end
+
   def drills
     @drills = Drill.all
   end

@@ -1,0 +1,67 @@
+<% content_for :title, "Green Initiatives at Whitmore Lake Public Schools | LEED Silver Certified" %>
+<% content_for :description, "Discover Whitmore Lake Public Schools' commitment to sustainability. Learn about our LEED Silver Certification and green initiatives to create eco-friendly, energy-efficient environments." %>
+
+<div class="green_initiatives">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">About WLPS</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <%= render "community_links_bar" %>
+    </div>
+    <div class="green_initiatives_intro py-4_5">
+        <div class="container">
+            <div class="d-flex gap-4_5 align-items-center">
+                <div class="text-center">
+                    <%= image_tag("us_green.png", alt: "US Green Building Council Badge", class: "origin") %>
+                </div>
+                <div class="">
+                    <h1><span>Sustainability at WLPS:</span><span class="text-black"> LEED Silver Certified Green Initiatives</span></h1>
+                    <p class="mb-0">LEED stands for Leadership in Energy & Environmental Design. To attain a LEED Silver Certification from the U.S. Green Building Council (USGBC) is a commendable achievement. As part of our ongoing green initiatives, our buildings have all received the LEED Silver Certification at Whitmore Lake Public Schools. This means our buildings comply with a set of environmental standards set to help buildings and their operators stay environmentally conscious and responsible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
+        <div class="container">
+            <h2 class="text-center text-black">WLPS LEED Silver Certification: Sustainability Achievements</h2>
+            <p class="mb-0">Community service is an essential way for students to explore their interests, show colleges what they believe in, and define a possible career path. By engaging in volunteer work, teens have an opportunity to learn experientially.</p>
+            <div class="sustainability_achievements">
+                <div class="grey_card_2 h-100">
+                    <%= image_tag("sustainable.png", alt: "Sustainable Sites", class: "origin") %>
+                    <p class="ff-b fs-18 mb-0 mt-4 fw-semibold">Sustainable Sites - <span class="text-red">Our Score: 7/14</span></p>
+                </div>
+                <div class="grey_card_2 h-100">
+                    <%= image_tag("water.png", alt: "Water Efficiency", class: "origin") %>
+                    <p class="ff-b fs-18 mb-0 mt-4 fw-semibold">Water Efficiency - <span class="text-red">Our Score: 3/5</span></p>
+                </div>
+                <div class="grey_card_2 h-100">
+                    <%= image_tag("energy.png", alt: "Energy", class: "origin") %>
+                    <p class="ff-b fs-18 mb-0 mt-4 fw-semibold">Energy - <span class="text-red">Our Score: 8/17</span></p>
+                </div>
+                <div class="grey_card_2 h-100">
+                    <%= image_tag("materials.png", alt: "Materials", class: "origin") %>
+                    <p class="ff-b fs-18 mb-0 mt-4 fw-semibold">Materials - <span class="text-red">Our Score: 7/13</span></p>
+                </div>
+                <div class="grey_card_2 h-100">
+                    <%= image_tag("quality.png", alt: "Indoor Quality", class: "origin") %>
+                    <p class="ff-b fs-18 mb-0 mt-4 fw-semibold">Indoor Quality - <span class="text-red">Our Score: 6/15</span></p>
+                </div>
+                <div class="grey_card_2 h-100">
+                    <%= image_tag("innovation.png", alt: "Innovation", class: "origin") %>
+                    <p class="ff-b fs-18 mb-0 mt-4 fw-semibold">Innovation - <span class="text-red">Our Score: 4/5</span></p>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="rule_btn py-3 primary-bg w-370">
+                    <%= link_to "Visit USBGC to See Full Report", "https://www.usgbc.org/projects/new-whitmore-lake-high-school", class:"text-white", target: "_blank" %>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <div class="container">
+            <h2 class="text-black">Educating Students Through Green Initiatives</h2>
+            <p>We believe staying aware of and reducing the impact WLPS buildings have on the environment aids us in producing students focused on their education as well as their role in caring for our world.</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,118 @@
+<% content_for :title, "School of Choice - Whitmore Lake Public Schools | Enroll Now" %>
+<% content_for :description, "Choose Whitmore Lake Public Schools as your School of Choice. Offering small class sizes, personalized education, and a safe, inclusive environment for K-12 students. Enroll today!" %>
+
+<div class="school_of_choice">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">About WLPS</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <%= render "community_links_bar" %>
+    </div>
+    <div class="school_of_choice_intro py-4_5">
+        <div class="container">
+            <h1><span>Whitmore Lake Public Schools:</span><span class="text-black"> Your School of Choice for Exceptional Education</span></h1>
+            <h2>School of Choice opens on February 19, 2024 for the 2024/2025 School Year</h2>
+            <p class="mb-0">Whitmore Lake Public Schools is proud to offer unique school options for students K-12 in and out of the Whitmore Lake district. With an inclusive culture that fosters personalized education and next-level education readiness, our Elementary School, Middle School, and High School are exceptional choices.</p>
+            <div class="d-flex gap-4_5 mt-4 justify-content-center">
+                <% if @school_of_choice_pdfs.any? %>
+                    <% @school_of_choice_pdfs.each do |pdf_doc| %>
+                        <% if pdf_doc.pdf.attached? %>
+                            <% if pdf_doc.title == "School of Choice Outline & Directions" %>
+                                <button class="btn_normal">
+                                    <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                </button>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                <% end %>
+                <button class="btn_normal">
+                    <%= link_to "School of Choice Application", "https://schools.scriptapp.com/#/inbox/to-do?workflowIdForNewSubmission=10141204417a81827d319544ff987769dd66b727d7", class:"text-white", target: "_blank" %>
+                </button>
+            </div>
+            <div class="container-sm text-center p-2 second-bg schedule_tour">
+                <h2 class="text-white mb-0">Schedule a Personal Tour at Whitmore Lake Public Schools</h2>
+                <p class="text-white mb-0">Contact <a href = "mailto:info@wlps.net" class="text-decoration-underline">info@wlps.net</a> or <a href = "telto:+17344494431" class="text-decoration-underline">734.449.4431 x5008</a></p>
+            </div>
+            <div class="container-sm text-center">
+                <h2>Trojan Pride is Family</h2>
+                <iframe
+                    src="https://www.youtube.com/embed/ICtFrlXI-gY"
+                    title="Trojan Pride is Family"
+                    frameborder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    style="width: 100%; height: 600px;">
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
+        <div class="container">
+            <h2 class="text-center text-black mb-5">What Makes Whitmore Lake Public Schools the Best Choice?</h2>
+            <div class="best_choice">
+                <div class="choice">
+                    <h2>A Safe Learning Environment</h2>
+                    <p class="mb-0">Our tight-knit community of staff and parents are committed to creating a safe learning environment through stringent security protocols.</p>
+                </div>
+                <div class="choice">
+                    <h2>Small Class Sizes</h2>
+                    <p class="mb-0">Our classes are about 20% smaller than competing schools, allowing more one-on-one attention from our teachers for our students.</p>
+                </div>
+                <div class="choice">
+                    <h2>A College Readiness Culture</h2>
+                    <p class="mb-0">This has resulted in a 97% graduation rate and our graduates going to the top Michigan colleges and universities.</p>
+                </div>
+                <div class="choice">
+                    <h2>Varied Curriculum</h2>
+                    <p class="mb-0">Students can explore different interests such as Performing & Applied Arts, Literature, Sciences, Mathematics, Social Sciences, Business & Tech, and Physical Education.</p>
+                </div>
+                <div class="choice">
+                    <h2>Bigger Isn't Always Better</h2>
+                    <p class="mb-0">Our 7th-12th grade format, with grades separated by 7th-8th and 9th-12th, reduces 9th grade failure rates.</p>
+                </div>
+                <div class="choice">
+                    <h2>WLPS is Our Family</h2>
+                    <p class="mb-0">Your child isn't just a number here. We know all our students on a first-name basis, and we care for them like our own at WLPS.</p>
+                </div>
+            </div>
+            <div class="mt-4">
+                <h2>Opportunity</h2>
+                <p class="mb-0">Whether in the classroom or on the field, WLPS is proud to offer our students the resources and opportunity to get involved and succeed. Every student is different, but our teachers, coaches, and staff are committed to helping each student identify his/her strengths to get the most out of his/her time at WLPS. This is so important to us because we have seen how this makes a positive impact on the future of each student.</p>
+            </div>
+        </div>
+    </div>
+    <div class="py-5 primary-bg">
+        <div class="container d-flex align-items-center gap-4">
+            <div class="flex-1">
+                <h1 class="text-white mb-0">Pioneering Sustainability:</h1>
+                <h2 class="text-white mb-0">WLPS High School's LEED Certification</h2>
+            </div>
+            <div class="flex-1 text-center">
+                <button class="btn-white px-3">
+                    <%= link_to "Learn About Our Green Initiatives", "/green-initiatives", class:"text-white", target: "_blank" %>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <div class="container d-flex align-items-center gap-4_5 mobile-reverse">
+            <div class="text_container flex-1">
+                <h2 class="text-black">Looking Ahead: The Future of Whitmore Lake Public Schools</h2>
+                <p class="mb-0">
+                    Indeed, there is a bright future for Whitmore Lake Public Schools as we continue to adapt our
+                    academic environments to the rapidly changing world we live in. One of the most exciting
+                    factors of our success is the unique body of students enrolled in our public schools. Being a
+                    School of Choice district, we're happy to uphold an inclusive environment where students from
+                    all backgrounds are welcome to join us in a successful academic journey. Each day, we look
+                    forward to welcoming our students into environments that promote learning, friendship,
+                    motivation, and many more character building aspects that we've worked hard to create in each of our public schools.
+                </p>
+            </div>
+            <div class="image_container flex-1">
+                <div class="right_img text-center">
+                    <%= image_tag("iPad.png", alt: "The Future of Whitmore Lake Public Schools") %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

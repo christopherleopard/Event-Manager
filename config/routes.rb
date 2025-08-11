@@ -19,6 +19,10 @@ Rails.application.routes.draw do
   get '/school-policy-notices', to: 'pages#school_policy_notices'
   get '/transparency-reporting', to: 'pages#transparency_reporting'
   get '/bond-updates', to: 'pages#bond_updates'
+  get '/community', to: 'pages#community'
+  get '/green-initiatives', to: 'pages#green_initiatives'
+  get '/history', to: 'pages#history'
+  get '/school-of-choice', to: 'pages#school_of_choice'
   get "staffs/index"
   get "staffs/show"
   get "events/index"

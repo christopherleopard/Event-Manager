@@ -229,6 +229,30 @@
     bottom: 0;
     left: 8%;
 }
+//Green Initiatives
+.sustainability_achievements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 36px;
+    margin-top: 36px;
+}
+//History
+.old_school {
+    margin-top: -16px;
+    margin-bottom: -16px;
+}
+//School of Choice
+.schedule_tour {
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+.best_choice {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
 //Responsive styles
 @media screen and (max-width: 768px) {
     .admin_login {
@@ -300,5 +324,16 @@
     }
     .child_care.homework {
         margin-bottom: 0;
+    }
+    .sustainability_achievements {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+    }
+    .sustainability_achievements .grey_card_2 {
+        padding: 16px;
+    }
+    .old_school {
+        margin-top: 0;
+        margin-bottom: 30px;
     }
 }

@@ -1,0 +1,75 @@
+<% content_for :title, "Our History - Whitmore Lake Public Schools | 1944 to Present" %>
+<% content_for :description, "Explore the rich history of Whitmore Lake Public Schools, from its founding in 1944 to its commitment to innovation and inclusivity as a School of Choice district" %>
+
+<div class="history">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">About WLPS</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <%= render "community_links_bar" %>
+    </div>
+    <div class="history_intro py-4_5">
+        <div class="container">
+            <h1><span>The History of Whitmore Lake Public Schools:</span><span class="text-black"> 1944 to Today</span></h1>
+            <p class="mb-0">
+                In 1944, Whitmore Lake Elementary School and Whitmore Lake Middle School were established
+                under Whitmore Lake Public Schools. Whitmore Lake High School was then established, and
+                saw its first graduating class walk shortly after 1950. Over the years, WLPS has grown as an
+                education system serving various students on many unique journeys, including now the WLPS
+                Early Childhood Center for younger children, and Whitmore Lake Community Recreation for athletics.
+            </p>
+        </div>
+    </div>
+    <div style="background-image: url('/assets/login_bg.png');">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="flex-1 text-center">
+                    <%= image_tag("old_school.png", alt: "Old WLPS", class: "origin old_school w-md-full") %>
+                </div>
+                <div class="flex-1 mb-4">
+                    <h2 class="text-black">Building on Over 70 Years of Excellence at WLPS</h2>
+                    <p class="mb-0">
+                        Since the first graduating class of Whitmore Lake High School shortly after 1950, for over
+                        70 years WLPS has continued as an institution of academic quality that continues to thrive with
+                        educational persistence stretching across primary and secondary education. WLPS has a strong
+                        foundation built on the past accomplishments of its various public schools, which are all School of Choice.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-5 primary-bg">
+        <div class="container d-flex align-items-center gap-4">
+            <div class="flex-1">
+                <h1 class="text-white mb-0">Pioneering Sustainability:</h1>
+                <h2 class="text-white mb-0">WLPS High School's LEED Certification</h2>
+            </div>
+            <div class="flex-1 text-center">
+                <button class="btn-white px-3">
+                    <%= link_to "Learn About Our Green Initiatives", "/green-initiatives", class:"text-white", target: "_blank" %>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <div class="container d-flex align-items-center gap-4_5 mobile-reverse">
+            <div class="text_container flex-1">
+                <h2 class="text-black">Looking Ahead: The Future of Whitmore Lake Public Schools</h2>
+                <p class="mb-0">
+                    Indeed, there is a bright future for Whitmore Lake Public Schools as we continue to adapt our
+                    academic environments to the rapidly changing world we live in. One of the most exciting
+                    factors of our success is the unique body of students enrolled in our public schools. Being a
+                    School of Choice district, we're happy to uphold an inclusive environment where students from
+                    all backgrounds are welcome to join us in a successful academic journey. Each day, we look
+                    forward to welcoming our students into environments that promote learning, friendship,
+                    motivation, and many more character building aspects that we've worked hard to create in each of our public schools.
+                </p>
+            </div>
+            <div class="image_container flex-1">
+                <div class="right_img text-center">
+                    <%= image_tag("iPad.png", alt: "The Future of Whitmore Lake Public Schools") %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

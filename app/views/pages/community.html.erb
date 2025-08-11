@@ -1,0 +1,129 @@
+<% content_for :title, "Community Involvement - Whitmore Lake Public Schools, Michigan" %>
+<% content_for :description, "Discover how Whitmore Lake Public Schools fosters community involvement through service projects, scholarships, and partnerships. Learn more about initiatives like Rake & Run, WLFEE grants, and Builders Club activities." %>
+
+<div class="community">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">About WLPS</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <%= render "community_links_bar" %>
+    </div>
+    <div class="community_intro py-4_5">
+        <div class="container">
+            <h1><span>How Whitmore Lake Public Schools</span><span class="text-black"> Builds Community Connections</span></h1>
+            <p class="mb-0">
+                Considering Whitmore Lake Public Schools is the educational institution of the Whitmore Lake
+                community, we understand our public schools and those who run them have a duty and
+                opportunity to be involved with the local community on a deeper level than most are able to
+                be. That's why WLPS values community involvement and is always taking steps to have a
+                positive impact on Whitmore Lake and its citizens, in and out of the classroom
+            </p>
+            <h2 class="text-black mt-5">Why Community Service Matters for Students</h2>
+            <p class="mb-0">
+                Community service is an essential way for students to explore their interests, show colleges
+                what they believe in, and define a possible career path. By engaging in volunteer work, teens have an opportunity to learn experientially.
+            </p>
+            <div class="d-flex gap-4_5 mt-5">
+                <div class="flex-1 text-center">
+                    <div>
+                        <%= image_tag("sense.png", alt: "Develops an increased sense of social responsibility & compassion", class: "origin") %>
+                    </div>
+                    <div>
+                        <p class="mb-0">Develops an increased sense of social responsibility & compassion</p>
+                    </div>
+                </div>
+                <div class="flex-1 text-center">
+                    <div>
+                        <%= image_tag("learning.png", alt: "Provides an opportunity to apply academic learning to real human needs", class: "origin") %>
+                    </div>
+                    <div>
+                        <p class="mb-0">Provides an opportunity to apply academic learning to real human needs</p>
+                    </div>
+                </div>
+                <div class="flex-1 text-center">
+                    <div>
+                        <%= image_tag("relationship.png", alt: "Builds relationships with peers, adults, and like-minded people sharing a cause", class: "origin") %>
+                    </div>
+                    <div>
+                        <p class="mb-0">Builds relationships with peers, adults, and like-minded people sharing a cause</p>
+                    </div>
+                </div>
+                <div class="flex-1 text-center">
+                    <div>
+                        <%= image_tag("thinking.png", alt: "Helps students improve on their communication & critical thinking skills", class: "origin") %>
+                    </div>
+                    <div>
+                        <p class="mb-0">Helps students improve on their communication & critical thinking skills</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
+        <div class="container d-flex align-items-center gap-4_5">
+            <div class="image_container flex-1">
+                <div class="right_img">
+                    <%= image_tag("rake_run.png", alt: "Rake & Run") %>
+                </div>
+            </div>
+            <div class="text_container flex-1">
+                <h2 class="text-black">Rake & Run: A Whitmore Lake Service Tradition</h2>
+                <p>Nothing says service in a more pronounced fashion in Whitmore Lake than the community service our students put in during Rake N Run. (Note: If you have never heard of it, Rake N Run is an event planned by the WLHS National Honor Society with a goal of raking as many yards of senior citizens in one day as possible. All students in grades 7 through 12 participate.)</p>
+                <div>
+                    <button class="rule_btn py-3 primary-bg w-370">
+                        <%= link_to "Read More About Rake & Run", "https://whitmorelakeschools.blogspot.com/2015/11/news-and-notes-volume-2-number-10.html", class:"text-white", target: "_blank" %>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <div class="container d-flex align-items-center gap-4_5 mobile-reverse">
+            <div class="text_container flex-1">
+                <h2 class="text-black">Supporting Success with Whitmore Lake Community Scholarships</h2>
+                <p>At Whitmore Lake, supporting and celebrating our student's success doesn't end when they receive their diploma. The Whitmore Lake Community Scholarships program seeks to reward graduating seniors who have shown dedication and excellence in academics, extracurricular activities, and community service, with a $1,000 scholarship to apply towards their higher education goals. If you would like to contribute to a scholarship or fund a full grant, click the button below now. We accept donations of all sizes from individuals and businesses, plus, your gift is tax-deductible!</p>
+                <div>
+                    <button class="rule_btn py-3 primary-bg w-370">
+                        <%= link_to "Read More About Community Scholarships", "http://www.wlcommunityscholarship.org/", class:"text-white", target: "_blank" %>
+                    </button>
+                </div>
+            </div>
+            <div class="image_container flex-1">
+                <div class="right_img text-center">
+                    <%= image_tag("scholarship.png", alt: "Whitmore Lake Community Scholarships", class: "origin w-md-full") %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
+        <div class="container d-flex align-items-center gap-4_5">
+            <div class="image_container flex-1">
+                <div class="right_img">
+                    <%= image_tag("foundation.png", alt: "Enhancing Education") %>
+                </div>
+            </div>
+            <div class="text_container flex-1">
+                <h2 class="text-black">Enhancing Education Through WLFEE Grants</h2>
+                <p>The Whitmore Lake Foundation for Educational Excellence provides financial aid and public relations support to programs and projects that enhance the academic and extracurricular experiences of our students. Since their founding in 2006, WLFEE has provided over $15,000 in grants to the staff and students of our district. These funds have enabled numerous programs, including music therapy, learning mastery club, and peer assistance groups. Additionally, they've supplied our classrooms with supplies like iPads, laboratory kits, outdoor learning materials, and more! Help us ensure the continued excellence of our district's educational experience by giving to WLFEE today. You can learn more about donation options and WLFEE's mission on their website below.</p>
+                <div>
+                    <button class="rule_btn py-3 primary-bg w-370">
+                        <%= link_to "Read More About WLFEE", "http://wlfee.org/", class:"text-white", target: "_blank" %>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <div class="container d-flex align-items-center gap-4_5">
+            <div class="image_container flex-1">
+                <div class="right_img">
+                    <%= image_tag("support.png", alt: "Supporting Our Community") %>
+                </div>
+            </div>
+            <div class="text_container flex-1">
+                <h2 class="text-black">Supporting Our Community with Whitmore Lake Area Human Services</h2>
+                <p>Whitmore Lake Area Human Services provides critical food and health and wellbeing assistance to residents in and around Whitmore Lake. WLPS partners closely with this organization throughout the year, providing valuable volunteer and community service opportunities to our students and staff. Each year our National Honor Society coordinates the largest food donation during their Canned Food Drive. Students, staff, and board members partner to provide a joy-filled holiday season during WLAHS' annual Adopt-a-Family program. And throughout the year students in all grades visit the food pantry to help stock shelves and prepare the pantry for those who use it.</p>
+            </div>
+        </div>
+    </div>
+</div>

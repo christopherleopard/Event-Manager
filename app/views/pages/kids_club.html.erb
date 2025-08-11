@@ -141,7 +141,7 @@
             </div>
         </div>
     </div>
-    <div class="py-4_5">
+    <div class="py-4_5" id="edcare">
         <div class="container d-flex gap-4 mobile-reverse">
             <div class="text_container flex-1">
                 <h2 class="text-black">Year-Round Enrichment with EduCare</h2>
@@ -197,7 +197,7 @@
                 </div>
                 <div>
                     <div>
-                        <button class="btn-white p-3 primary-bg w-370 .ff-ap">
+                        <button class="btn-white p-3 primary-bg w-370 ff-ap">
                             <%= link_to "Apply Today", "https://schools.scriptapp.com/#/workflow-submission/945187085100d8c0d92148669fa6c185dc7142f9", class:"text-white", target: "_blank", rel: "noopener" %>
                         </button>
                     </div>
@@ -205,7 +205,7 @@
                         <% if @kids_club_pdfs.any? %>
                             <% @kids_club_pdfs.each do |pdf_doc| %>
                                 <% if pdf_doc.pdf.attached? %>
-                                    <button class="btn-white p-3 primary-bg w-370 .ff-ap">
+                                    <button class="btn-white p-3 primary-bg w-370 ff-ap">
                                         <%= link_to "Download Educare Brochure", rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
                                     </button>
                                 <% end %>

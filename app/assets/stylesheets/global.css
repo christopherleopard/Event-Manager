@@ -151,6 +151,18 @@ p {
     background: #ffffff;
     text-shadow: none;
 }
+.second-bg {
+    background: #3e3e3e;
+}
+.btn_normal {
+    background: #D32128;
+    color: #ffffff;
+    border-radius: 0;
+    padding: 1em 3em;
+    text-shadow: none;
+    font-family: 'Helvetica Neue', sans-serif;
+    border: none;
+}
 .primary-btn {
     background: #D32128 !important;
     color: #fff !important;
@@ -285,8 +297,8 @@ img.origin {
 }
 @media screen and (max-width: 768px) {
     .container {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
     .gap-4_5 {
         gap: 16px;
