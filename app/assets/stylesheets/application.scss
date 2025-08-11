@@ -253,6 +253,19 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
+//Why Choose WLPS
+.wl_logo_group {
+    background-image: url('/assets/wl_logo_group.png');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+//Staff
+.team_members {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px;
+}
 //Responsive styles
 @media screen and (max-width: 768px) {
     .admin_login {
@@ -325,7 +338,7 @@
     .child_care.homework {
         margin-bottom: 0;
     }
-    .sustainability_achievements {
+    .sustainability_achievements, .best_choice, .team_members {
         grid-template-columns: repeat(1, 1fr);
         gap: 16px;
     }
@@ -335,5 +348,9 @@
     .old_school {
         margin-top: 0;
         margin-bottom: 30px;
+    }
+    .wl_logo_group {
+        background-image: url('/assets/wl_logo_group_mob.png');
+        height: 320px;
     }
 }

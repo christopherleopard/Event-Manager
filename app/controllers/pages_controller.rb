@@ -49,12 +49,18 @@ class PagesController < ApplicationController
 
   def school_of_choice
     @school_of_choice_pdfs = PdfDocument.where(page_title: "School of Choice").includes(:pdf_attachment, :pdf_blob)
+    @enrollment = EnrollmentForm.new
   end
 
   def drills
     @drills = Drill.all
   end
+
   def bond_updates
     @contact = Contact.new
+  end
+
+  def staff
+    @staffs = Staff.all
   end
 end

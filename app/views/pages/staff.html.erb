@@ -1,0 +1,68 @@
+<% content_for :title, "Staff Directory - Whitmore Lake Public Schools | Meet Our Team" %>
+<% content_for :description, "Explore the Whitmore Lake Public Schools Staff Directory. Meet our dedicated administrators, teachers, counselors, and transportation team who ensure a safe and supportive learning environment." %>
+
+<div class="staffs">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">About WLPS</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <%= render "community_links_bar" %>
+    </div>
+    <div class="staffs_intro py-4_5">
+        <div class="container">
+            <h1><span>Meet the Team</span><span class="text-black"> at Whitmore Lake Public Schools</span></h1>
+            <p>Use our staff directory to get to know the WLPS staff, and feel confident that your child will be learning in a safe and supportive environmet.</p>
+            <div id="accordion">
+                <% [ "Administration", "Early Childhood Center", "Go Like the Wind Montessori", "Elementary School", "Middle & High School", "Counseling", "Transportation" ].each_with_index do |department, index| %>
+                    <% collapse_id = "collapse#{index}" %>
+
+                    <div class="card bg-transparent border-0 mb-2">
+                    <div class="card-header text-white rounded-0 ff-b fw-semibold d-flex justify-content-between">
+                        <div>
+                            <%= link_to("#{department}", "##{collapse_id}", class: "card-link", data: { toggle: "collapse" }) %>
+                        </div>
+                        <div class="status_icons">
+                            <span class="status_icon <%= index == 0 ? 'hide' : 'show' %>">+</span>
+                            <span class="status_icon <%= index == 0 ? 'show' : 'hide' %>">-</span>
+                        </div>
+                    </div>
+
+                    <div id="<%= collapse_id %>" class="collapse mt-3 mb-2 <%= 'show' if index == 0 %>" data-parent="#accordion">                        
+                        <% staffs = Staff.where(department: department) %>
+                        <% if staffs.any? %>
+                            <div>
+                                <div class="fw-semibold color-normal">
+                                    <div class="team_members">
+                                        <% staffs.each_with_index do |staff, index2| %>                                    
+                                            <div class="member">
+                                                <% if staff.profile_image.attached? %>
+                                                    <%= image_tag url_for(staff.profile_image), alt: "#{staff.name} profile image", class: "origin mb-3" %>
+                                                <% else %>
+                                                    <span class="text-muted">No image</span>
+                                                <% end %>
+                                                <p class="fs-20 text-red mb-0"><%= staff.name %></p>
+                                                <p class="mb-0"><%= staff.title %></p>
+                                                <p class="mb-0"><%= department %></p>
+                                                <p class="mb-0">
+                                                    <% raw = staff.phone.to_s %>
+                                                    <% digits = raw.gsub(/\D/, '') %>
+                                                    <% digits = digits.sub(/\A1(?=\d{10,}\z)/, '') %>
+                                                    <% core  = digits[0, 10] %>
+                                                    <a href="<%= "tel:+1#{core}" %>" class="color-normal"><%= staff.phone %></a>
+                                                </p>
+                                                <p class="mb-0"><a href="mailto:<%= staff.email %>" class="color-normal"><%= staff.email %></a></p>
+                                                </div>                                    
+                                        <% end %>
+                                    </div>
+                                </div>
+                            </div>
+                        <% else %>
+                            <div>No staffs available.</div>
+                        <% end %>
+                    </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

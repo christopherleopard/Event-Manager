@@ -81,38 +81,86 @@
             </div>
         </div>
     </div>
-    <div class="py-5 primary-bg">
-        <div class="container d-flex align-items-center gap-4">
-            <div class="flex-1">
-                <h1 class="text-white mb-0">Pioneering Sustainability:</h1>
-                <h2 class="text-white mb-0">WLPS High School's LEED Certification</h2>
+    <div class="py-4_5">
+        <div class="container d-flex align-items-center gap-4_5 mobile-reverse">
+            <div class="text_container flex-1">
+                <h2 class="text-black">Fostering Positive Behavior Through PBIS at WLPS</h2>
+                <p class="mb-4">
+                    To encourage a safer and more effective environment at our elementary school, we implement
+                    the Positive Behavior Interventions & Supports (PBIS) program. This program is an elementary
+                    school-wide approach to expectations for behavior in and out of school to facilitate a calm
+                    environment, conducive to learning. All of these factors put together create a safe and caring environment, where our students truly thrive.
+                </p>
+                <div>
+                    <% if @school_of_choice_pdfs.any? %>
+                        <% @school_of_choice_pdfs.each do |pdf_doc| %>
+                            <% if pdf_doc.pdf.attached? %>
+                                <% if pdf_doc.title == "Download the PBIS Brochure" %>
+                                    <button class="btn_normal">
+                                        <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                    </button>
+                                <% end %>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                </div>
             </div>
-            <div class="flex-1 text-center">
-                <button class="btn-white px-3">
-                    <%= link_to "Learn About Our Green Initiatives", "/green-initiatives", class:"text-white", target: "_blank" %>
-                </button>
+            <div class="image_container flex-1">
+                <div class="right_img text-center">
+                    <%= image_tag("behavior.png", alt: "Fostering Positive Behavior Through PBIS at WLPS", class: "origin w-md-full") %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
+        <div class="container">
+            <h2 class="text-center text-black">Join the WLPS Family - Enroll Through School of Choice</h2>
+            <p class="text-center">Now accepting School of Choice Applications for Grades K-12!</p>
+            <h2 class="text-center">How to Apply</h2>
+            <div class="d-flex gap-4_5">
+                <div class="step flex-1 text-center">
+                    <%= image_tag("step_1.png", alt: "Step 1", class: "origin") %>
+                    <h2>Step 1</h2>
+                    <p class="mb-0">
+                        Parent/Legal Guardian needs to complete the application and sign on the appropriate line.
+                        (If the parent/legal guardian is requesting participation in the Inter-District School of Choice
+                        Program for more than one student in the family, a separate application form should be completed for each student.)
+                    </p>
+                    <div class="mt-4">
+                        <% if @school_of_choice_pdfs.any? %>
+                            <% @school_of_choice_pdfs.each do |pdf_doc| %>
+                                <% if pdf_doc.pdf.attached? %>
+                                    <% if pdf_doc.title == "School of Choice Outline & Directions" %>
+                                        <button class="btn_normal">
+                                            <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                        </button>
+                                    <% end %>
+                                <% end %>
+                            <% end %>
+                        <% end %>
+                    </div>
+                </div>
+                <div class="step flex-1 text-center">
+                    <%= image_tag("step_2.png", alt: "Step 2", class: "origin") %>
+                    <h2>Step 2</h2>
+                    <p class="mb-0">
+                        If you have any questions or would like assistance with the Inter-District School of Choice
+                        Program, please contact Tom DeKeyser, Superintendent at (734) 449-4464
+                    </p>
+                    <div class="mt-4">
+                        <button class="btn_normal">
+                            <%= link_to "School of Choice Application", "https://schools.scriptapp.com/#/inbox/to-do?workflowIdForNewSubmission=10141204417a81827d319544ff987769dd66b727d7", class:"text-white", target: "_blank" %>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="py-4_5">
-        <div class="container d-flex align-items-center gap-4_5 mobile-reverse">
-            <div class="text_container flex-1">
-                <h2 class="text-black">Looking Ahead: The Future of Whitmore Lake Public Schools</h2>
-                <p class="mb-0">
-                    Indeed, there is a bright future for Whitmore Lake Public Schools as we continue to adapt our
-                    academic environments to the rapidly changing world we live in. One of the most exciting
-                    factors of our success is the unique body of students enrolled in our public schools. Being a
-                    School of Choice district, we're happy to uphold an inclusive environment where students from
-                    all backgrounds are welcome to join us in a successful academic journey. Each day, we look
-                    forward to welcoming our students into environments that promote learning, friendship,
-                    motivation, and many more character building aspects that we've worked hard to create in each of our public schools.
-                </p>
-            </div>
-            <div class="image_container flex-1">
-                <div class="right_img text-center">
-                    <%= image_tag("iPad.png", alt: "The Future of Whitmore Lake Public Schools") %>
-                </div>
-            </div>
+        <div class="container">
+            <h2 class="text-black text-center">Join Our Whitmore Lake Public Schools Family - Enroll Today!</h2>
+            <p class="text-center">Still have questions? Fill out the form below and we'll be in touch to give you the answers you need!</p>
+            <%= render 'enrollments/form' %>
         </div>
     </div>
 </div>

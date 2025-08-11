@@ -1,0 +1,10 @@
+<!-- app/views/enrollment_mailer/notify_admin.html.erb -->
+<p><strong>Name:</strong> <%= @form.full_name %></p>
+<p><strong>Email:</strong> <%= @form.email %></p>
+<p><strong>Phone:</strong> <%= @form.phone.presence || "-" %></p>
+
+<p><strong>Address:</strong><br>
+<pre style="font-family: inherit;"><%= @form.full_address %></pre></p>
+
+<p><strong>Message:</strong><br>
+<%= simple_format(@form.message) %></p>

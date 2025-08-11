@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   get '/green-initiatives', to: 'pages#green_initiatives'
   get '/history', to: 'pages#history'
   get '/school-of-choice', to: 'pages#school_of_choice'
+  get '/why-choose-wlps', to: 'pages#why_choose_wlps'
+  get '/staff', to: 'pages#staff'
   get "staffs/index"
   get "staffs/show"
   get "events/index"
@@ -45,6 +47,7 @@ Rails.application.routes.draw do
 
   root "home#index"
   post 'contacts', to: 'contacts#create', as: 'contacts'
+  resource :enrollment, only: [:new, :create]
   resources :events, only: [ :index, :show ]
   resources :staffs, only: [ :index, :show ]
   resources :board_minutes, only: [ :index, :show ]
