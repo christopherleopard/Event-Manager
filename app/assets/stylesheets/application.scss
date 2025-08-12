@@ -266,6 +266,49 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 36px;
 }
+//Board Books
+.board_book, .board_minute {
+    display: flex;
+    padding: 16px 36px;
+    gap: 12px;
+}
+.board_book:nth-child(even), .board_minute:nth-child(even) {
+    background: #f3f3f3;
+}
+.board_minute {
+    align-items: end;
+}
+//Board Members
+.board_member_image {
+    width: 22%;
+}
+.board_member_info {
+    width: 32%;
+    margin: auto;
+    text-align: center;
+}
+.board_member_actions {
+    flex-direction: column;
+    width: 6%;
+}
+.board_member_action_icon {
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+}
+.board_member_action_icon img {
+    margin: auto;
+}
+.show_note.primary-bg {
+    background: #b31c23;
+}
+.board_member_social {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 40%;
+}
 //Responsive styles
 @media screen and (max-width: 768px) {
     .admin_login {
@@ -352,5 +395,18 @@
     .wl_logo_group {
         background-image: url('/assets/wl_logo_group_mob.png');
         height: 320px;
+    }
+    .board_member_image, .board_member_info, .board_member_actions, .board_member_social, .email_board_member .primary-btn {
+        width: 100%;
+    }
+    .board_member_info {
+        margin-top: 16px;
+    }
+    .board_member_actions {
+        flex-direction: row;
+        margin-bottom: 16px;
+    }
+    .board_member_action_icon {
+        padding: 16px 0;
     }
 }

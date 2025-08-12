@@ -52,6 +52,10 @@ class PagesController < ApplicationController
     @enrollment = EnrollmentForm.new
   end
 
+  def board_calendars
+    @board_calendars_pdfs = PdfDocument.where(page_title: "Board Calendars").includes(:pdf_attachment, :pdf_blob)
+  end
+
   def drills
     @drills = Drill.all
   end
@@ -62,5 +66,13 @@ class PagesController < ApplicationController
 
   def staff
     @staffs = Staff.all
+  end
+
+  def board_books
+    @board_books = BoardBook.all
+  end
+
+  def board_minutes
+    @board_minutes = BoardMinute.all
   end
 end

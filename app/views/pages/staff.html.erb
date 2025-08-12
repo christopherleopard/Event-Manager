@@ -50,14 +50,14 @@
                                                     <% core  = digits[0, 10] %>
                                                     <a href="<%= "tel:+1#{core}" %>" class="color-normal"><%= staff.phone %></a>
                                                 </p>
-                                                <p class="mb-0"><a href="mailto:<%= staff.email %>" class="color-normal"><%= staff.email %></a></p>
+                                                <p class="mb-0"><a href="mailto:<%= staff.email %>" class="color-normal text-decoration-underline"><%= staff.email %></a></p>
                                                 </div>                                    
                                         <% end %>
                                     </div>
                                 </div>
                             </div>
                         <% else %>
-                            <div>No staffs available.</div>
+                            <div>No staff available.</div>
                         <% end %>
                     </div>
                     </div>

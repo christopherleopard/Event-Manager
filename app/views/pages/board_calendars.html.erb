@@ -1,0 +1,40 @@
+<% content_for :title, "Board Calendars - Whitmore Lake Public Schools | Meeting Dates & Locations" %>
+<% content_for :description, "View the Whitmore Lake Public Schools Board of Education calendar. Find dates, times, locations, and meeting types for all Board of Education meetings." %>
+
+<div class="board_calendars">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">Board of Education</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <%= render "board_of_education_links_bar" %>
+    </div>
+    <div class="board_calendars_intro py-4_5">
+        <div class="container">
+            <h1><span>Board of Education Calendar</span><span class="text-black"> of Whitmore Lake Public Schools</span></h1>
+            <p class="mb-0">
+                The Board of Education meets one Monday each month. Public is invited to attend Board of
+                Education meetings. Whitmore Lake School Board Meetings are normally held at 7:00 p.m. in
+                the High School Media Center. If the meeting should be moved to another location, the
+                designated area will be posted. The agenda is available as you enter the library. If a parent
+                wishes to bring up a matter for Board consideration, and be placed on the agenda, he/she
+                should preferably contact the Superintendent's office one week in advance.
+            </p>
+            <div class="text-center my-4">
+                <% if @board_calendars_pdfs.any? %>
+                    <% @board_calendars_pdfs.each do |pdf_doc| %>
+                        <% if pdf_doc.pdf.attached? %>
+                            <button class="primary-btn">
+                                <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                            </button>
+                        <% end %>
+                    <% end %>
+                <% end %>
+            </div>
+            <h2 class="text-black">Board of Education Meeting Location</h2>
+            <p class="mb-0">
+                Board of Education meetings are held at the Whitmore Lake Public Schools High School Media
+                Center located at 7430 Whitmore Lake Road, Whitmore Lake, MI 48189. For more information call (734)449-4464.
+            </p>
+        </div>
+    </div>
+</div>

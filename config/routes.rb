@@ -25,6 +25,11 @@ Rails.application.routes.draw do
   get '/school-of-choice', to: 'pages#school_of_choice'
   get '/why-choose-wlps', to: 'pages#why_choose_wlps'
   get '/staff', to: 'pages#staff'
+  get '/board-books', to: 'pages#board_books'
+  get '/board-calendars', to: 'pages#board_calendars'
+  get '/board-committees', to: 'pages#board_committees'
+  get '/board-members', to: 'pages#board_members'
+  get '/board-minutes', to: 'pages#board_minutes'
   get "staffs/index"
   get "staffs/show"
   get "events/index"

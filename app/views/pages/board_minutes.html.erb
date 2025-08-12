@@ -1,0 +1,74 @@
+<% content_for :title, "Board Minutes - Whitmore Lake Public Schools | Meeting Records" %>
+<% content_for :description, "Access Whitmore Lake Public Schools' Board of Education meeting minutes. View records from current and past meetings to stay informed about district decisions." %>
+
+<div class="board_minutes">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">Board of Education</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <%= render "board_of_education_links_bar" %>
+    </div>
+    <div class="board_minutes_intro py-4_5">
+        <div class="container">
+            <h1><span>Board of Education Minutes</span><span class="text-black"> of Whitmore Lake Public Schools</span></h1>
+            <p>Find and read all the minutes from the latest and previous Board of Education meetings in the documents below. For individual with disabilities who need alternative access to Board PDF documents, please contact the Website Accessibility Coordinator at <a href = "mailto:melissa.heuker@wlps.net" class="text-red text-decoration-underline">melissa.heuker@wlps.net</a>.</p>
+            <div id="accordion">
+                <%
+                      school_years = [
+                        "WLPS Board of Education Meeting Minutes 2024-2025",
+                        "WLPS Board of Education Meeting Minutes 2023-2024",
+                        "WLPS Board of Education Meeting Minutes 2022-2023",
+                        "WLPS Board of Education Meeting Minutes 2021-2022",
+                        "WLPS Board of Education Meeting Minutes 2020-2021",
+                        "WLPS Board of Education Meeting Minutes 2019-2020",
+                        "WLPS Board of Education Meeting Minutes 2018-2019",
+                        "WLPS Board of Education Meeting Minutes 2017-2018",
+                        "WLPS Board of Education Meeting Minutes 2016-2017",
+                        "WLPS Board of Education Meeting Minutes 2015-2016",
+                        "WLPS Board of Education Meeting Minutes 2014-2015",
+                        "WLPS Board of Education Meeting Minutes 2013-2014",
+                        "WLPS Board of Education Meeting Minutes 2012-2013"
+                    ]
+                %>
+                <% school_years.each_with_index do |school_year, index| %>
+                    <% collapse_id = "collapse#{index}" %>
+
+                    <div class="card bg-transparent border-0 mb-2">
+                    <div class="card-header text-white rounded-0 ff-b fw-semibold d-flex justify-content-between">
+                        <div>
+                            <%= link_to("#{school_year}", "##{collapse_id}", class: "card-link", data: { toggle: "collapse" }) %>
+                        </div>
+                        <div class="status_icons">
+                            <span class="status_icon <%= index == 0 ? 'hide' : 'show' %>">+</span>
+                            <span class="status_icon <%= index == 0 ? 'show' : 'hide' %>">-</span>
+                        </div>
+                    </div>
+
+                    <div id="<%= collapse_id %>" class="collapse mt-3 mb-2 <%= 'show' if index == 0 %>" data-parent="#accordion">                        
+                        <% board_minutes = BoardMinute.where(school_year: school_year) %>
+                        <% if board_minutes.any? %>
+                            <div>
+                                <div class="fw-semibold color-normal">
+                                    <% board_minutes.each_with_index do |board_minute, index2| %>                                    
+                                        <div class="board_minute">
+                                            <%= image_tag "pdf.png", class: "origin h-100" %>
+                                            <div class="minute_date">
+                                                <p class="fw-semibold fs-20"><%= board_minute.date.strftime("%B %Y") %></p>
+                                                <%= link_to url_for(board_minute.pdf), target: "_blank", rel: "noopener", class: "text-red text-decoration-underline" do %>
+                                                    <%= board_minute.date.strftime("%m/%d/%Y") %>
+                                                <% end %>
+                                            </div>
+                                        </div>                                    
+                                    <% end %>
+                                </div>
+                            </div>
+                        <% else %>
+                            <div>No board minute available.</div>
+                        <% end %>
+                    </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

@@ -13,4 +13,25 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+
+  document.querySelectorAll(".board_member_action_icon").forEach(function(icon) {
+    icon.addEventListener("click", function() {
+      var note = this.getAttribute("data-note");
+      console.log(note);
+      this.parentElement.querySelectorAll(".board_member_action_icon").forEach(function(sibling) {
+        sibling.classList.remove("show_note");
+      });
+      this.classList.add("show_note");
+
+      var socialContainer = this.parentElement.parentElement.querySelector(".board_member_social");
+
+      socialContainer.querySelectorAll(".board_member_social .board_member_note").forEach(function(noteElem) {
+        if (noteElem.className.indexOf(note) !== -1) {
+          noteElem.style.display = "block"; // show
+        } else {
+          noteElem.style.display = "none"; // hide
+        }
+      });
+    });
+  });
 });
