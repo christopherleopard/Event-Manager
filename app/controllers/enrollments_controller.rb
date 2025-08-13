@@ -8,9 +8,9 @@ class EnrollmentsController < ApplicationController
     @enrollment = EnrollmentForm.new(enrollment_params)
 
     if @enrollment.valid?
-      EnrollmentMailer.with(form: @enrollment).notify_admin.deliver_later
-      EnrollmentMailer.with(form: @enrollment).confirm_user.deliver_later
-      redirect_to new_enrollment_path, notice: "Thanks! We’ll be in touch."
+      EnrollmentMailer.with(form: @enrollment).notify_admin.deliver_now
+      EnrollmentMailer.with(form: @enrollment).confirm_user.deliver_now
+      redirect_to new_enrollment_path, notice: "Thanks! We'll be in touch."
     else
       render :new, status: :unprocessable_entity
     end
