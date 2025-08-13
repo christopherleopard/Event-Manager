@@ -56,12 +56,20 @@ class PagesController < ApplicationController
     @board_calendars_pdfs = PdfDocument.where(page_title: "Board Calendars").includes(:pdf_attachment, :pdf_blob)
   end
 
+  def get_involved
+    @get_involved_pdfs = PdfDocument.where(page_title: "Get Involed").includes(:pdf_attachment, :pdf_blob)
+  end
+
   def drills
     @drills = Drill.all
   end
 
   def bond_updates
     @contact = Contact.new
+  end
+
+  def twenty_twentyfour_bond
+    @bond = BondForm.new
   end
 
   def staff

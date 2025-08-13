@@ -30,6 +30,12 @@ Rails.application.routes.draw do
   get '/board-committees', to: 'pages#board_committees'
   get '/board-members', to: 'pages#board_members'
   get '/board-minutes', to: 'pages#board_minutes'
+  get '/community-recreation', to: 'pages#community_recreation'
+  get '/community-pool', to: 'pages#community_pool'
+  get '/wavemaker-swim-school', to: 'pages#wavemaker_swim_school'
+  get '/get-involved-community-recreation', to: 'pages#get_involved'
+  get '/staff-resources', to: 'pages#staff_resources'
+  get '/2024-bond', to: 'pages#twenty_twentyfour_bond'
   get "staffs/index"
   get "staffs/show"
   get "events/index"
@@ -53,6 +59,7 @@ Rails.application.routes.draw do
   root "home#index"
   post 'contacts', to: 'contacts#create', as: 'contacts'
   resource :enrollment, only: [:new, :create]
+  resource :bond, only: [:new, :create]
   resources :events, only: [ :index, :show ]
   resources :staffs, only: [ :index, :show ]
   resources :board_minutes, only: [ :index, :show ]

@@ -118,8 +118,20 @@ p {
 .color-normal {
     color: #3e3e3e;
 }
+.fs-96 {
+    font-size: 96px;
+}
+.fs-56 {
+    font-size: 56px;
+}
+.fs-46 {
+    font-size: 46px;
+}
 .fs-34 {
     font-size: 34px;
+}
+.fs-26 {
+    font-size: 26px;
 }
 .fs-22 {
     font-size: 22px;
@@ -182,6 +194,14 @@ p {
     border: none;
     padding: 1em;
     line-height: 1.25 !important;    
+    font-family: 'Helvetica Neue', sans-serif;
+}
+.grey-button_2 {
+    background: #3e3e3e;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+    padding: 1em 5em;    
     font-family: 'Helvetica Neue', sans-serif;
 }
 .tool-btn:hover {
@@ -303,7 +323,7 @@ img.origin {
     .gap-4_5 {
         gap: 16px;
     }
-    .fixed_img img.origin, .add_funds .origin, img.origin.w-md-full, .w-370, .w-4p, .w-3p, .w-2p {
+    .fixed_img img.origin, .add_funds .origin, img.origin.w-md-full, img.origin.gallery_img, .w-370, .w-4p, .w-3p, .w-2p {
         width: 100%;
     }
     .d-flex.align-items-center {

@@ -1,0 +1,49 @@
+<!-- app/views/bonds/new.html.erb -->
+<div class="container-sm">
+  <%= form_with model: @bond, url: bond_path, scope: :bond_form do |f| %>
+    <% if @bond.errors.any? %>
+      <div class="errors">
+        <h3>Please fix these:</h3>
+        <ul><% @bond.errors.full_messages.each { |m| %><li><%= m %></li><% } %></ul>
+      </div>
+    <% end %>
+
+    <div class="grid">
+    <div class="d-flex gap-4_5 mb-3">
+      <div class="flex-1">
+        <%= f.label "First Name*", class: "ff-bb text-black" %>
+        <%= f.text_field :first_name, class: "w-100", required: true %>
+      </div>
+      <div class="flex-1">
+        <%= f.label "Last Name*", class: "ff-bb text-black" %>
+        <%= f.text_field :last_name, class: "w-100", required: true %>
+      </div>
+    </div>
+
+    <div class="d-flex gap-4_5 mb-3">
+      <div class="flex-1">
+        <%= f.label "Email*", class: "ff-bb text-black" %>
+        <%= f.email_field :email, class: "w-100", required: true %>
+      </div>
+      <div class="flex-1">
+        <%= f.label :phone, class: "ff-bb text-black" %>
+        <%= f.telephone_field :phone, class: "w-100", placeholder: "(optional)" %>
+      </div>
+    </div>
+
+    <div>
+      <%= f.label "Questions/Comments*", class: "ff-bb text-black" %>
+      <%= f.text_area :message, rows: 6, required: true, class: "w-100" %>
+    </div>
+    </div>
+
+    <!-- Honeypot -->
+    <div style="display:none;">
+      <label>Leave blank</label>
+      <%= f.text_field :trap, value: "" %>
+    </div>
+    <div class="text-center mt-4">
+      <%= f.submit "Submit", class: "rule_btn primary-bg py-3 text-white" %>
+    </div>
+  <% end %>
+</div>

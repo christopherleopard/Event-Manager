@@ -1,0 +1,70 @@
+<% content_for :title, "Get Involved - Whitmore Lake Community Recreation | Volunteer & Support" %>
+<% content_for :description, "Make a difference in Whitmore Lake! Volunteer, coach, or financially support community recreation programs. Explore ways to get involved with WL Community Recreation." %>
+
+<div class="get_involved">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">Community Recreation</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <%= render "community_rec_links_bar" %>
+    </div>
+    <div class="py-4_5">
+        <div class="container">
+            <h1 class="text-center heading"><span>Make an Impact</span><span class="text-black"> - Get Involved with Whitmore Lake Community Recreation</span></h1>
+            <h2 class="text-center text-black mb-0">Are you looking for opportunities to:</h2>
+            <div class="opportunities container-sm">
+                <div class="opportunity">
+                    <%= image_tag("help.png", alt: "Volunteer", class: "origin") %>
+                    <p class="mb-0">Volunteer to help provide<br> recreation programs?</p>
+                </div>
+                <div class="opportunity">
+                    <%= image_tag("resume.png", alt: "Volunteer", class: "origin") %>
+                    <p class="mb-0">Develop your resume and/or <br>life experiences?</p>
+                </div>
+                <div class="opportunity">
+                    <%= image_tag("love.png", alt: "Volunteer", class: "origin") %>
+                    <p class="mb-0">Volunteer with others who share <br>your love of recreation?</p>
+                </div>
+                <div class="opportunity">
+                    <%= image_tag("financial.png", alt: "Volunteer", class: "origin") %>
+                    <p class="mb-0">Financially support Whitmore Lake <br>Community Recreation goals?</p>
+                </div>
+                <div class="opportunity">
+                    <%= image_tag("time.png", alt: "Volunteer", class: "origin") %>
+                    <p class="mb-0">Give your time and skills to a cause <br>you believe in?</p>
+                </div>
+            </div>
+            <p>If you answered yes to these questions, then there are some great opportunities for you at Whitmore Lake Community Recreation! The success of our programs hinges on the time our dedicated volunteers give. There are a variety of ways you can get involved and volunteer: office work, coaching soccer, participating in our spring clean ups, the list goes on and on! Volunteers will be recognized at the annual WLPS volunteer reception. In our dedication to providing the safest environments for our participants, we require background checks on all our volunteers. We have joined forces with the National Recreation and Park Association's Operation TLC2 Making Communities Safe and screen all of our volunteers through their recommended NCSI program.</p>
+        </div>
+    </div>
+    <div class="py-0">
+        <div class="four_img">
+            <div class="flex-1"><%= image_tag("1.png", alt: "") %></div>
+            <div class="flex-1"><%= image_tag("2.png", alt: "") %></div>
+            <div class="flex-1"><%= image_tag("3.png", alt: "") %></div>
+            <div class="flex-1"><%= image_tag("4.png", alt: "") %></div>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <div class="container">
+            <h2 class="text-black">Ways to Volunteer & Support Whitmore Lake Community Rec</h2>
+            <p class="mb-0">Looking for a fun and unique place to have your next celebration? Rent one of our multipurpose rooms during weekend open swim hours to host your own pool party! You can decorate it to your party theme, use the modest kitchen facility, and enjoy the open space to accommodate your guests.</p>            
+            <div class="mt-4 d-flex gap-4">
+                <% if @get_involved_pdfs.any? %>
+                    <% @get_involved_pdfs.each do |pdf_doc| %>
+                        <% if pdf_doc.pdf.attached? %>
+                            <a href="<%= rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true) %>" target="_blank" rel="noopener">
+                                <button class="btn_normal mb-0">
+                                    <%= pdf_doc.title %>
+                                </button>
+                            </a>
+                        <% end %>
+                    <% end %>
+                <% end %>
+                <a href="https://wlcr.recdesk.com/Community/Page?pageId=36859" target="_blank">
+                    <button class="btn_normal mb-0">Volunteer Packet Form</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

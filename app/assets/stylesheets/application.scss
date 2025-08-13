@@ -133,6 +133,9 @@
 .w-370 {
     width: 370px;
 }
+.w-470 {
+    width: 470px;
+}
 //Kids Club
 .child_care_kids_club {
     flex-wrap: wrap;
@@ -309,6 +312,194 @@
     margin-bottom: auto;
     width: 40%;
 }
+//Community Recreation
+.recreation_programs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+    margin-top: 32px;
+}
+.special_reminder {
+    display: flex;
+    gap: 32px;
+    margin-top: 24px;
+}
+.follow_us {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.follow_fb {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
+.bg-90-left {
+    background-size: 90% 100%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+.bg-90-right {
+    background-size: 90% 100%;
+    background-repeat: no-repeat;
+    background-position-x: left;
+}
+// Community Pool
+.aquatic_programs {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 36px;
+}
+.aquatic_program {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.host {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 16px;
+    margin-left: 60px;
+}
+.first_rental {
+    margin-left: 60px;
+}
+// Wavemaker Swim School
+.line {
+    width: 80%;
+    margin: 0 auto;
+    height: 2px;
+    background: #D32229;
+}
+.pricing_item p {
+    line-height: 1.2;
+}
+//Staff Resources
+.staff_resources_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.staff_resource {
+    background: #f3f3f3;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 240px;
+}
+.staff_resource img.origin {
+    width: min-content;
+}
+//2024 Bond
+.bond_btns {
+    display: flex;
+    justify-content: space-between;
+    margin: 36px 0;
+}
+.bond_btns_2 {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+}
+.fund_usage {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+.fund_icon {
+    width: 60px;
+    text-align: center;
+}
+.tax_table table, .tax_table table th, .tax_table table td {
+  border: 3px solid black;
+  border-collapse: collapse;
+  font-family: 'Lato', sans-serif;
+}
+.tax_table table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+}
+.tax_table table th, .tax_credit table th {
+    padding: 1em 4em;
+    background: #D32229;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+.tax_table table td {
+    text-align: center;
+    font-size: 18px;
+    padding: 1em 4em;
+    color: #000;
+}
+.tax_credit table {
+    width: 370px;
+}
+.tax_credit table, .tax_credit table th, .tax_credit table thead {
+    border: 3px solid black;
+}
+.tax_credit table td {
+    text-align: center;
+    font-size: 18px;
+    padding: 0.5em 2em;
+    color: #000;
+}
+.tax_credit {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+.accomplishment {
+    padding: 32px 0;
+}
+.bond_video {
+    width: 60%;
+    margin: 0 auto;
+}
+.carousel-indicators.bonds {
+    position: initial;
+    gap: 10px;
+    margin-top: 20px;
+}
+.carousel-indicators.bonds li {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #979797;
+}
+.carousel-indicators.bonds .active {
+    width: 18px;
+    height: 18px;
+    background: #d8d8d8;
+    margin: 1px;
+}
+.gallery_img {
+    max-width: 570px;
+}
+// Get Involved
+.opportunities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 36px 0;
+}
+.opportunity {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+.four_img {
+    display: flex;
+}
+.four_img img {
+    width: 100%;
+    height: 100%;
+}
 //Responsive styles
 @media screen and (max-width: 768px) {
     .admin_login {
@@ -347,7 +538,7 @@
     #accordion .d-flex {
         flex-direction: initial;
     }
-    .rule_btn, .calendar_btn, .rule_btn_2 {
+    .rule_btn, .calendar_btn, .rule_btn_2, .btn-white, .btn_normal {
         width: 100%;
     }
     .calendar_links {
@@ -381,7 +572,7 @@
     .child_care.homework {
         margin-bottom: 0;
     }
-    .sustainability_achievements, .best_choice, .team_members {
+    .sustainability_achievements, .best_choice, .team_members, .recreation_programs, .aquatic_programs, .staff_resources_list, .opportunities {
         grid-template-columns: repeat(1, 1fr);
         gap: 16px;
     }
@@ -408,5 +599,45 @@
     }
     .board_member_action_icon {
         padding: 16px 0;
+    }
+    .follow_us {
+        display: block;
+    }
+    .recreation_program.d-flex {
+        flex-direction: row;
+    }
+    .follow_btn {
+        margin-top: 16px;
+    }
+    .bg-90-left, .bg-90-right {
+        background-size: 100% 90%;
+        background-position-y: bottom;
+    }
+    .host, .first_rental {
+        margin-left: 0;
+    }
+    .aquatic_program {
+        width: 220px;
+        margin: 0 auto;
+    }
+    .staff_resource {
+        height: 200px;
+    }
+    .bond_btns, .tax_credit, .bond_btns_2 {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .tax_table table, .tax_credit table, .bond_video {
+        width: 100%;
+    }
+    .tax_table table th, .tax_credit table th, .tax_table table td {
+        padding: 1rem 0.5rem;
+    }
+    .four_img {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .text-center.heading {
+        text-align: left !important;
     }
 }

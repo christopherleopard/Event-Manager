@@ -1,0 +1,135 @@
+<% content_for :title, "Community Pool - Whitmore Lake Public Schools | Swim Classes, Lap Swim & Rentals" %>
+<% content_for :description, "Enjoy the Whitmore Lake Community Pool at the WL Community Recreation Center. Register for swim lessons, AquaFit, open swim, lap swim, and pool party rentals today!" %>
+
+<div class="community_pool">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">Community Recreation</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <%= render "community_rec_links_bar" %>
+    </div>
+    <div class="py-4_5">
+        <div class="container">
+            <h1><span>Whitmore Lake Community Pool</span><span class="text-black"> | Aquatic Center & Swim Programs</span></h1>
+            <p>The WL Community Aquatic facility opened in August 2007. Located on the south side of Whitmore Lake High School, this 228,000-gallon regulation-sized swimming pool features six 25-yard lanes with starting blocks, two diving boards and a wading pool with ramp entry. With a water temp averaging 81 degrees, the WL Community Aquatic facility is a great place to enjoy aquatic activities!</p>
+            <p>The facility includes men and women's locker rooms equipped with lockers, restrooms, sinks and showers, and a family locker room with private changing/shower rooms for families with little ones.</p>
+            <p class="mb-0">The WL Community Pool is home to the WLCR Waves Swim and Dive Club with competitions at all levels. It is also home of the Whitmore Lake High School Trojan Swim Teams. The WL Community Pool also offers fitness classes, open swim, lap swim, and lessons for all ages throughout the week.</p>
+        </div>
+    </div>
+    <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
+        <div class="container">
+            <h2><span class="text-black">WLCR Aquatic</span><span> Programs</span></h2>
+            <div class="aquatic_programs py-4_5">
+                <div class="aquatic_program text-center">
+                    <div clss="program_img">
+                        <%= image_tag("aua_fit.png", alt: "Aqua Fit", class: "origin") %>
+                    </div>
+                    <div class="program_txt">
+                        <p class="mb-0 fs-20 text-black">Aqua Fit</p>
+                    </div>
+                    <a href="https://wlcr.recdesk.com/Community/Program" target="_blank">
+                        <button class="rule_btn_2 text-white primary-bg w-100">Register for AquaFit</button>
+                    </a>
+                </div>
+                <div class="aquatic_program text-center">
+                    <div clss="program_img">
+                        <%= image_tag("swim.png", alt: "Lap Swim & Open Swim", class: "origin") %>
+                    </div>
+                    <div class="program_txt">
+                        <p class="mb-0 fs-20 text-black">Lap Swim & Open Swim</p>
+                    </div>
+                    <a href="https://wlcr.recdesk.com/Community/Program?category=4" target="_blank">
+                        <button class="rule_btn_2 text-white primary-bg w-100">Register for Lap & Open Swim</button>
+                    </a>
+                </div>
+                <div class="aquatic_program text-center">
+                    <div clss="program_img">
+                        <%= image_tag("pool.png", alt: "Pool Parties & Rental", class: "origin") %>
+                    </div>
+                    <div class="program_txt">
+                        <p class="mb-0 fs-20 text-black">Pool Parties & Rental</p>
+                    </div>
+                    <a href="https://wlcr.recdesk.com/Community/Program?category=10" target="_blank">
+                        <button class="rule_btn_2 text-white primary-bg w-100">Register for Pool Parties & Rental</button>
+                    </a>
+                </div>
+                <div class="aquatic_program text-center">
+                    <div clss="program_img">
+                        <%= image_tag("wavemaker_logo.png", alt: "WaveMaker Swim School", class: "origin") %>
+                    </div>
+                    <div class="program_txt">
+                        <p class="mb-0 fs-20 text-black">WaveMaker Swim School</p>
+                    </div>
+                    <a href="https://wlcr.recdesk.com/Community/Program?category=8" target="_blank">
+                        <button class="rule_btn_2 text-white primary-bg w-100">Register for WaveMaker Swim School</button>
+                    </a>
+                </div>
+                <div class="aquatic_program text-center">
+                    <div clss="program_img">
+                        <%= image_tag("wlcr_waves_swim_team_logo.png", alt: "Waves Swim/Dive Team", class: "origin") %>
+                    </div>
+                    <div class="program_txt">
+                        <p class="mb-0 fs-20 text-black">Waves Swim/Dive Team</p>
+                    </div>
+                    <a href="https://www.gomotionapp.com/team/miwlw/page/home" target="_blank">
+                        <button class="rule_btn_2 text-white primary-bg w-100">Register for Waves Swim/Dive Team</button>
+                    </a>
+                </div>
+            </div>
+            <h2><span class="text-black">Open Swim is</span><span> FREE </span><span class="text-black">for in-district residents with a District Open Swim Membership.</span></h2>
+            <div class="text-center">
+                <a href="https://wlcr.recdesk.com/Community/Membership" target="_blank">
+                    <button class="btn_normal mb-0">Register for District Open Swim Membership</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <div class="container">
+            <h2 class="text-black"> Host a Pool Party at Whitmore Lake Community Pool!</h2>
+            <p>Looking for a fun and unique place to have your next celebration? Rent one of our multipurpose rooms during weekend open swim hours to host your own pool party! You can decorate it to your party theme, use the modest kitchen facility, and enjoy the open space to accommodate your guests.</p>
+            <div style="background-image: url('/assets/login_bg.png'); padding: 2em;">
+                <div class="d-flex">
+                    <div class="flex-1">
+                        <div class="host">
+                            <%= image_tag("checkmark.png", alt: "Host a Pool Party", class: "origin") %>
+                            <p class="mb-0">$125 for 2 hours (1:00 pm - 3:00 pm)</p>
+                        </div>
+                        <div class="host">
+                            <%= image_tag("checkmark.png", alt: "Host a Pool Party", class: "origin") %>
+                            <p class="mb-0">Includes 10 swimmers (+$2 for each additional swimmer)</p>
+                        </div>
+                        <div class="host">
+                            <%= image_tag("checkmark.png", alt: "Host a Pool Party", class: "origin") %>
+                            <p class="mb-0">6 tables</p>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="host">
+                            <%= image_tag("checkmark.png", alt: "Host a Pool Party", class: "origin") %>
+                            <p class="mb-0">30 chairs</p>
+                        </div>
+                        <div class="host">
+                            <%= image_tag("checkmark.png", alt: "Host a Pool Party", class: "origin") %>
+                            <p class="mb-0">Direct entrance to pool (Side B only)</p>
+                        </div>
+                        <div class="host">
+                            <%= image_tag("checkmark.png", alt: "Host a Pool Party", class: "origin") %>
+                            <p class="mb-0">Kitchenette (Side B only)</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="mb-0 first_rental">First rental of the day will be Site B, second rental of the day will be Side A.</p>
+            </div>
+            <div class="text-center py-4">
+                <a href="https://wlcr.recdesk.com/Community/Program?category=10" target="_blank">
+                    <button class="btn_normal mb-0">Reserve the Pool</button>
+                </a>
+            </div>
+            <h2 class="text-black text-center">
+                The Community Pool is also available for private pool party rentals for $175.<br>
+                Call 734-44-44361 x3057 for more information.
+            </h2>
+        </div>
+    </div>
+</div>

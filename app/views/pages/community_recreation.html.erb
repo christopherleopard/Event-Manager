@@ -1,0 +1,225 @@
+<% content_for :title, "About Whitmore Lake Community Recreation | Youth & Adult Programs" %>
+<% content_for :description, "Whitmore Lake Community Recreation offers youth and adult programs, fitness classes, aquatics, and more. Learn about classes, registration, and upcoming events." %>
+
+<div class="community_recreation">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">Community Recreation</h2>
+    </div>
+    <div class="red_button_bar primary-bg py-3">
+        <%= render "community_rec_links_bar" %>
+    </div>
+    <div class="py-4_5">
+        <div class="container">
+            <h1><span>Whitmore Lake Community Recreation</span><span class="text-black"> | Programs for All Ages.</span></h1>
+            <p class="mb-0">Whitmore Lake Community Recreation offers something for everyone. We are passionate about building community through:</p>
+            <div class="recreation_programs">
+                <div class="recreation_program d-flex gap-4 align-items-center">
+                    <div clss="program_img">
+                        <%= image_tag("youth_recreation.png", alt: "Youth Recreation") %>
+                    </div>
+                    <div class="program_txt">
+                        <p class="mb-0"><b>Youth Recreation:</b> camps, clinics,<br> teams, lessons, and fun.</p>
+                    </div>
+                </div>
+                <div class="recreation_program d-flex gap-4 align-items-center">
+                    <div clss="program_img">
+                        <%= image_tag("adult_recreation.png", alt: "Adult Recreation") %>
+                    </div>
+                    <div class="program_txt">
+                        <p class="mb-0"><b>Adult Recreation:</b> softball, basketball,<br> and special community events.</p>
+                    </div>
+                </div>
+                <div class="recreation_program d-flex gap-4 align-items-center">
+                    <div clss="program_img">
+                        <%= image_tag("aquatics.png", alt: "Aquatics") %>
+                    </div>
+                    <div class="program_txt">
+                        <p class="mb-0"><b>Aquatics:</b> teams, lessons, safety, open<br> play, and lap swim.</p>
+                    </div>
+                </div>
+                <div class="recreation_program d-flex gap-4 align-items-center">
+                    <div clss="program_img">
+                        <%= image_tag("health_fitness.png", alt: "Health & Fitness") %>
+                    </div>
+                    <div class="program_txt">
+                        <p class="mb-0"><b>Health & Fitness:</b> Trojan Fit Club classes like<br> yoga, cardio, strength and conditioning, biking,<br> and community events.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <%= image_tag("banner.png", alt: "Banner", class: "origin w-md-full") %>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
+        <div class="container d-flex align-items-center gap-5">
+            <div class="image_container flex-1">
+                <div class="right_img text-center">
+                    <%= image_tag("computer.png", alt: "Community Rec Class Registration", class:"origin w-md-full") %>
+                </div>
+            </div>
+            <div class="text_container flex-1">
+                <h2 class="text-black">Community Rec Class Registration</h2>
+                <p>WLCR offers online registration through RecDesk. Please click the links below to register for programs, view your account, and more!</p>
+                <div class="mt-2">
+                    <a href="https://wlcr.recdesk.com/Community/Program" target="_blank">
+                        <button class="rule_btn_2 w-470 primary-bg text-white">Recreation Programs & Registration</button>
+                    </a>
+                </div>
+                <div class="mt-2">
+                    <a href="https://wlcr.recdesk.com/Community/Program" target="_blank">
+                        <button class="rule_btn_2 w-470 primary-bg text-white">Aquatics Programs & Registration</button>
+                    </a>
+                </div>
+                <div class="mt-2">
+                    <a href="https://wlcr.recdesk.com/Community/Program?category=7" target="_blank">
+                        <button class="rule_btn_2 w-470 primary-bg text-white">Trojan Fit Club Programs & Registration</button>
+                    </a>
+                </div>
+                <div class="mt-2">
+                    <a href="https://wlcr.recdesk.com/Community/Home" target="_blank">
+                        <button class="rule_btn_2 w-470 primary-bg text-white">WLCR RecDesk</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <p class="mb-0">You can also visit the WLCR office outside the community pool at Whitmore Lake High School Monday through Friday from 8:00 am - 5:00 pm. Please call 734-449-4461 x 3057 or email wlcrinfo@wlps.net for help outside these hours. We are almost always available!</h2>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <div class="container">
+            <h2 class="text-center mb-0"><span class="text-black">Community Recreation</span><span> Special Reminders</span></h2>
+            <div class="special_reminder">
+                <div class="image_container">
+                    <div class="right_img text-center">
+                        <%= image_tag("alarm.png", alt: "Reminder", class: "origin") %>
+                    </div>
+                </div>
+                <div class="text_container">
+                    <p class="mb-0">WLCR will process full refunds for any programs cancelled by our department. All other cancellations must be made one week before the program begins or first day of practice or Kick Off event. A $5 or 7% processing fee, whichever is greater, will be deducted from the refund amounts. After a program begins, we will only consider a refund with a medical note. A $40 fee will be assessed for checks returned for insufficient funds.</p>
+                </div>
+            </div>
+            <div class="special_reminder">
+                <div class="image_container">
+                    <div class="right_img text-center">
+                        <%= image_tag("alarm.png", alt: "Reminder", class: "origin") %>
+                    </div>
+                </div>
+                <div class="text_container">
+                    <p class="mb-0">When Whitmore Lake Public Schools are closed due to bad weather, Community Recreation activities are cancelled. Every attempt will be made to reschedule; however, when circumstances prohibit, classes will not be rescheduled.</p>
+                </div>
+            </div>
+            <div class="special_reminder">
+                <div class="image_container">
+                    <div class="right_img text-center">
+                        <%= image_tag("alarm.png", alt: "Reminder", class: "origin") %>
+                    </div>
+                </div>
+                <div class="text_container">
+                    <p class="mb-0">If inclement weather occurs after school hours or on the weekends, please check the WLCR office recording at 734-449-4461 Ext. 3057 for information.</p>
+                </div>
+            </div>
+            <div class="special_reminder">
+                <div class="image_container">
+                    <div class="right_img text-center">
+                        <%= image_tag("alarm.png", alt: "Reminder", class: "origin") %>
+                    </div>
+                </div>
+                <div class="text_container">
+                    <p class="mb-0">Community Recreation registrations are ongoing. You can click on the appropriate link to obtain class and league information or call the WLCR office during office hours.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5 py-2" style="background: #0A3E85;">
+        <div class="container-sm follow_us">
+            <div class="follow_fb">
+                <%= image_tag("fb_white.png", alt: "FaceBook Logo", class: "origin h-100") %>
+                <div>
+                    <h2 class="text-white">Follow Us On Facebook</h2>
+                    <p class="text-white mb-0">Stay up-to-date on all the WLCR events & activities</p>
+                </div>
+            </div>
+            <div class="follow_btn">
+                <a href="https://www.facebook.com/WLCommunityRecreation/" target="_blank">
+                    <button class="btn-white">Follow Us</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <div class="container d-flex align-items-center gap-4_5 mobile-reverse">
+            <div class="text_container flex-1">
+                <h2>WLCR Walking Track</h2>
+                <h2><span class="text-black">Important Walking Track</span><span> Information</span></h2>
+                <ul>
+                    <li>Please check in and out at the Community Recreation Office or with the lifeguard on deck if no one is in the office.</li>
+                    <li>The track is closed when the pool is closed.</li>
+                    <li>The track is closed to the public during high school sporting events held in the gym and during school hours.</li>
+                    <li>The price for using the walking track is $1.00 PER PERSON PER VISIT. Senior Citizens walk for free!</li>
+                    <li>If there is an athletic event, the track will be closed. <a href="https://sites.google.com/a/wlps.net/sites/system/errors/WebspaceNotFound?path=%2Fathletics%2Fschedules" class="text-red">View Athletic Schedules</a>.</li>
+                </ul>
+            </div>
+            <div class="image_container flex-1">
+                <div class="right_img">
+                    <%= image_tag("walking-track.png", alt: "WLCR Walking Track") %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5 primary-bg">
+        <div class="container d-flex">
+            <div class="image_container flex-1">
+                <%= image_tag("wl.png", alt: "WL Logo", class: "origin") %>
+            </div>
+            <div class="text_container flex-1">
+                <h2 class="text-white">Community Recreation<br> Hours & Location </h2>
+                <p class="text-white">
+                    7430 Whitmore Lake Road<br>
+                    Whitmore Lake, MI 48189<br>
+                    734-449-4461 Ext. 3057
+                </p>
+                <a href="https://www.google.com/maps/place/Whitmore+Lake+High+School/@42.390178,-83.772525" target="_blank">
+                    <button class="grey-button_2">View Map</button>
+                </a>
+                <p class="text-white mt-2 mb-0">Office Hours<br> Monday - Friday, 8:00 am - 5:00 pm</p>
+            </div>
+            <div class="flex-1">
+                <h2 class="text-white">Walking Track Hours</h2>
+                <p class="text-white mb-4">
+                    Monday - Friday:<br>
+                    3:00 pm - 8:00 pm
+                </p>
+                <p class="text-white mb-4">
+                    Saturday:<br>
+                    9:00 am - 10:00 am; 1:00 pm - 3:00 pm
+                </p>
+                <p class="text-white mb-0">
+                    Sunday:<br>
+                    1:00 pm - 3:00 pm (from Labor Day to Memorial Day)
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <div class="container d-flex bg-90-left py-4_5 gap-4 align-items-center" style="background-image: url('/assets/login_bg.png');">
+            <div class="image_container fext-1 text-center">
+                <%= image_tag("ann.png", alt: "Ann Kehn", class: "origin") %>
+            </div>
+            <div class="text_container flex-1">
+                <p class="fs-20 fw-semibold">Ann Kehn<br>A<span class="text-red">quatic and Recreation Director</span></p>
+                <p class="mb-0">Before joining the WLCR team, Ann spent 13 years as the Aquatic Supervisor at the Health and Fitness Center at WCC. Her role included supervising and mentoring pool staff, teaching Aqua Aerobics, teaching adult swim lessons, supporting Masters Swimming (the best beginner adult sport!) and supporting all aspects of aquatics along with personal training and being a safety lead. In and around the water for most of her life, Ann also supported Pinckney Community Ed by supervising, teaching and coaching for over 25 years. Ann holds many certifications including Certified Pool Operator, US Masters Swim Coach, Lifeguard and Water Safety Instructor Trainer, Parkinson's Disease Instructor and ACSM Personal Trainer. Ann's 'people first' mindset has allowed her to excel in building and maintaining strong relationships, inspiring her employees, and establishing lasting organizational systems. A mother to six kids who live all over the world, Ann loves to travel, hike, camp and open-water swim in her free time. She is excited to join the Whitmore Lake team where she is looking forward to creating a strong, close-knit community.</p>
+            </div>
+        </div>
+        <div class="container d-flex bg-90-right py-4_5 align-items-center gap-5 mobile-reverse mt-5" style="background-image: url('/assets/login_bg.png');">
+            <div class="text_container fext-1">
+                <p class="fs-20 fw-semibold">Kevin LaMont<br>A<span class="text-red">thletic and Recreation Coordinator</span></p>
+                <p class="mb-0">Kevin is a 2019 graduate of Whitmore Lake High School. He went on to run Track/Cross Country and play Baseball at Adrian College, where he recently graduated with a Bachelor of Business Administration degree with a concentration in sports management. He was a part of the Society of Sports Management club at Adrian College where he was able to volunteer at events such as the 2022 NCAA College Football National Championship, the 2023 NHL All-Star game, and Super Bowl LVII. Since graduating, Kevin has helped coach Track and Cross Country at the High School. Kevin is an avid sports fan who enjoys hanging out with family and friends and running in his free time. Kevin is excited to get to work to make a difference in the community he grew up in.</p>                
+            </div>
+            <div class="image_container flex-1 text-center">
+                <%= image_tag("kevin.png", alt: "Kevin LaMont", class: "origin") %>
+            </div>
+        </div>
+    </div>
+</div>
