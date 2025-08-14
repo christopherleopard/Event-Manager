@@ -2,6 +2,9 @@
 @import "active_admin/mixins";
 @import "active_admin/base";
 
+body {
+    color: #3e3e3e;
+}
 .active_admin #header, .active_admin #title_bar, .active_admin #footer, .admin_dashboard .custom-select-wrapper {
     display: none;
 }

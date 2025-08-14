@@ -1,0 +1,298 @@
+<% content_for :title, "Back to School Guide - Whitmore Lake Public Schools" %>
+<% content_for :description, "View the Whitmore Lake Public Schools Back to School Guide for info and resources like academic calendars, bus routes, school supply lists, and more." %>
+
+<div class="back_to_school_guide">
+    <div class="page_heading p-20" style="background-image: url('/assets/bg_2.png');">
+        <h2 class="text-center text-white mb-0">Back to School Guide</h2>
+    </div>
+    <div class="py-4_5">
+        <div class="container">
+            <div class="d-flex gap-4_5 align-items-center mobile-reverse">
+                <div class="text_container flex-1">
+                    <h1><span>Whitmore Lake Public Schools </span><br><span class="text-black">Back to School Guide | 2024-2025</span></h1>
+                    <p class="mb-0">Trojans, look no further for all the essential information and tools you need to start the year off successfully and prepare you to make it another great year to be a Trojan! Have any questions? Contact us at info@wlps.net.</p>
+                </div>
+                <div class="image_container flex-1 text-center">
+                    <div class="right_img">
+                        <%= image_tag("back_to_school_logo.png", alt: "Back to School Logo", class: "origin w-md-full") %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
+        <div class="container">
+            <h2 class="text-black"> Back to School Information</h2>
+            <div class="bond_btns mt-4 mb-0">
+                <%
+                    school_info = [
+                        "Go Like the Wind Montessori Information",
+                        "Early Childhood Center Information",
+                        "Elementary School Information",
+                        "Middle & High School Information"
+                    ]
+                %>
+                <% if @back_to_school_guide_pdfs.any? %>
+                    <% @back_to_school_guide_pdfs.each do |pdf_doc| %>
+                        <% if pdf_doc.pdf.attached? && school_info.include?(pdf_doc.title) %>
+                            <a href="<%= rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true) %>" target="_blank" rel="noopener">
+                                <button class="rule_btn_2 primary-bg py-3 text-white">
+                                    <%= pdf_doc.title %>
+                                </button>
+                            </a>
+                        <% end %>
+                    <% end %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <div class="container">
+            <h2 class="text-black">Back to School Resources</h2>
+            <p>Now more than ever, the first day of school is an exciting and nervous process. It's up to all of us to kick this year off on the right foot. Provided below are several resources to help students return to school in the most successful way possible, including bus routes, school supply lists, and more!</p>
+            <div class="text-center">
+                <p class="fs-18 ff-bb mb-2">Registration & Enrollment</p>
+                <a href="https://schools.scriptapp.com/#/workflow-submission/10141204417a81827d319544ff987769dd66b727d7" class="text-red text-decoration-underline" target="_blank">WLPS School of Choice Application</a><br>
+                <a href="https://schools.scriptapp.com/#/inbox/to-do?workflowIdForNewSubmission=166432038622537e6d14440fbb0f18884644d36c3" class="text-red text-decoration-underline" target="_blank">New Student Online Registration</a>
+            </div>
+            <div class="school_resources">
+                <div class="school_resource">
+                    <p class="fs-18 ff-bb">School Lists & Picture Days</p>
+                    <%
+                        school_lists = [
+                            "First Day of School Sign",
+                            "GLTW School Supply Lists",
+                            "WLES School Supply Lists",
+                            "WLMS School Supply List",
+                            "WLHS School Supply List",
+                            "WLES Picture Day Ordering",
+                            "WLMS/HS Picture Day Ordering",
+                            "Trojan Lunchbox Notes"
+                        ]
+                    %>
+                    <% if @back_to_school_guide_pdfs.any? %>
+                        <% @back_to_school_guide_pdfs.each do |pdf_doc| %>
+                            <% if pdf_doc.pdf.attached? && school_lists.include?(pdf_doc.title) %>
+                                <p class="mb-0">
+                                    <a href="<%= rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true) %>" target="_blank" rel="noopener" class="text-red text-decoration-underline">
+                                        <%= pdf_doc.title %>
+                                    </a>
+                                </p>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                </div>
+                <div class="school_resource">
+                    <p class="fs-18 ff-bb">Logistics: Buses, Meals & Safety</p>
+                    <%
+                        logistics = [
+                            "Academic Calendar",
+                            "Bus Routes",
+                            "FREE Breakfast & Lunch Information (PreK-12th)",
+                            "Vaccination Reminders",
+                            "School Policy Notices"
+                        ]
+                    %>
+                    <% if @back_to_school_guide_pdfs.any? %>
+                        <% @back_to_school_guide_pdfs.each do |pdf_doc| %>
+                            <% if pdf_doc.pdf.attached? && logistics.include?(pdf_doc.title) %>
+                                <p class="mb-0">
+                                    <a href="<%= rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true) %>" target="_blank" rel="noopener" class="text-red text-decoration-underline">
+                                        <%= pdf_doc.title %>
+                                    </a>
+                                </p>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                    <p class="mb-0">
+                        <a href="/food-service" class="text-red text-decoration-underline">
+                            FREE Breakfast & Lunch Information (PreK-12th)
+                        </a>
+                    </p>
+                    <p class="mb-0">
+                        <a href="https://www.cdc.gov/vaccines/?CDC_AAref_Val=https://www.cdc.gov/vaccines/schedules/" target="_blank" class="text-red text-decoration-underline">
+                            Vaccination Reminders
+                        </a>
+                    </p>
+                    <p class="mb-0">
+                        <a href="/school-policy-notices" class="text-red text-decoration-underline">
+                            School Policy Notices
+                        </a>
+                    </p>
+                </div>
+                <div class="school_resource">
+                    <p class="fs-18 ff-bb">Athletics, Clubs & Activities</p>
+                    <p class="mb-0">
+                        <a href="/kids-club" class="text-red text-decoration-underline">
+                            Kids Club Before/After Care
+                        </a>
+                    </p>
+                    <p class="mb-0">
+                        <a href="https://montessori.wlps.net/" target="_blank" class="text-red text-decoration-underline">
+                            EduCare Before/After Care & No School/Snow Day Care
+                        </a>
+                    </p>
+                    <p class="mb-0">
+                        <a href="https://sideline.bsnsports.com/schools/michigan/whitmorelake/whitmore-lake-high-school" target="_blank" class="text-red text-decoration-underline">
+                            WL Athletics Spiritwear
+                        </a>
+                    </p>
+                    <p class="mb-0">
+                        <a href="/athletics" class="text-red text-decoration-underline">
+                            MS/HS Athletics
+                        </a>
+                    </p>
+                    <p class="mb-0">
+                        <a href="/community-recreation" class="text-red text-decoration-underline">
+                            Whitmore Lake Community Recreation
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
+        <div class="container">
+            <h2 class="text-black">Connect With WLPS</h2>
+            <p>Download the official WLPS app to keep up on school events and information, connect with teachers and staff, and much more. Parents and students can also stay in touch with us via our various social media channels listed below.</p>
+            <div class="d-flex gap-4_5">
+                <div class="d-flex gap-4_5 align-items-center flex-1">
+                    <div class="image_container flex-1 text-center">
+                        <div class="right_img">
+                            <%= image_tag("phone_app.png", alt: "Phone App", class: "origin") %>
+                        </div>
+                    </div>
+                    <div class="text_container flex-1">
+                        <h2 class="text-black">Get the WLPS App</h2>
+                        <p>Search "Whitmore Lake PS, MI" on the App Store or Google Play Store.</p>
+                        <ul>
+                            <li>Know what's going on at school</li>
+                            <li>Connect with teachers and administrators</li>
+                            <li>Stay up-to-date with school information</li>
+                        </ul>
+                    </div> 
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-black text-center">Connect on Social Media</h2>
+                    <div class="d-flex gap-4_5">
+                        <div class="flex-1">
+                            <div class="text-center mb-3">
+                                <%= image_tag("fb_blue.png", alt: "Facebook", class: "origin") %>
+                            </div>
+                            <p class="mb-2">
+                                <a href="https://www.facebook.com/WhitmoreLakePublicSchools" target="_blank">
+                                    <button class="rule_btn_2 primary-bg py-3 text-white">@WhitmoreLakePublicSchools</button>
+                                </a>
+                            </p>
+                            <p class="mb-2">
+                                <a href="https://www.facebook.com/WLCommunityRecreation/" target="_blank">
+                                    <button class="rule_btn_2 primary-bg py-3 text-white">@WLCommunityRecreation</button>
+                                </a>
+                            </p>
+                            <p class="mb-0">
+                                <a href="https://www.facebook.com/whitmorelakeathletics/" target="_blank">
+                                    <button class="rule_btn_2 primary-bg py-3 text-white">@whitmorelakeathletics</button>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-center mb-3">
+                                <%= image_tag("instagram.png", alt: "Instagram", class: "origin") %>
+                            </div>
+                            <p class="mb-2">
+                                <a href="https://www.instagram.com/whitlkpublicschools/" target="_blank">
+                                    <button class="rule_btn_2 primary-bg py-3 text-white">@whitlkpublicschools</button>
+                                </a>
+                            </p>
+                            <p class="mb-0">
+                                <a href="https://www.instagram.com/wl_athletics/" target="_blank">
+                                    <button class="rule_btn_2 primary-bg py-3 text-white">@wl_athletics</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4_5">
+        <div class="container-sm">
+            <h2 class="text-black text-center">Board of Education & Administration</h2>
+            <div class="bond_btns_2">
+                <a href="/board-members">
+                    <button class="rule_btn primary-bg py-3 text-white">Board of Education Members</button>
+                </a>
+                <a href="/board-calendars">
+                    <button class="rule_btn primary-bg py-3 text-white">Board of Education Meetings</button>
+                </a>
+            </div>
+            <div class="board_members_table mt-4">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><h2 class="text-white mb-0">Title</h2></th>
+                            <th><h2 class="text-white mb-0">Name</h2></th>
+                            <th><h2 class="text-white mb-0">Number</h2></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Superintendent of Schools</td>
+                            <td>Tom DeKeyser</td>
+                            <td>734-449-4464 x 5000</td>
+                        </tr>
+                        <tr>
+                            <td>Assistant Superintendent</td>
+                            <td>Denise Kerrigan</td>
+                            <td>734-449-4464 x 5001</td>
+                        </tr>
+                        <tr>
+                            <td>Middle and High School Principal (6-12) & Director of Instruction</td>
+                            <td>Jill Henry</td>
+                            <td>734-449-4461</td>
+                        </tr>
+                        <tr>
+                            <td>Elementary School Principal (K-5th Grade)</td>
+                            <td>Jennifer Petzke</td>
+                            <td>734-449-2051</td>
+                        </tr>
+                        <tr>
+                            <td>Montessori Education Specialist</td>
+                            <td>Robin Armstrong</td>
+                            <td>734-449-4715 x 4100</td>
+                        </tr>
+                        <tr>
+                            <td>Director of Early Childhood Center</td>
+                            <td>Sue Wanamaker</td>
+                            <td>734-449-4715 x 4002</td>
+                        </tr>
+                        <tr>
+                            <td>Athletic Director</td>
+                            <td>Brad McCormack</td>
+                            <td>734-449-4461 x 3005</td>
+                        </tr>
+                        <tr>
+                            <td>Director of Communications and Human Resources</td>
+                            <td>Maria Carter-Ewald</td>
+                            <td>734-449-4461 x 5008</td>
+                        </tr>
+                        <tr>
+                            <td>Director of Student Services</td>
+                            <td>Melissa Heuker</td>
+                            <td>734-449-4464 x 5009</td>
+                        </tr>
+                        <tr>
+                            <td>Transportation and Operations Coordinator</td>
+                            <td>Sheryl Webber</td>
+                            <td>734-449-4464 x 6002</td>
+                        </tr>
+                        <tr>
+                            <td>Director of Aquatics and Recreation</td>
+                            <td>Ann Kehn</td>
+                            <td>734-449-4464 x 3058</td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

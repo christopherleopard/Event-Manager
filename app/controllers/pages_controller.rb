@@ -60,6 +60,10 @@ class PagesController < ApplicationController
     @get_involved_pdfs = PdfDocument.where(page_title: "Get Involed").includes(:pdf_attachment, :pdf_blob)
   end
 
+  def back_to_school_guide
+    @back_to_school_guide_pdfs = PdfDocument.where(page_title: "Back to School").includes(:pdf_attachment, :pdf_blob)
+  end
+
   def drills
     @drills = Drill.all
   end
@@ -68,7 +72,19 @@ class PagesController < ApplicationController
     @contact = Contact.new
   end
 
+  def operating_millage
+    @contact = Contact.new
+  end
+
+  def wlcr_millage
+    @contact = Contact.new
+  end
+
   def twenty_twentyfour_bond
+    @bond = BondForm.new
+  end
+
+  def twenty_twentyfour_sinking_fund
     @bond = BondForm.new
   end
 

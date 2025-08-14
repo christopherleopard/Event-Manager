@@ -12,24 +12,24 @@
 
 <div class="d-flex gap-4_5 mb-3">
   <div class="flex-1">
-    <%= form.label "Name*", class: "ff-bb" %>
+    <%= form.label "Name*", class: "ff-bb text-black" %>
     <%= form.text_field :name, class: "w-100", required: true %>
   </div>
 
   <div class="flex-1">
-    <%= form.label "Email*", class: "ff-bb" %>
+    <%= form.label "Email*", class: "ff-bb text-black" %>
     <%= form.email_field :email, class: "w-100", required: true %>
   </div>
 </div>
 
 
   <div>
-    <%= form.label "Questions/Comments*", class: "ff-bb" %>
+    <%= form.label "Questions/Comments*", class: "ff-bb text-black" %>
     <%= form.text_area :message, class: "w-100", rows: 6, required: true %>
   </div>
 
   <div class="text-center mt-4">
-    <%= form.submit 'Submit', class: "primary-btn" %>
+    <%= form.submit 'Submit', class: "rule_btn primary-bg py-3 text-white" %>
   </div>
 <% end %>
 </div>

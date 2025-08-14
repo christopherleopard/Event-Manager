@@ -36,6 +36,10 @@ Rails.application.routes.draw do
   get '/get-involved-community-recreation', to: 'pages#get_involved'
   get '/staff-resources', to: 'pages#staff_resources'
   get '/2024-bond', to: 'pages#twenty_twentyfour_bond'
+  get '/2024-sinking-fund', to: 'pages#twenty_twentyfour_sinking_fund'
+  get '/operating-millage', to: 'pages#operating_millage'
+  get '/wlcr-millage', to: 'pages#wlcr_millage'
+  get '/back-to-school-guide', to: 'pages#back_to_school_guide'
   get "staffs/index"
   get "staffs/show"
   get "events/index"

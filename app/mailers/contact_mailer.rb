@@ -1,5 +1,5 @@
 class ContactMailer < ApplicationMailer
-  default to: 'mpetriella@ignitexds.com'
+  default to: 'mpetriella@ignitexds.com, createworldleopard@gmail.com'
 
   def contact_email(contact)
     @contact = contact
