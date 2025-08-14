@@ -10,6 +10,8 @@
     </div>
   <% end %>
 
+  <%= form.hidden_field :context, value: (local_assigns[:context] || "contact") %>
+
 <div class="d-flex gap-4_5 mb-3">
   <div class="flex-1">
     <%= form.label "Name*", class: "ff-bb text-black" %>
