@@ -34,4 +34,15 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+
+  document.querySelectorAll(".dropdown-submenu a.submenu_item .caret").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const submenu = this.parentElement.nextElementSibling;
+      if (submenu) {
+        submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+      }
+    });
+  });
 });

@@ -2,14 +2,15 @@
   <% @events.each do |event| %>
     <div class="d-flex px-4 py-3 align-items-center gap-3 event_item">
       <div class="event_date text-center">
-        <p class="text-red fw-semibold mb-0"><%= event.starts_at_date.strftime("%A") %></p>
-        <h1 class="text-red fw-semibold mb-0"><%= event.starts_at_date.strftime("%d") %></h1>
-        <p class="text-red fw-semibold mb-0"><%= event.starts_at_date.strftime("%B") %></p>
+        <p class="text-red fw-bold mb-0 ff-l ff-opb"><%= event.starts_at_date.strftime("%a").upcase %></p>
+        <h1 class="text-red fw-bold mb-0 fs-34 ff-l ff-opb"><%= event.starts_at_date.strftime("%d") %></h1>
+        <p class="text-red fw-bold mb-0 ff-l ff-opb"><%= event.starts_at_date.strftime("%b").upcase %></p>
       </div>
+      <div class="divider"></div>
       <div class="event_data">
-        <p class="text-red fw-semibold event_title mb-0"><%= event.name %></p>
-        <p class="event_time mb-0"><%= event.starts_at_time&.strftime("%-I:%M %p") if event.starts_at_time.present? %></p>
-        <p class="mb-0"><%= truncate(event.description, length: 100) %></p>
+        <p class="text-red fw-bold event_title mb-0 ff-l ff-opb"><%= event.name %></p>
+        <p class="event_time mb-0 ff-l"><%= event.starts_at_time&.strftime("%-I:%M %p") if event.starts_at_time.present? %></p>
+        <p class="mb-0 ff-l"><%= truncate(event.description, length: 100) %></p>
       </div>
     </div>
   <% end %>

@@ -20,6 +20,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'OpenSansBold';
+  src: url('/assets/OpenSans-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
   font-family: 'Helvetica Neue';
@@ -93,8 +100,14 @@ h3 {
 .ff-hl {
     font-family: 'HelveticaLight', sans-serif;
 }
+.ff-l {
+    font-family: 'Lato', sans-serif;
+}
 .ff-op {
     font-family: "OpenSans", sans-serif !important;
+}
+.ff-opb {
+    font-family: "OpenSansBold", sans-serif !important;
 }
 .pb-lg {
     padding-bottom: 128px;;
@@ -140,6 +153,9 @@ p {
 }
 .fs-14 {
     font-size: 14px;
+}
+label {
+    text-transform: capitalize;
 }
 .lh-1_8 {
     line-height: 1.8;
@@ -342,5 +358,11 @@ img.origin {
     }
     .grey_card_row {
         min-width: 100%;
+    }
+    .mt-lg-m {
+        margin-top: 0px;
+    }
+    .mt-lg-m-mobile {
+        margin-top: -60px;
     }
 }

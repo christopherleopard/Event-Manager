@@ -19,7 +19,7 @@ ActiveAdmin.register Drill do
     def update
       super do |success, failure|
         success.html do
-          redirect_to collection_path, notice: "Board Book updated" and return
+          redirect_to collection_path, notice: "Drill updated" and return
         end
         failure.html { render :edit, status: :unprocessable_entity and return }
       end

@@ -37,7 +37,7 @@
                     <div><p class="mb-0 fs-20 text-red ff-bb text-center">Monday - Friday<br>6:00 AM - 6:00 PM</p></div>
                 </div>
                 <div class="">
-                    <h2>Kids Club Program Details & Hours</h2>
+                    <h2 class="text-black">Kids Club Program Details & Hours</h2>
                     <p>Location: Whitmore Lake Elementary School, 1077 Barker Rd. Whitmore Lake, MI 48189</p>
                     <p>Kids Club is open on most half days and full days. No School Days and Snow Day care is available through Kids Club at a combined location with our EduCare program located at the WLPS Main Street Campus.</p>
                     <p>Care during school breaks is available through our EduCare program.</p>
@@ -57,7 +57,7 @@
                         <%= image_tag("fun.png", alt: "Positive and fun educationally enriching environment", class: "origin") %>
                     </div>
                     <div class="mt-2">
-                        <p class="mb-0 fw-semibold">Positive and fun educationally enriching environment</p>
+                        <p class="mb-0 fw-bold ff-opb">Positive and fun educationally enriching environment</p>
                     </div>
                 </div>
                 <div class="text-center child_care">
@@ -65,7 +65,7 @@
                         <%= image_tag("mental.png", alt: "Physically and mentally challenging planned activities", class: "origin") %>
                     </div>
                     <div class="mt-2">
-                        <p class="mb-0 fw-semibold">Physically and mentally challenging planned activities</p>
+                        <p class="mb-0 fw-bold ff-opb">Physically and mentally challenging planned activities</p>
                     </div>
                 </div>
                 <div class="text-center child_care">
@@ -73,7 +73,7 @@
                         <%= image_tag("outdoor.png", alt: "Indoor/outdoor physical activities", class: "origin") %>
                     </div>
                     <div class="mt-2">
-                        <p class="mb-0 fw-semibold">Indoor/outdoor physical activities</p>
+                        <p class="mb-0 fw-bold ff-opb">Indoor/outdoor physical activities</p>
                     </div>
                 </div>
                 <div class="text-center child_care plan">
@@ -81,7 +81,7 @@
                         <%= image_tag("plan.png", alt: "Special planned activities", class: "origin") %>
                     </div>
                     <div class="mt-2">
-                        <p class="mb-0 fw-semibold">Special planned activities</p>
+                        <p class="mb-0 fw-bold ff-opb">Special planned activities</p>
                     </div>
                 </div>
                 <div class="text-center child_care homework">
@@ -89,7 +89,7 @@
                         <%= image_tag("homework.png", alt: "Homework assistance", class: "origin") %>
                     </div>
                     <div class="mt-2">
-                        <p class="mb-0 fw-semibold">Homework assistance</p>
+                        <p class="mb-0 fw-bold ff-opb">Homework assistance</p>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
             <h2 class="text-black mb-5">How to Register for Whitmore Lake Kids Club</h2>
             <div class="d-flex gap-4_5">
                 <div class="flex-1">
-                    <p class="fs-20 fw-semibold">Kids Club Brochure</p>
+                    <p class="fs-20 fw-bold ff-opb">Kids Club Brochure</p>
                     <% if @kids_club_pdfs.any? %>
                         <% @kids_club_pdfs.each do |pdf_doc| %>
                             <% if pdf_doc.pdf.attached? %>
@@ -112,7 +112,7 @@
                     <% end %>
                 </div>
                 <div class="flex-1">
-                    <p class="fs-20 fw-semibold">Kids Club Registration</p>
+                    <p class="fs-20 fw-bold ff-opb">Kids Club Registration</p>
                     <div>
                         <button class="rule_btn py-3 primary-bg w-370">
                             <%= link_to "New Student Kids Club Registration", "https://schools.procareconnect.com/register/b3b590fe-f8ad-40ef-8019-5f27eca6c21b", class:"text-white", target: "_blank", rel: "noopener" %>
@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 <div class="flex-1">
-                    <p class="fs-20 fw-semibold">Kids Club Weekly Schedule Request Form</p>
+                    <p class="fs-20 fw-bold ff-opb">Kids Club Weekly Schedule Request Form</p>
                     <div>
                         <button class="rule_btn py-3 primary-bg w-370">
                             <%= link_to "Weekly Schedule Request Form", "https://schools.scriptapp.com/#/inbox/to-do?workflowIdForNewSubmission=1395894786032d5fc8f054af1a128ceb495d95df3", class:"text-white", target: "_blank", rel: "noopener" %>
@@ -157,7 +157,7 @@
                         <% @kids_club_pdfs.each do |pdf_doc| %>
                             <% if pdf_doc.pdf.attached? %>
                                 <button class="rule_btn py-3 primary-bg w-370">
-                                    <%= link_to "Download Educare Brochure", rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                    <%= link_to "Download EduCare Brochure", rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
                                 </button>
                             <% end %>
                         <% end %>
@@ -206,7 +206,7 @@
                             <% @kids_club_pdfs.each do |pdf_doc| %>
                                 <% if pdf_doc.pdf.attached? %>
                                     <button class="btn-white p-3 primary-bg w-370 ff-ap">
-                                        <%= link_to "Download Educare Brochure", rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
+                                        <%= link_to "Download EduCare Brochure", rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
                                     </button>
                                 <% end %>
                             <% end %>

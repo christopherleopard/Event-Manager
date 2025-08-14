@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @events = Event.all
+    @events = Event.order(starts_at_date: :desc).limit(3)
     @home_pdfs = PdfDocument.where(page_title: "Home").includes(:pdf_attachment, :pdf_blob)
   end
 end
