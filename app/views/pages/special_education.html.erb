@@ -26,7 +26,7 @@
                 </div>            
             </div>
             <div class="flex-1">
-                <%= image_tag("se-logo.png", alt: "SE", class: "origin") %>
+                <%= image_tag("se-logo.png", alt: "SE", class: "origin w-md-full") %>
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
             the district and include the following:
             </p>
             <div class="d-flex gap-4_5 py-3">
-                <div class="education">
+                <div class="education text-center">
                     <%= image_tag("grade_level.png", alt: "Grade Level", class: "origin") %>
                 </div>
                 <div>
@@ -57,8 +57,8 @@
                 </div>
             </div>
             <div class="d-flex gap-4_5 py-3">
-                <div class="education">
-                    <%= image_tag("grade_level.png", alt: "Grade Level", class: "origin") %>
+                <div class="education text-center">
+                    <%= image_tag("evaluations.png", alt: "Evaluations and Reevaluations", class: "origin") %>
                 </div>
                 <div>
                     <p class="text-red fw-bold ff-opb">Evaluations and Reevaluations</p>
@@ -72,8 +72,8 @@
                 </div>
             </div>
             <div class="d-flex gap-4_5 py-3">
-                <div class="education">
-                    <%= image_tag("grade_level.png", alt: "Grade Level", class: "origin") %>
+                <div class="education text-center">
+                    <%= image_tag("attendance.png", alt: "Attendance", class: "origin") %>
                 </div>
                 <div>
                     <p class="text-red fw-bold ff-opb">Attendance</p>
@@ -103,7 +103,7 @@
         </div>
     </div>
     <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
-        <h2 class="text-center text-black">Programs and/or services are provided to students who meet the following eligibility criteria:</h2>
+        <h2 class="container text-center text-black">Programs and/or services are provided to students who meet the following eligibility criteria:</h2>
         <div class="container-sm d-flex pt-3">
             <ul class="text-red fw-semibold flex-1 fs-20 lh-1_8">
                 <li>Autistic Impaired</li>
@@ -126,7 +126,7 @@
         </div>
     </div>
     <div class="py-4_5">
-        <h2 class="text-center text-black">Whitmore Lake provides the following programs and services in-district:</h2>
+        <h2 class="container text-center text-black">Whitmore Lake provides the following programs and services in-district:</h2>
         <div class="container-sm d-flex pt-3">
             <ul class="text-red fw-semibold flex-1 fs-20 lh-1_8">
                 <li>School-based Speech and Language Therapy</li>
@@ -143,33 +143,35 @@
         </div>
     </div>
     <div class="py-4_5" style="background-image: url('/assets/login_bg.png');">
-        <h2 class="text-center text-black">WLPS and Washtenaw Intermediate School District partner to<br>
-        provide the following services to students in-district:</h2>
+        <h2 class="container text-center text-black">
+            WLPS and Washtenaw Intermediate School District partner to<br>
+            provide the following services to students in-district:
+        </h2>
         <div class="container d-flex justify-content-between py-3 text-center">
             <div class="flex-1">
                 <div>
-                    <%= image_tag("grade_level.png", alt: "Grade Level", class: "origin") %>
+                    <%= image_tag("hearing.png", alt: "Hearing impairment consultation", class: "origin") %>
                 </div>
-                <p class="text-red fs-20 mt-3 mb-0 fw-semibold">Hearing impairment consultation</p>
+                <p class="text-red fs-20 mt-3 mb-0 ff-opb">Hearing impairment consultation</p>
             </div>
             <div class="flex-1">
                 <div>
-                    <%= image_tag("grade_level.png", alt: "Grade Level", class: "origin") %>
+                    <%= image_tag("visual.png", alt: "Visual impairment consultation", class: "origin") %>
                 </div>
-                <p class="text-red fs-20 mt-3 mb-0 fw-semibold">Visual impairment consultation</p>
+                <p class="text-red fs-20 mt-3 mb-0 ff-opb">Visual impairment consultation</p>
             </div>
             <div class="flex-1">
                 <div>
-                    <%= image_tag("grade_level.png", alt: "Grade Level", class: "origin") %>
+                    <%= image_tag("behavior_consult.png", alt: "Behavior consultation", class: "origin") %>
                 </div>
-                <p class="text-red fs-20 mt-3 mb-0 fw-semibold">Behavior consultation</p>
+                <p class="text-red fs-20 mt-3 mb-0 ff-opb">Behavior consultation</p>
             </div>
         </div>
-        <div class="text-center pt-4">
+        <div class="container text-center pt-4">
             <% if @special_education_pdfs.any? %>
                 <% @special_education_pdfs.each do |pdf_doc| %>
                     <% if pdf_doc.pdf.attached? %>
-                        <button class="primary-btn">
+                        <button class="btn_normal mb-0">
                             <%= link_to pdf_doc.title, rails_blob_path(pdf_doc.pdf, disposition: "inline", only_path: true), class:"text-white", target: "_blank", rel: "noopener" %>
                         </button>
                     <% end %>
@@ -210,62 +212,62 @@
             <div class="d-flex gap-4_5 mt-3">
                 <div class="flex-1">
                     <div class="mt-4">
-                        <p class="text-red fw-semibold mb-2">Implementing Services</p>
+                        <p class="text-red ff-opb mb-2">Implementing Services</p>
                         <p class="mb-2">The Washtenaw ISD Special Education Department directly implements services for approximately 300 students with significant and low-incidence disabilities from birth to 26 years old, and court-involved youth.</p>
                         <button class="rule_btn py-3 w-270">
                             <%= link_to "More Information", "https://www.washtenawisd.org/our-services/special-education-services/", class:"text-white", target: "_blank" %>
                         </button>
                     </div>
                     <div class="mt-4">
-                        <p class="text-red fw-semibold mb-2">Transition Service</p>
+                        <p class="text-red ff-opb mb-2">Transition Service</p>
                         <p class="mb-2">Young adults often benefit from transition services from the school, ISD, or other community agencies.</p>
                         <button class="rule_btn py-3 w-270">
                             <%= link_to "More Information", "https://www.washtenawisd.org/our-services/special-education-services/transition-services/", class:"text-white", target: "_blank" %>
                         </button>
                     </div>
                     <div class="mt-4">
-                        <p class="text-red fw-semibold mb-2">Assistive Technology</p>
+                        <p class="text-red ff-opb mb-2">Assistive Technology</p>
                         <p class="mb-2">Public school districts in Washtenaw County have adopted a common process for considering the need for assistive technology.</p>
                         <button class="rule_btn py-3 w-270">
                             <%= link_to "More Information", "https://www.washtenawisd.org/our-services/administrative-departments/special-education/instruction--assessment/assistive-technology/", class:"text-white", target: "_blank" %>
                         </button>
                     </div>
                     <div class="mt-4">
-                        <p class="text-red fw-semibold mb-2">Parent Advisory Committee</p>
+                        <p class="text-red ff-opb mb-2">Parent Advisory Committee</p>
                         <p class="mb-2">Washtenaw ISD hosts a Parent Advisory Committee (PAC) every month.</p>
                         <button class="rule_btn py-3 w-270">
                             <%= link_to "More Information", "https://www.washtenawisd.org/our-services/administrative-departments/special-education/resources/parent-advisory-committee-pac/", class:"text-white", target: "_blank" %>
                         </button>
                     </div>
                     <div class="mt-4">
-                        <p class="text-red fw-semibold mb-2">Parent Handbook</p>
+                        <p class="text-red ff-opb mb-2">Parent Handbook</p>
                         <p class="mb-2">The PAC has published a Parent Handbook and Procedural Safeguards Notice.</p>
                     </div>
                 </div>
                 <div class="flex-1">
                     <div class="mt-4">
-                        <p class="text-red fw-semibold mb-2">Resources</p>
+                        <p class="text-red ff-opb mb-2">Resources</p>
                         <p class="mb-2">Washtenaw ISD hosts a Parent Advisory Committee (PAC) every month.</p>
                         <button class="rule_btn py-3 w-270">
                             <%= link_to "More Information", "https://www.washtenawisd.org/our-services/administrative-departments/special-education/resources/", class:"text-white", target: "_blank" %>
                         </button>
                     </div>
                     <div class="mt-4">
-                        <p class="text-red fw-semibold mb-2">Medicaid School Based Services</p>
+                        <p class="text-red ff-opb mb-2">Medicaid School Based Services</p>
                         <p class="mb-2">In Michigan, the Medicaid School Based Services program provides partial reimbursement for services such as occupational therapy, physical therapy, speech therapy, psychological services, social work services, orientation and mobility services, transportation, nursing services, case management and assistive technology services.</p>
                         <button class="rule_btn py-3 w-270">
                             <%= link_to "More Information", "https://www.washtenawisd.org/our-services/special-education-services/health-services/", class:"text-white", target: "_blank" %>
                         </button>
                     </div>
                     <div class="mt-4">
-                        <p class="text-red fw-semibold mb-2">Early On/Early Intervention</p>
+                        <p class="text-red ff-opb mb-2">Early On/Early Intervention</p>
                         <p class="mb-2">Early On is the State of Michigan Early Intervention Program for children age 0-3.</p>
                         <button class="rule_btn py-3 w-270">
                             <%= link_to "More Information", "https://www.washtenawisd.org/our-schools-programs/early-childhood/", class:"text-white", target: "_blank" %>
                         </button>
                     </div>
                     <div class="mt-4">
-                        <p class="text-red fw-semibold mb-2">MDE Alternate Assessments</p>
+                        <p class="text-red ff-opb mb-2">MDE Alternate Assessments</p>
                         <p class="mb-2">The Interactive Decision-Making Tool helps Individualized Education Program (IEP) teams determine if a student should take the general (M-STEP/MME) or alternate assessment (MI-Access).</p>
                         <button class="rule_btn py-3 w-270">
                             <%= link_to "More Information", "https://www.washtenawisd.org/our-services/instruction/assessment/", class:"text-white", target: "_blank" %>

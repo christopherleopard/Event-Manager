@@ -6,7 +6,26 @@
         <h2 class="text-center text-white mb-0">Community Recreation</h2>
     </div>
     <div class="red_button_bar primary-bg py-3">
-        <%= render "community_rec_links_bar" %>
+        <div class="container d-md-flex gap-4 calendar_links justify-content-between">
+            <button class="calendar_btn">
+                <%= link_to "About WLCR", "/community-recreation", class:"text-white ff-b" %>
+            </button>
+            <button class="calendar_btn">
+                <%= link_to "Community Pool", "/community-pool", class:"text-white ff-b" %>
+            </button>
+            <button class="calendar_btn">
+                <%= link_to "WaveMaker Swim School", "/wavemaker-swim-school", class:"text-white ff-b" %>
+            </button>
+            <button class="calendar_btn">
+                <%= link_to "Waves Swim Team", "https://www.gomotionapp.com/team/miwlw/page/home", class:"text-white ff-b", target: "_blank" %>
+            </button>
+            <button class="calendar_btn">
+                <%= link_to "Get Involved", "/get-involved-community-recreation", class:"text-white ff-b" %>
+            </button>
+            <button class="calendar_btn">
+                <%= link_to "WLCR Calendar", "/community-recreation-calendar", class:"text-white ff-b" %>
+            </button>
+        </div>
     </div>
     <div class="py-4_5">
         <div class="container">
@@ -48,7 +67,7 @@
     <div class="py-4_5">
         <div class="container">
             <h2 class="text-black">Ways to Volunteer & Support Whitmore Lake Community Rec</h2>
-            <p class="mb-0">Looking for a fun and unique place to have your next celebration? Rent one of our multipurpose rooms during weekend open swim hours to host your own pool party! You can decorate it to your party theme, use the modest kitchen facility, and enjoy the open space to accommodate your guests.</p>            
+            <p class="mb-0">Have a special skill or talent you'd love to teach others? Want to introduce an activity to the community? Check out our Volunteer Packet and Potential Instructor Packet for the “how-tos” on proposing an offer. To submit the Volunteer Packet, click the button below and fill out and complete the online form. To submit the Potential Instructor Packet, click the button below to download the PDF. Submit your completed PDF to <a href="mailto:wlcrinfo@wlps.net" class="text-red text-decoration-underline">wlcrinfo@wlps.net.</a></p>            
             <div class="mt-4 d-flex gap-4">
                 <% if @get_involved_pdfs.any? %>
                     <% @get_involved_pdfs.each do |pdf_doc| %>
