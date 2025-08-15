@@ -30,25 +30,86 @@
   <body>
     <main class="page">
       <header>
-        <div class="top_header">
-          <div class="container d-flex justify-content-between py-2 position-relative logo_wrapper">
-            <div class="logo position-absolute top-0 start-0 z-3">
-              <%= link_to root_path do %>
-                <%= image_tag("logo.png", alt: "Admin Logo", class: "top_logo") %>
+        <div class="desktop_header">
+          <div class="top_header">
+            <div class="container d-flex justify-content-between py-2 position-relative logo_wrapper">
+              <div class="logo position-absolute top-0 start-0 z-3">
+                <%= link_to root_path do %>
+                  <%= image_tag("logo.png", alt: "Admin Logo", class: "top_logo") %>
+                <% end %>
+              </div>
+              <%= link_to "https://www.facebook.com/WhitmoreLakePublicSchools", target: "_blank" do %>
+                <%= image_tag("fb.png", alt: "Facebook", class: "fb_icon") %>
               <% end %>
+              <%= link_to "(734) 449-4464", "tel:7344494464", class: "text-red" %>
             </div>
-            <%= link_to "https://www.facebook.com/WhitmoreLakePublicSchools", target: "_blank" do %>
-              <%= image_tag("fb.png", alt: "Facebook", class: "fb_icon") %>
-             <% end %>
-            <%= link_to "(734) 449-4464", "tel:7344494464", class: "text-red" %>
           </div>
-        </div>
-        <div class="main_menu text-center">
-          <div class="secondary_menu bg-black">
-            <div class="container position-relative">
-              <%= image_tag("badge-highschools-national-year.png", alt: "Best High Schools", class: "origin best_school_badge") %>
+          <div class="main_menu text-center">
+            <div class="secondary_menu bg-black">
+              <div class="container position-relative">
+                <%= image_tag("badge-highschools-national-year.png", alt: "Best High Schools", class: "origin best_school_badge") %>
+                <div class="container-navbar">
+                  <nav class="navbar navbar-expand-sm p-0">
+                    <div class="container-fluid">
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                        <ul class="navbar-nav"> 
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white px-4 fw-semibold" href="#" role="button" data-toggle="dropdown">Board of Education</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/board-members">Board Members</a></li>
+                              <li><a class="dropdown-item" href="/board-minutes">Board Minutes</a></li>
+                              <li><a class="dropdown-item" href="/board-audits">Board Audits</a></li>
+                              <li><a class="dropdown-item" href="/board-books">Board Books</a></li>
+                              <li><a class="dropdown-item" href="/board-calendars">Board Calendars</a></li>
+                              <li><a class="dropdown-item" href="/board-committees">Board Committees</a></li>
+                              <li><a class="dropdown-item" href="https://z2policy.ctspublish.com/luskalbertson/browse/whitmoreset/whitmore/root" target="_blank">Board Policies</a></li>
+                            </ul>
+                          </li>
+
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white px-4 fw-semibold" href="#" role="button" data-toggle="dropdown">Departments</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/facilities">Facilities</a></li>
+                              <li class="dropdown-submenu">
+                                <a class="dropdown-item submenu_item" href="/food-service">Food Service <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="/food-service/menus">Menus</a></li>
+                                  <li><a class="dropdown-item" href="/food-service/family-resources">Family Resources</a></li>
+                                </ul>
+                              </li>
+                              <li><a class="dropdown-item" href="/kids-club">Kids Club</a></li>
+                              <li><a class="dropdown-item" href="/special-education">Special Education</a></li>
+                              <li><a class="dropdown-item" href="https://wlpstech.weebly.com" target="_blank">Technology</a></li>
+                              <li><a class="dropdown-item" href="/transportation">Transportation</a></li>
+                            </ul>
+                          </li>
+
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white px-4 fw-semibold" href="#" role="button" data-toggle="dropdown">News & Info</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">News & Notes</a></li>
+                              <li><a class="dropdown-item" href="/drills">Drills</a></li>
+                              <li><a class="dropdown-item" href="/efunds">eFunds</a></li>
+                              <li><a class="dropdown-item" href="/peachjar">PeachJar</a></li>
+                              <li><a class="dropdown-item" href="/school-policy-notices">School Policy Notices</a></li>
+                              <li><a class="dropdown-item" href="/transparency-reporting">Transparency Reporting</a></li>
+                              <li><a class="dropdown-item" href="/bond-updates">WLPS Millage Updates</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+
+            <div class="primary_menu" style="background-image: url('/assets/menu_bg_black.png');">
               <div class="container-navbar">
-                <nav class="navbar navbar-expand-sm p-0">
+                <nav class="navbar navbar-expand-sm py-1">
                   <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                       <span class="navbar-toggler-icon"></span>
@@ -56,47 +117,45 @@
                     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
                       <ul class="navbar-nav"> 
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle text-white px-4 fw-semibold" href="#" role="button" data-toggle="dropdown">Board of Education</a>
+                          <a class="nav-link dropdown-toggle text-red px-5 fw-semibold" href="#" role="button" data-toggle="dropdown">Schools</a>
                           <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/board-members">Board Members</a></li>
-                            <li><a class="dropdown-item" href="/board-minutes">Board Minutes</a></li>
-                            <li><a class="dropdown-item" href="/board-audits">Board Audits</a></li>
-                            <li><a class="dropdown-item" href="/board-books">Board Books</a></li>
-                            <li><a class="dropdown-item" href="/board-calendars">Board Calendars</a></li>
-                            <li><a class="dropdown-item" href="/board-committees">Board Committees</a></li>
-                            <li><a class="dropdown-item" href="https://z2policy.ctspublish.com/luskalbertson/browse/whitmoreset/whitmore/root" target="_blank">Board Policies</a></li>
+                            <li><a class="dropdown-item" href="#">Board Members</a></li>
+                            <li><a class="dropdown-item" href="#">Board Minutes</a></li>
+                            <li><a class="dropdown-item" href="#">Board Audits</a></li>
                           </ul>
                         </li>
 
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle text-white px-4 fw-semibold" href="#" role="button" data-toggle="dropdown">Departments</a>
+                          <a class="nav-link dropdown-toggle text-red px-5 fw-semibold" href="#" role="button" data-toggle="dropdown">Calendars</a>
                           <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/facilities">Facilities</a></li>
-                            <li class="dropdown-submenu">
-                              <a class="dropdown-item submenu_item" href="/food-service">Food Service <span class="caret"></span></a>
-                              <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/food-service/menus">Menus</a></li>
-                                <li><a class="dropdown-item" href="/food-service/family-resources">Family Resources</a></li>
-                              </ul>
-                            </li>
-                            <li><a class="dropdown-item" href="/kids-club">Kids Club</a></li>
-                            <li><a class="dropdown-item" href="/special-education">Special Education</a></li>
-                            <li><a class="dropdown-item" href="https://wlpstech.weebly.com" target="_blank">Technology</a></li>
-                            <li><a class="dropdown-item" href="/transportation">Transportation</a></li>
+                            <li><a class="dropdown-item" href="/district-calendar">District & BOE Calendar</a></li>
+                            <li><a class="dropdown-item" href="/main-street-campus-calendar">Main Street Campus Calendar</a></li>
+                            <li><a class="dropdown-item" href="/elementary-school-calendar">Elementary School Calendar</a></li>
+                            <li><a class="dropdown-item" href="/middle-and-high-school-calendar">Middle & High School Calendar</a></li>
+                            <li><a class="dropdown-item" href="https://whitmorelakeathletics.com/main/calendar" target="_blank">Athletic Calendar</a></li>
+                            <li><a class="dropdown-item" href="/community-recreation-calendar">Community Recreation Calendar</a></li>
                           </ul>
                         </li>
 
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle text-white px-4 fw-semibold" href="#" role="button" data-toggle="dropdown">News & Info</a>
+                          <a class="nav-link text-red px-5 fw-semibold" href="/athletics">Athletics</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle text-red px-5 fw-semibold" href="#" role="button" data-toggle="dropdown">About WLPS</a>
                           <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/news-and-notes">News & Notes</a></li>
-                            <li><a class="dropdown-item" href="/drills">Drills</a></li>
-                            <li><a class="dropdown-item" href="/efunds">eFunds</a></li>
-                            <li><a class="dropdown-item" href="/peachjar">PeachJar</a></li>
-                            <li><a class="dropdown-item" href="/school-policy-notices">School Policy Notices</a></li>
-                            <li><a class="dropdown-item" href="/transparency-reporting">Transparency Reporting</a></li>
-                            <li><a class="dropdown-item" href="/bond-updates">WLPS Millage Updates</a></li>
+                            <li><a class="dropdown-item" href="/why-choose-wlps">Why Choose WLPS?</a></li>
+                            <li><a class="dropdown-item" href="/community">Community</a></li>
+                            <li><a class="dropdown-item" href="/green-initiatives">Green Initiatives</a></li>
+                            <li><a class="dropdown-item" href="/history">History</a></li>
+                            <li><a class="dropdown-item" href="/school-of-choice">School of Choice</a></li>
+                            <li><a class="dropdown-item" href="/staff">Staff</a></li>
+                            <li><a class="dropdown-item" href="/https://jobs.redroverk12.com/org/wlps">Employment</a></li>
                           </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                          <a class="nav-link text-red px-5 fw-semibold" href="/academics">Academics</a>
                         </li>
                       </ul>
                     </div>
@@ -104,62 +163,146 @@
                 </nav>
               </div>
             </div>
+
+            <div class="emergency_icon">
+              <%= image_tag("michigan.png", alt: "Emergency", class: "origin") %>
+            </div>
           </div>
+        </div>
+        <div class="mobile_header">
+          <div class="top_header">
+            <div class="container py-2 px-4 position-relative mob_top">
+              <div class="logo position-absolute top-0 start-4 z-3">
+                <%= link_to root_path do %>
+                  <%= image_tag("logo.png", alt: "Admin Logo" , class: "top_logo" ) %>
+                <% end %>
+              </div>
+              <%= link_to "https://www.facebook.com/WhitmoreLakePublicSchools" , target: "_blank" do %>
+                <%= image_tag("fb.png", alt: "Facebook" , class: "fb_icon" ) %>
+                  <% end %>
+                    <%= link_to "(734) 449-4464" , "tel:7344494464" , class: "text-red" %>
+            </div>
+          </div>
+          <div class="main_menu" style="background-image: url('/assets/menu_bg_mobile.png');">
+            <div class="secondary_menu">
+              <div class="position-relative">
+                <%= image_tag("badge-highschools-national-year.png", alt: "Best High Schools", class: "origin best_school_badge" ) %>
+                <div class="container-navbar">
+                  <nav class="navbar navbar-expand-sm p-0 mob_navbar">
+                    <div class="">
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon hamburger"></span>
+                      </button>
+                      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white px-4 fw-semibold" href="#" role="button"
+                              data-toggle="dropdown">Board of Education</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/board-members">Board Members</a></li>
+                              <li><a class="dropdown-item" href="/board-minutes">Board Minutes</a></li>
+                              <li><a class="dropdown-item" href="/board-audits">Board Audits</a></li>
+                              <li><a class="dropdown-item" href="/board-books">Board Books</a></li>
+                              <li><a class="dropdown-item" href="/board-calendars">Board Calendars</a></li>
+                              <li><a class="dropdown-item" href="/board-committees">Board Committees</a></li>
+                              <li><a class="dropdown-item"
+                                  href="https://z2policy.ctspublish.com/luskalbertson/browse/whitmoreset/whitmore/root"
+                                  target="_blank">Board Policies</a></li>
+                            </ul>
+                          </li>
 
-          <div class="primary_menu">
-            <div class="container-navbar">
-              <nav class="navbar navbar-expand-sm py-1">
-                <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-                    <ul class="navbar-nav"> 
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-red px-5 fw-semibold" href="#" role="button" data-toggle="dropdown">Schools</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Board Members</a></li>
-                          <li><a class="dropdown-item" href="#">Board Minutes</a></li>
-                          <li><a class="dropdown-item" href="#">Board Audits</a></li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white px-4 fw-semibold" href="#" role="button"
+                              data-toggle="dropdown">Departments</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/facilities">Facilities</a></li>
+                              <li class="dropdown-submenu">
+                                <a class="dropdown-item submenu_item" href="/food-service">Food Service <span
+                                    class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="/food-service/menus">Menus</a></li>
+                                  <li><a class="dropdown-item" href="/food-service/family-resources">Family Resources</a></li>
+                                </ul>
+                              </li>
+                              <li><a class="dropdown-item" href="/kids-club">Kids Club</a></li>
+                              <li><a class="dropdown-item" href="/special-education">Special Education</a></li>
+                              <li><a class="dropdown-item" href="https://wlpstech.weebly.com" target="_blank">Technology</a>
+                              </li>
+                              <li><a class="dropdown-item" href="/transportation">Transportation</a></li>
+                            </ul>
+                          </li>
+
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white px-4 fw-semibold" href="#" role="button"
+                              data-toggle="dropdown">News & Info</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">News & Notes</a></li>
+                              <li><a class="dropdown-item" href="/drills">Drills</a></li>
+                              <li><a class="dropdown-item" href="/efunds">eFunds</a></li>
+                              <li><a class="dropdown-item" href="/peachjar">PeachJar</a></li>
+                              <li><a class="dropdown-item" href="/school-policy-notices">School Policy Notices</a></li>
+                              <li><a class="dropdown-item" href="/transparency-reporting">Transparency Reporting</a></li>
+                              <li><a class="dropdown-item" href="/bond-updates">WLPS Millage Updates</a></li>
+                            </ul>
+                          </li>
+
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white px-4 fw-semibold" href="#" role="button"
+                              data-toggle="dropdown">Schools</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Board Members</a></li>
+                              <li><a class="dropdown-item" href="#">Board Minutes</a></li>
+                              <li><a class="dropdown-item" href="#">Board Audits</a></li>
+                            </ul>
+                          </li>
+
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white px-4 fw-semibold" href="#" role="button"
+                              data-toggle="dropdown">Calendars</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/district-calendar">District & BOE Calendar</a></li>
+                              <li><a class="dropdown-item" href="/main-street-campus-calendar">Main Street Campus Calendar</a>
+                              </li>
+                              <li><a class="dropdown-item" href="/elementary-school-calendar">Elementary School Calendar</a></li>
+                              <li><a class="dropdown-item" href="/middle-and-high-school-calendar">Middle & High School
+                                  Calendar</a></li>
+                              <li><a class="dropdown-item" href="https://whitmorelakeathletics.com/main/calendar"
+                                  target="_blank">Athletic Calendar</a></li>
+                              <li><a class="dropdown-item" href="/community-recreation-calendar">Community Recreation Calendar</a>
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="nav-item dropdown">
+                            <a class="nav-link text-white px-4 fw-semibold" href="/athletics">Athletics</a>
+                          </li>
+
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white px-4 fw-semibold" href="#" role="button"
+                              data-toggle="dropdown">About WLPS</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/why-choose-wlps">Why Choose WLPS?</a></li>
+                              <li><a class="dropdown-item" href="/community">Community</a></li>
+                              <li><a class="dropdown-item" href="/green-initiatives">Green Initiatives</a></li>
+                              <li><a class="dropdown-item" href="/history">History</a></li>
+                              <li><a class="dropdown-item" href="/school-of-choice">School of Choice</a></li>
+                              <li><a class="dropdown-item" href="/staff">Staff</a></li>
+                              <li><a class="dropdown-item" href="/https://jobs.redroverk12.com/org/wlps">Employment</a></li>
+                            </ul>
+                          </li>
+
+                          <li class="nav-item dropdown">
+                            <a class="nav-link text-white px-4 fw-semibold" href="/academics">Academics</a>
+                          </li>
                         </ul>
-                      </li>
-
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-red px-5 fw-semibold" href="#" role="button" data-toggle="dropdown">Calendars</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="/district-calendar">District & BOE Calendar</a></li>
-                          <li><a class="dropdown-item" href="/main-street-campus-calendar">Main Street Campus Calendar</a></li>
-                          <li><a class="dropdown-item" href="/elementary-school-calendar">Elementary School Calendar</a></li>
-                          <li><a class="dropdown-item" href="/middle-and-high-school-calendar">Middle & High School Calendar</a></li>
-                          <li><a class="dropdown-item" href="https://whitmorelakeathletics.com/main/calendar" target="_blank">Athletic Calendar</a></li>
-                          <li><a class="dropdown-item" href="/community-recreation-calendar">Community Recreation Calendar</a></li>
-                        </ul>
-                      </li>
-
-                      <li class="nav-item dropdown">
-                        <a class="nav-link text-red px-5 fw-semibold" href="/athletics">Athletics</a>
-                      </li>
-
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-red px-5 fw-semibold" href="#" role="button" data-toggle="dropdown">About WLPS</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="/why-choose-wlps">Why Choose WLPS?</a></li>
-                          <li><a class="dropdown-item" href="/community">Community</a></li>
-                          <li><a class="dropdown-item" href="/green-initiatives">Green Initiatives</a></li>
-                          <li><a class="dropdown-item" href="/history">History</a></li>
-                          <li><a class="dropdown-item" href="/school-of-choice">School of Choice</a></li>
-                          <li><a class="dropdown-item" href="/staff">Staff</a></li>
-                          <li><a class="dropdown-item" href="/https://jobs.redroverk12.com/org/wlps">Employment</a></li>
-                        </ul>
-                      </li>
-
-                      <li class="nav-item dropdown">
-                        <a class="nav-link text-red px-5 fw-semibold" href="/academics">Academics</a>
-                      </li>
-                    </ul>
-                  </div>
+                      </div>
+                    </div>
+                  </nav>
                 </div>
-              </nav>
+              </div>
+            </div>
+            <div class="emergency_icon">
+              <%= image_tag("michigan.png", alt: "Emergency" , class: "origin" ) %>
             </div>
           </div>
         </div>
@@ -167,9 +310,104 @@
 
       <%= yield %>
 
-      <footer class="mt-10 text-center text-gray-600">
-        <p>&copy; <%= Time.current.year %> Event Manager Admin</p>
+      <footer class="text-white second-bg py-5 fs-14">
+        <div class="container fw-bold">
+          <div class="footer_menu">
+            <div class="">
+              <div class="text-center mb-5">
+                <%= link_to root_path do %>
+                  <%= image_tag("white_logo.png", alt: "Logo", class: "bottom_logo origin") %>
+                <% end %>
+              </div>
+            </div>
+            <div class="">
+              <p class="mb-5">Contact Us</p>
+              <p>8845 Main Street<br>Whitmore Lake, MI 48189</p>
+              <p>Phone: (734) 449-4464<br>Fax: (734) 449-5336<br>Email: <a href="maito:info@wlps.net" class="text-white">info@wlps.net</a></p>
+              <p><a href="https://goo.gl/maps/siKMSYYqxQ42" class="text-white" target="_blank">Get Directions</a></p>
+              <p><a href="https://z2policy.ctspublish.com/luskalbertson/browse/whitmoreset/whitmore/z20000072" target="_blank" class="text-decoration-underline">Website Accessibility</a></p>
+            </div>
+            <div class="">
+              <p>Schools</p>
+              <p class="fs-12 mb-2"><a href="/early-childhood-center">Early Childhood Center</a></p>
+              <p class="fs-12 mb-2"><a href="/elementary-school">Elementary School</a></p>
+              <p class="fs-12 mb-2"><a href="/kindergarten">Kindergarten</a></p>
+              <p class="fs-12 mb-0"><a href="/middle-and-high-school">Middle & High School</a></p>
+              <p class="mt-4">Board of Education</p>
+              <p class="fs-12 mb-2"><a href="/board-audits">Audits</a></p>
+              <p class="fs-12 mb-2"><a href="/board-books">Books</a></p>
+              <p class="fs-12 mb-2"><a href="/board-calendars">Calendars</a></p>
+              <p class="fs-12 mb-2"><a href="/board-committees">Committees</a></p>
+              <p class="fs-12 mb-2"><a href="/board-members">Members</a></p>
+              <p class="fs-12 mb-2"><a href="/board-minutes">Minutes</a></p>
+              <p class="fs-12 mb-0"><a href="https://z2policy.ctspublish.com/luskalbertson/browse/whitmoreset/whitmore/root" target="_blank">Policies</a></p>
+            </div>
+            <div class="">
+              <p>About Us</p>
+              <p class="fs-12 mb-2"><a href="/why-choose-wlps">Why Choose WLPS</a></p>
+              <p class="fs-12 mb-2"><a href="/community">Community</a></p>
+              <p class="fs-12 mb-2"><a href="/history">History</a></p>
+              <p class="fs-12 mb-2"><a href="/green-initiatives">Green Initiatives</a></p>
+              <p class="fs-12 mb-2"><a href="/school-of-choice">School of Choice</a></p>
+              <p class="fs-12 mb-2"><a href="/staff">Staff</a></p>
+              <p class="fs-12 mb-0"><a href="/employment">Employment</a></p>
+
+              <p class="mt-4">Calendars</p>              
+              <p class="fs-12 mb-2"><a href="/community-recreation-calendar">Community Recreation Calendar</a></p>
+              <p class="fs-12 mb-2"><a href="/district-calendar">District Calendar</a></p>
+              <p class="fs-12 mb-2"><a href="/elementary-school-calendar">Elementary School Calendar</a></p>
+              <p class="fs-12 mb-0"><a href="/middle-and-high-school-calendar">Middle & High School Calendar</a></p>
+            </div>
+            <div class="">
+              <p>News & Information</p>
+              <p class="fs-12 mb-2"><a href="/drills">Drills</a></p>
+              <p class="fs-12 mb-2"><a href="#">News & Notes (Blog)</a></p>
+              <p class="fs-12 mb-2"><a href="/efunds">Payschools</a></p>
+              <p class="fs-12 mb-2"><a href="/peachjar">PeachJar</a></p>
+              <p class="fs-12 mb-2"><a href="/school-policy-notices">School Policy Notices</a></p>
+              <p class="fs-12 mb-0"><a href="/transparency-reporting">Transparency Reporting</a></p>
+
+              <p class="mt-4"><a href="/athletics">Athletics</a></p>
+              <p class="mt-4"><a href="/academics">Academics</a></p>
+              <p class="mt-4">Departments</p>
+              <p class="fs-12 mb-2"><a href="/facilities">Facilities</a></p>
+              <p class="fs-12 mb-2"><a href="/food-service">Food Service</a></p>
+              <p class="fs-12 mb-2"><a href="/special-education">Special Education</a></p>
+              <p class="fs-12 mb-0"><a href="https://wlpstech.weebly.com" target="_blank">Technology</a></p>
+            </div>
+            <div class="">
+              <p>Community Recreation</p>
+              <p class="fs-12 mb-2"><a href="/community-recreation">About Community Recreation</a></p>
+              <p class="fs-12 mb-2"><a href="/community-pool">Community Pool</a></p>
+              <p class="fs-12 mb-2"><a href="/wavemaker-swim-school">WaveMaker Swim School</a></p>
+              <p class="fs-12 mb-0"><a href="https://www.gomotionapp.com/team/miwlw/page/home" target="_blank">Waves Swim Team</a></p>
+
+              <p class="mt-4 mb-0"><a href="/staff-resources">Staff Resources</a></p>
+            </div>
+          </div>
+        </div>
       </footer>
+      <div class="text-white py-4 bg-black">
+        <div class="bottom_footer">
+          <div class="copyright">
+            <p class="mb-0">Copyright © 2025 Ignite XDS. All Rights Reserved.</p>
+          </div>
+          <div class="ignite">
+            <div class="socials">
+              <%= link_to "https://www.facebook.com/WhitmoreLakePublicSchools", target: "_blank" do %>
+                <%= image_tag("fb_white_small.png", alt: "Facebook", class: "origin") %>
+              <% end %>
+              <%= link_to "https://www.instagram.com/wlps_ignite/", target: "_blank" do %>
+                <%= image_tag("x_white_small.png", alt: "X", class: "origin") %>
+              <% end %>
+            </div>
+            <div class="ignite_logo">
+              <%= link_to "https://www.ignitexds.com", target: "_blank" do %>
+                <%= image_tag("ignite_logo.png", alt: "Ignite XDS Logo", class:"origin") %>
+              <% end %>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

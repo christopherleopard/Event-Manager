@@ -590,6 +590,39 @@ header {
     z-index: 9;
     position: relative;
 }
+.emergency_icon {
+    position: absolute;
+    bottom: -18px;
+    right: calc((50vw - 660px) / 2);
+    cursor: pointer;
+}
+.footer_menu {
+    display: flex;
+    justify-content: space-between;
+}
+.bottom_footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+}
+.ignite {
+    display: flex;
+    gap: 200px;
+}
+.socials {
+    display: flex;
+    gap: 8px;
+}
+.desktop_header {
+    display: block;
+}
+.mobile_header {
+    display: none;
+}
+.primary_menu {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 //Responsive styles
 @media screen and (max-width: 768px) {
     .admin_login {
@@ -769,5 +802,64 @@ header {
     }
     .four-boxes h2 {
         font-size: 14px;
+    }
+    .footer_menu {
+        display: block;
+    }
+    .bottom_footer {
+        display: block;
+        text-align: center;
+    }
+    .ignite {
+        display: block;
+        margin-top: 16px;
+    }
+    .socials {
+        display: block;
+        margin-bottom: 16px;
+    }
+    .desktop_header {
+        display: none;
+    }
+    .mobile_header {
+        display: block;
+    }
+    .emergency_icon {
+        position: initial;
+        text-align: right;
+        padding: 6px 24px;
+    }
+    .main_menu {
+        background-repeat: no-repeat;
+    }
+    .best_school_badge {
+        position: absolute;
+        left: 35%;
+    }
+    .mob_navbar {
+        display: block;
+        text-align: right;
+    }
+    .navbar-toggler-icon.hamburger {
+        background-image: url('/assets/hamburger.png');
+    }
+    .navbar-toggler {
+        padding: 7px 0;
+        border: none;
+    }
+    .secondary_menu {
+        padding: 0 24px;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    .mob_top {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 64px;
+    }
+    .start-4 {
+        left: 24px;
     }
 }
