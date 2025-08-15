@@ -556,6 +556,9 @@
     padding: 1em 4em;
     text-align: center;
 }
+.board_members_table table tbody tr:nth-child(even) {
+    background: #ebebeb;
+}
 //Menu
 .dropdown-submenu {
   position: relative;

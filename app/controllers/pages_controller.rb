@@ -85,7 +85,7 @@ class PagesController < ApplicationController
   end
 
   def twenty_twentyfour_sinking_fund
-    @bond = BondForm.new
+    @fund = FundForm.new
   end
 
   def staff

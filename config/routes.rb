@@ -64,6 +64,7 @@ Rails.application.routes.draw do
   post 'contacts', to: 'contacts#create', as: 'contacts'
   resource :enrollment, only: [:new, :create]
   resource :bond, only: [:new, :create]
+  resource :fund, only: [:new, :create]
   resources :events, only: [ :index, :show ]
   resources :staffs, only: [ :index, :show ]
   resources :board_minutes, only: [ :index, :show ]

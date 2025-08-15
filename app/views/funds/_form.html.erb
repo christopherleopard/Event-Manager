@@ -1,10 +1,10 @@
-<!-- app/views/bonds/new.html.erb -->
+<!-- app/views/funds/new.html.erb -->
 <div class="container-sm">
-  <%= form_with model: @bond, url: bond_path, scope: :bond_form do |f| %>
-    <% if @bond.errors.any? %>
+  <%= form_with model: @fund, url: fund_path, scope: :fund_form do |f| %>
+    <% if @fund.errors.any? %>
       <div class="errors">
         <h3>Please fix these:</h3>
-        <ul><% @bond.errors.full_messages.each { |m| %><li><%= m %></li><% } %></ul>
+        <ul><% @fund.errors.full_messages.each { |m| %><li><%= m %></li><% } %></ul>
       </div>
     <% end %>
 

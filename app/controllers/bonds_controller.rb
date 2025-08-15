@@ -9,7 +9,6 @@ class BondsController < ApplicationController
 
     if @bond.valid?
       BondMailer.with(form: @bond).notify_admin.deliver_now
-      BondMailer.with(form: @bond).confirm_user.deliver_now
       redirect_to new_bond_path, notice: "Thanks! We'll be in touch."
     else
       render :new, status: :unprocessable_entity

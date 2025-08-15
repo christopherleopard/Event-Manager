@@ -9,7 +9,6 @@ class EnrollmentsController < ApplicationController
 
     if @enrollment.valid?
       EnrollmentMailer.with(form: @enrollment).notify_admin.deliver_now
-      EnrollmentMailer.with(form: @enrollment).confirm_user.deliver_now
       redirect_to new_enrollment_path, notice: "Thanks! We'll be in touch."
     else
       render :new, status: :unprocessable_entity
