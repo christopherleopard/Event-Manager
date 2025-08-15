@@ -1,0 +1,21 @@
+<div class="emergency_alert">
+  <% @emergency_alerts.each do |emergency_alert| %>
+    <% if emergency_alert.enabled %>
+      <div class="text-center alert_info p-4" style="background: #b31c23;">
+        <div style="text-align: right;">
+          <%= image_tag("close.png", alt: "Close Icon" , class: "alert_close" ) %>
+        </div>
+        <h1 class="text-white">EMERGENCY ALERT</h1>
+        <p class="text-white mb-0"><%= emergency_alert.message %></p>
+      </div>
+      <div class="school_address text-center primary-bg p-4">
+        <h2 class="mb-0 text-white">Go Like The Wind Montessori</h2>
+        <p class="text-white mb-4">8845 Main Street, Whitmore Lake, MI 48189</p>
+        <h2 class="mb-0 text-white">Early Childhood Center, Kindergarten, Elementary School</h2>
+        <p class="text-white mb-4">1077 Barker Rd, Whitmore Lake, MI 48189</p>
+        <h2 class="mb-0 text-white">Middle & High School</h2>
+        <p class="text-white mb-0">7430 Whitmore Lake Rd, Whitmore Lake, MI 48189</p>
+      </div>
+    <% end %>
+  <% end %>
+</div>

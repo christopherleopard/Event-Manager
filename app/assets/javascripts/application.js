@@ -45,4 +45,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  document.querySelector(".alert_close").addEventListener("click", function () {
+    document.querySelector(".emergency_alert_wrapper").style.display = "none";
+  });
+
+  document.querySelector(".emergency_icon").addEventListener("click", function () {
+    document.querySelector(".emergency_alert_wrapper").style.display = "block";
+  });
 });
